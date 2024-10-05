@@ -1,0 +1,1 @@
+# plugins-woo-conditional-discount-rules-for-checkout
