@@ -1,0 +1,3 @@
+<?php
+return ['project-id-version'=>'Conditional Discount Rules For WooCommerce Checkout','report-msgid-bugs-to'=>'https://www.multidots.com/contact/','pot-creation-date'=>'2022-09-06 06:18:54+00:00','po-revision-date'=>'2024-08-12 14:10+0000','last-translator'=>'','language-team'=>'German','language'=>'de_DE','mime-version'=>'1.0','content-type'=>'text/plain; charset=UTF-8','content-transfer-encoding'=>'8bit','plural-forms'=>'nplurals=2; plural=n != 1;','x-generator'=>'Loco https://localise.biz/','x-loco-version'=>'2.5.5; wp-5.8.1','x-domain'=>'woo-conditional-discount-rules-for-checkout
+','messages'=>[]];
