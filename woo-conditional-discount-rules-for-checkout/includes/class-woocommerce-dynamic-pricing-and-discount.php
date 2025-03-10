@@ -65,7 +65,6 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro {
         $this->set_locale();
         $this->define_admin_hooks();
         $this->define_public_hooks();
-        $this->define_freemius_actions();
         $prefix = ( is_network_admin() ? 'network_admin_' : '' );
         add_filter(
             "{$prefix}plugin_action_links_" . WDPAD_PLUGIN_BASENAME,
@@ -117,11 +116,6 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro {
          * side of the site.
          */
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-woocommerce-dynamic-pricing-and-discount-public.php';
-        /**
-         * The class responsible for defining all actions that occur for Freemius related things
-         * side of the site.
-         */
-        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-woocommerce-dynamic-pricing-and-discount-freemius-api.php';
         $this->loader = new Woocommerce_Dynamic_Pricing_And_Discount_Pro_Loader();
     }
 
@@ -250,20 +244,6 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro {
     }
 
     /**
-     * Register all of the hooks related to the freemius functionality
-     * of the plugin.
-     *
-     * @since    4.2.0
-     * @access   private
-     */
-    private function define_freemius_actions() {
-        $plugin_freemius = new Woocommerce_Dynamic_Pricing_And_Discount_Pro_Freemius_API();
-        $this->loader->add_action( 'wp_ajax_wdpad_freemius_activate', $plugin_freemius, 'wdpad_freemius_activate' );
-        $this->loader->add_action( 'wp_ajax_wdpad_freemius_deactivate', $plugin_freemius, 'wdpad_freemius_deactivate' );
-        $this->loader->add_action( 'wp_ajax_wdpad_freemius_sync', $plugin_freemius, 'wdpad_freemius_sync' );
-    }
-
-    /**
      * Return the plugin action links.  This will only be called if the plugin
      * is active.
      *
@@ -297,7 +277,6 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro {
         if ( isset( $plugin_data['TextDomain'] ) && $plugin_data['TextDomain'] !== 'woo-conditional-discount-rules-for-checkout' ) {
             return $plugin_meta;
         }
-        $url = '';
         $url = esc_url( 'https://wordpress.org/plugins/woo-conditional-discount-rules-for-checkout/#reviews' );
         $plugin_meta[] = sprintf( '<a href="%s" target="_blank" style="color:#f5bb00;">%s</a>', $url, esc_html( '★★★★★' ) );
         return $plugin_meta;

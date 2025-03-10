@@ -68,9 +68,9 @@ $paction = filter_input( INPUT_GET, 'action', FILTER_SANITIZE_FULL_SPECIAL_CHARS
 $paction_id = filter_input( INPUT_GET, 'post', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
 if ( isset( $paction ) && $paction === 'edit' ) {
     $btnValue = __( 'Update', 'woo-conditional-discount-rules-for-checkout' );
-    $dpad_title = __( get_the_title( $paction_id ), 'woo-conditional-discount-rules-for-checkout' );
-    $getFeesCost = __( get_post_meta( $paction_id, 'dpad_settings_product_cost', true ), 'woo-conditional-discount-rules-for-checkout' );
-    $getFeesType = __( get_post_meta( $paction_id, 'dpad_settings_select_dpad_type', true ), 'woo-conditional-discount-rules-for-checkout' );
+    $dpad_title = get_the_title( $paction_id );
+    $getFeesCost = get_post_meta( $paction_id, 'dpad_settings_product_cost', true );
+    $getFeesType = get_post_meta( $paction_id, 'dpad_settings_select_dpad_type', true );
     $getFeesStartDate = get_post_meta( $paction_id, 'dpad_settings_start_date', true );
     $getFeesEndDate = get_post_meta( $paction_id, 'dpad_settings_end_date', true );
     $dpad_time_from = get_post_meta( $paction_id, 'dpad_time_from', true );
@@ -88,11 +88,11 @@ if ( isset( $paction ) && $paction === 'edit' ) {
     $getAdjustmentCost = 0;
     $getGetCategory = 0;
     $getUserLoginStatus = '';
-    $getDiscountMsg = ( get_post_meta( $paction_id, 'dpad_discount_msg_text', true ) ? __( get_post_meta( $paction_id, 'dpad_discount_msg_text', true ), 'woo-conditional-discount-rules-for-checkout' ) : '' );
+    $getDiscountMsg = ( get_post_meta( $paction_id, 'dpad_discount_msg_text', true ) ? get_post_meta( $paction_id, 'dpad_discount_msg_text', true ) : '' );
     $getDiscountMsgBgColor = ( get_post_meta( $paction_id, 'dpad_discount_msg_bg_color', true ) ? get_post_meta( $paction_id, 'dpad_discount_msg_bg_color', true ) : '#ffcaca' );
     $getDiscountMsgTextColor = ( get_post_meta( $paction_id, 'dpad_discount_msg_text_color', true ) ? get_post_meta( $paction_id, 'dpad_discount_msg_text_color', true ) : '#000000' );
-    $getSaleProduct = ( get_post_meta( $paction_id, 'dpad_sale_product', true ) ? __( get_post_meta( $paction_id, 'dpad_sale_product', true ), 'woo-conditional-discount-rules-for-checkout' ) : '' );
-    $getSelectedflg = ( get_post_meta( $paction_id, 'dpad_chk_discount_msg_selected_product', true ) ? __( get_post_meta( $paction_id, 'dpad_chk_discount_msg_selected_product', true ), 'woo-conditional-discount-rules-for-checkout' ) : '' );
+    $getSaleProduct = ( get_post_meta( $paction_id, 'dpad_sale_product', true ) ? get_post_meta( $paction_id, 'dpad_sale_product', true ) : '' );
+    $getSelectedflg = ( get_post_meta( $paction_id, 'dpad_chk_discount_msg_selected_product', true ) ? get_post_meta( $paction_id, 'dpad_chk_discount_msg_selected_product', true ) : '' );
     $getSelectedpd_lt = get_post_meta( $paction_id, 'dpad_selected_product_list', true );
     $get_select_dow = get_post_meta( $paction_id, 'dpad_select_day_of_week', true );
 } else {
@@ -276,6 +276,86 @@ echo esc_attr( get_woocommerce_currency_symbol() );
 ?>">
                         </div>
                         <?php 
+?>
+                            <div class="product_cost_right_div">
+                                <div class="applyperqty-boxone">
+                                    <div class="applyperqty-box">
+                                        <label for="dpad_chk_qty_price">
+                                            <?php 
+esc_html_e( 'Apply Per Quantity', 'woo-conditional-discount-rules-for-checkout' );
+?>
+                                            <span class="wdpad-pro-label"></span>
+                                            <?php 
+echo wp_kses( wc_help_tip( esc_html__( 'Apply this discount per quantity of products.', 'woo-conditional-discount-rules-for-checkout' ) ), array(
+    'span' => $allowed_tooltip_html,
+) );
+?>
+                                        </label>
+                                        <input type="checkbox" name="dpad_chk_qty_price" id="dpad_chk_qty_price" class="chk_qty_price_class" value="on">
+                                    </div>
+                                </div>
+                                <div class="applyperqty-boxtwo">
+                                    <div class="applyperqty-box">
+                                        <label for="apply_per_qty_type">
+                                            <?php 
+esc_html_e( 'Calculate Quantity Based On', 'woo-conditional-discount-rules-for-checkout' );
+?>
+                                            <span class="wdpad-pro-label"></span>
+                                            <?php 
+echo wp_kses( wc_help_tip( esc_html__( 'If you want to apply the discount for each quantity - where quantity should calculated based on product/category conditions, then select the "Product Based" option.', 'woo-conditional-discount-rules-for-checkout' ) . '<br/>' . esc_html__( 'If you want to apply the discount for each quantity in the customer\'s cart, then select the "Cart Based" option.', 'woo-conditional-discount-rules-for-checkout' ) ), array(
+    'span' => $allowed_tooltip_html,
+) );
+?>
+                                        </label>
+                                        <select name="dpad_per_qty" id="price_cartqty_based" class="chk_qty_price_class" id="apply_per_qty_type" disabled>
+                                            <option value="qty_cart_based"><?php 
+esc_html_e( 'Cart Based', 'woo-conditional-discount-rules-for-checkout' );
+?></option>
+                                            <option value="qty_product_based"><?php 
+esc_html_e( 'Product Based', 'woo-conditional-discount-rules-for-checkout' );
+?></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="applyperqty-boxthree">
+                                    <div class="applyperqty-box">
+                                        <label for="extra_product_cost">
+                                            <?php 
+/* translators: %s: currency symbol */
+printf( esc_html__( 'Discount per Additional Quantity (%s) ', 'woo-conditional-discount-rules-for-checkout' ), esc_html( get_woocommerce_currency_symbol() ) );
+?>
+                                            <span class="required-star">*</span>
+                                            <span class="wdpad-pro-label"></span>
+                                        </label>
+                                        <input type="text" name="extra_product_cost" class="text-class" id="extra_product_cost" required value="" placeholder="<?php 
+echo esc_attr( get_woocommerce_currency_symbol() );
+?>" disabled>
+                                    </div>
+                                    <div class="description dpad_dynamic_rules_tooltips">
+                                        <p><?php 
+esc_html_e( 'You can add a discount here to be charged for each additional quantity.', 'woo-conditional-discount-rules-for-checkout' );
+?></p>
+                                        <div class="dpad_dynamic_rules_content">
+                                        <?php 
+echo sprintf( wp_kses( __( 'For example, if a user adds 3 items and you\'ve set a $10 discount with a $5 discount for each additional item, the total extra discount would be = $10+$5+$5 = $20. <br/><br/> The quantity calculation depends on your choice in the "Calculate Quantity Based On" dropdown. If you choose "Product Based," quantities are calculated based on products that meet the discount conditions. If there are more than 1 such product in the cart, the discount applies only to the additional quantities. For instance, if there are 5 items in the cart and 3 qualify for the discount, the additional discount of $5 applies to 2 items, not all 5.', 'woo-conditional-discount-rules-for-checkout' ), array(
+    'br'     => array(),
+    'a'      => array(
+        'href'   => array(),
+        'title'  => array(),
+        'target' => array(),
+        'class'  => array(),
+    ),
+    'span'   => array(
+        'class' => array(),
+    ),
+    'strong' => array(),
+) ) );
+?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php 
 ?>
                     </td>
                 </tr>
@@ -600,8 +680,10 @@ if ( isset( $productFeesArray ) && !empty( $productFeesArray ) ) {
         ?>><?php 
         esc_html_e( 'Product', 'woo-conditional-discount-rules-for-checkout' );
         ?></option>
-                                                <option value="variableproduct_in_pro"><?php 
-        esc_html_e( 'Variable Product 🔒', 'woo-conditional-discount-rules-for-checkout' );
+                                                <option value="variableproduct" <?php 
+        echo ( $dpad_conditions === 'variableproduct' ? 'selected' : '' );
+        ?>><?php 
+        esc_html_e( 'Variable Product', 'woo-conditional-discount-rules-for-checkout' );
         ?></option>
                                                 <option value="category" <?php 
         echo ( $dpad_conditions === 'category' ? 'selected' : '' );
@@ -610,6 +692,9 @@ if ( isset( $productFeesArray ) && !empty( $productFeesArray ) ) {
         ?></option>
                                                 <option value="tag_in_pro"><?php 
         esc_html_e( 'Tag 🔒', 'woo-conditional-discount-rules-for-checkout' );
+        ?></option>
+                                                <option value="brand_in_pro"><?php 
+        esc_html_e( 'Brand 🔒', 'woo-conditional-discount-rules-for-checkout' );
         ?></option>
                                                 <option value="product_qty_in_pro"><?php 
         esc_html_e( 'Product\'s quantity 🔒', 'woo-conditional-discount-rules-for-checkout' );
@@ -773,6 +858,8 @@ if ( isset( $productFeesArray ) && !empty( $productFeesArray ) ) {
             $html .= $admin_object->wdpad_get_country_list( $i, $condtion_value );
         } elseif ( 'product' === $dpad_conditions ) {
             $html .= $admin_object->wdpad_get_product_list( $i, $condtion_value, 'edit' );
+        } elseif ( $dpad_conditions === 'variableproduct' ) {
+            $html .= $admin_object->wdpad_get_varible_product_list( $i, $condtion_value, 'edit' );
         } elseif ( 'category' === $dpad_conditions ) {
             $html .= $admin_object->wdpad_get_category_list( $i, $condtion_value );
         } elseif ( 'user' === $dpad_conditions ) {
@@ -843,14 +930,17 @@ if ( isset( $productFeesArray ) && !empty( $productFeesArray ) ) {
                                             <option value="product"><?php 
     esc_html_e( 'Product', 'woo-conditional-discount-rules-for-checkout' );
     ?></option>
-                                            <option value="variableproduct_in_pro"><?php 
-    esc_html_e( 'Variable Product 🔒', 'woo-conditional-discount-rules-for-checkout' );
+                                            <option value="variableproduct"><?php 
+    esc_html_e( 'Variable Product', 'woo-conditional-discount-rules-for-checkout' );
     ?></option>
                                             <option value="category"><?php 
     esc_html_e( 'Category', 'woo-conditional-discount-rules-for-checkout' );
     ?></option>
                                             <option value="tag_in_pro"><?php 
     esc_html_e( 'Tag 🔒', 'woo-conditional-discount-rules-for-checkout' );
+    ?></option>
+                                            <option value="brand_in_pro"><?php 
+    esc_html_e( 'Brand 🔒', 'woo-conditional-discount-rules-for-checkout' );
     ?></option>
                                             <option value="product_qty_in_pro"><?php 
     esc_html_e( 'Product\'s quantity 🔒', 'woo-conditional-discount-rules-for-checkout' );

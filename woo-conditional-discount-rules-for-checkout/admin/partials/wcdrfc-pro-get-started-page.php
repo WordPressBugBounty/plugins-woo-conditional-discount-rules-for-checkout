@@ -15,6 +15,7 @@ require_once(plugin_dir_path( __FILE__ ).'header/plugin-header.php' );
             <p>
                 <?php 
                 echo sprintf(
+                    /* translators: %s: YouTube channel anchor tag */
                     esc_html__('To help you get started, watch the quick tour video on the right. For more help, explore our help documents or visit our %s for detailed video tutorials.', 'woo-conditional-discount-rules-for-checkout'),
                     '<a href="' . esc_url('https://www.youtube.com/@Dotstore16') . '" target="_blank">' . esc_html__('YouTube channel', 'woo-conditional-discount-rules-for-checkout') . '</a>',
                 );

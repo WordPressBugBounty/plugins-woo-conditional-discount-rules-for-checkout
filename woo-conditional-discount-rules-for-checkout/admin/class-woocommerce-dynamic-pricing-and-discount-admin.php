@@ -202,7 +202,7 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
                 'note'                           => esc_html__( 'Note: ', 'woo-conditional-discount-rules-for-checkout' ),
                 'warning_msg6'                   => esc_html__( 'You need to select product specific option in Discount Rules for product based option', 'woo-conditional-discount-rules-for-checkout' ),
                 'error_msg'                      => esc_html__( 'Please add Discount Rules value', 'woo-conditional-discount-rules-for-checkout' ),
-                'warning_msg_per_qty'            => esc_html__( 'Please choose atleast one product or product variation or category or tag condition', 'woo-conditional-discount-rules-for-checkout' ),
+                'warning_msg_per_qty'            => esc_html__( 'Please choose atleast one product or product variation or category condition', 'woo-conditional-discount-rules-for-checkout' ),
                 'discount_cost_msg'              => esc_html__( 'Please add discount value which will apply on cart/checkout.', 'woo-conditional-discount-rules-for-checkout' ),
                 'select_country'                 => esc_html__( 'Select a Country', 'woo-conditional-discount-rules-for-checkout' ),
                 'select_product'                 => esc_html__( 'Select a Product', 'woo-conditional-discount-rules-for-checkout' ),
@@ -398,6 +398,13 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
             $html .= 'textarea';
         } elseif ( $condition === 'product' ) {
             $html .= wp_json_encode( $this->wdpad_get_product_list(
+                $count,
+                [],
+                '',
+                true
+            ) );
+        } elseif ( $condition === 'variableproduct' ) {
+            $html .= wp_json_encode( $this->wdpad_get_varible_product_list(
                 $count,
                 [],
                 '',
@@ -671,6 +678,65 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
     }
 
     /**
+     * Function for select product list
+     *
+     */
+    public function wdpad_get_varible_product_list(
+        $count = '',
+        $selected = array(),
+        $action = '',
+        $json = false
+    ) {
+        global $sitepress;
+        if ( !empty( $sitepress ) ) {
+            $default_lang = $sitepress->get_default_language();
+        }
+        $post_in = '';
+        if ( 'edit' === $action ) {
+            $post_in = $selected;
+            $posts_per_page = -1;
+        } else {
+            $post_in = '';
+            $posts_per_page = 10;
+        }
+        $product_args = array(
+            'post_type'      => 'product_variation',
+            'post_status'    => 'publish',
+            'orderby'        => 'ID',
+            'order'          => 'ASC',
+            'post__in'       => $post_in,
+            'posts_per_page' => $posts_per_page,
+        );
+        $get_all_products = new WP_Query($product_args);
+        $html = '<select id="var-product-filter-' . $count . '" rel-id="' . $count . '" name="dpad[product_dpad_conditions_values][value_' . $count . '][]" class="product_var_filter_select2 product_discount_select product_dpad_conditions_values multiselect2" multiple="multiple">';
+        if ( isset( $get_all_products->posts ) && !empty( $get_all_products->posts ) ) {
+            foreach ( $get_all_products->posts as $get_all_product ) {
+                if ( !empty( $sitepress ) ) {
+                    $new_product_id = apply_filters(
+                        'wpml_object_id',
+                        $get_all_product->ID,
+                        'product',
+                        true,
+                        $default_lang
+                    );
+                } else {
+                    $new_product_id = $get_all_product->ID;
+                }
+                $selected = array_map( 'intval', $selected );
+                $selectedVal = ( is_array( $selected ) && !empty( $selected ) && in_array( $new_product_id, $selected, true ) ? 'selected=selected' : '' );
+                if ( $selectedVal !== '' ) {
+                    $html .= '<option value="' . $new_product_id . '" ' . $selectedVal . '>' . '#' . $new_product_id . ' - ' . get_the_title( $new_product_id ) . '</option>';
+                }
+            }
+        }
+        $html .= '</select>';
+        if ( $json ) {
+            return [];
+        }
+        return $html;
+    }
+
+    /**
      * Function for select cat list
      *
      * @param string $count
@@ -813,6 +879,26 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
     }
 
     /**
+     * Optimized the query for search product title
+     * 
+     * @param string $where
+     * @param object $wp_query
+     * 
+     * @return string
+     * 
+     * @since 2.5.1
+     */
+    public function wdpad_posts_where( $where, $wp_query ) {
+        global $wpdb;
+        $search_term = $wp_query->get( 'search_pro_title' );
+        if ( !empty( $search_term ) ) {
+            $search_term_like = $wpdb->esc_like( $search_term );
+            $where .= ' AND ' . $wpdb->posts . '.post_title LIKE \'%' . esc_sql( $search_term_like ) . '%\'';
+        }
+        return $where;
+    }
+
+    /**
      * Get simple and variable products on Ajax
      *
      * @since 1.0.0
@@ -836,16 +922,6 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
         $offset = ( isset( $offset ) ? intval( $offset ) : 0 );
         $baselang_simple_product_ids = array();
         $baselang_variation_product_ids = array();
-        function wdpad_posts_where(  $where, $wp_query  ) {
-            global $wpdb;
-            $search_term = $wp_query->get( 'search_pro_title' );
-            if ( !empty( $search_term ) ) {
-                $search_term_like = $wpdb->esc_like( $search_term );
-                $where .= ' AND ' . $wpdb->posts . '.post_title LIKE \'%' . esc_sql( $search_term_like ) . '%\'';
-            }
-            return $where;
-        }
-
         $product_args = array(
             'post_type'        => array('product', 'product_variation'),
             'posts_per_page'   => $posts_per_page,
@@ -857,14 +933,14 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
         );
         add_filter(
             'posts_where',
-            'wdpad_posts_where',
+            array($this, 'wdpad_posts_where'),
             10,
             2
         );
         $get_wp_query = new WP_Query($product_args);
         remove_filter(
             'posts_where',
-            'wdpad_posts_where',
+            array($this, 'wdpad_posts_where'),
             10,
             2
         );
@@ -927,16 +1003,6 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
         $posts_per_page = ( isset( $posts_per_page ) ? intval( $posts_per_page ) : 10 );
         $offset = ( isset( $offset ) ? intval( $offset ) : 0 );
         $baselang_product_ids = array();
-        function wdpad_posts_where(  $where, $wp_query  ) {
-            global $wpdb;
-            $search_term = $wp_query->get( 'search_pro_title' );
-            if ( isset( $search_term ) ) {
-                $search_term_like = $wpdb->esc_like( $search_term );
-                $where .= ' AND ' . $wpdb->posts . '.post_title LIKE \'%' . esc_sql( $search_term_like ) . '%\'';
-            }
-            return $where;
-        }
-
         $product_args = array(
             'post_type'      => 'product',
             'posts_per_page' => $posts_per_page,
@@ -949,14 +1015,14 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
         );
         add_filter(
             'posts_where',
-            'wdpad_posts_where',
+            array($this, 'wdpad_posts_where'),
             10,
             2
         );
         $wp_query = new WP_Query($product_args);
         remove_filter(
             'posts_where',
-            'wdpad_posts_where',
+            array($this, 'wdpad_posts_where'),
             10,
             2
         );
@@ -1019,16 +1085,6 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
         if ( !empty( $sitepress ) ) {
             $default_lang = $sitepress->get_default_language();
         }
-        function wdpad_posts_wheres(  $where, $wp_query  ) {
-            global $wpdb;
-            $search_term = $wp_query->get( 'search_pro_title' );
-            if ( isset( $search_term ) ) {
-                $search_term_like = $wpdb->esc_like( $search_term );
-                $where .= ' AND ' . $wpdb->posts . '.post_title LIKE \'%' . esc_sql( $search_term_like ) . '%\'';
-            }
-            return $where;
-        }
-
         $product_args = array(
             'post_type'        => 'product',
             'posts_per_page'   => $posts_per_page,
@@ -1040,14 +1096,14 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
         );
         add_filter(
             'posts_where',
-            'wdpad_posts_wheres',
+            array($this, 'wdpad_posts_where'),
             10,
             2
         );
         $get_all_products = new WP_Query($product_args);
         remove_filter(
             'posts_where',
-            'wdpad_posts_wheres',
+            array($this, 'wdpad_posts_wheres'),
             10,
             2
         );
@@ -1095,6 +1151,7 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
     function wdpad_admin_footer_review() {
         $url = '';
         $url = esc_url( 'https://wordpress.org/plugins/woo-conditional-discount-rules-for-checkout/#reviews' );
+        // translators: %1$s: URL
         $html = sprintf( wp_kses( __( '<strong>We need your support</strong> to keep updating and improving the plugin. Please <a href="%1$s" target="_blank">help us by leaving a good review</a> :) Thanks!', 'woo-conditional-discount-rules-for-checkout' ), array(
             'strong' => array(),
             'a'      => array(

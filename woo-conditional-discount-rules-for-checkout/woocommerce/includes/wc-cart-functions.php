@@ -104,11 +104,13 @@ function wc_add_to_cart_message($products, $show_qty = false) {
     }
 
     foreach ($products as $product_id => $qty) {
+        /* translators: %s: product name */
         $titles[] = ( $qty > 1 ? absint($qty) . ' &times; ' : '' ) . sprintf(_x('&ldquo;%s&rdquo;', 'Item name in quotes', 'woo-conditional-discount-rules-for-checkout'), wp_strip_all_tags(get_the_title($product_id)));
         $count += $qty;
     }
 
     $titles = array_filter($titles);
+    /* translators: %s: product name */
     $added_text = sprintf(_n('%s has been added to your cart.', '%s have been added to your cart.', $count, 'woo-conditional-discount-rules-for-checkout'), wc_format_list_of_items($titles));
 
     // Output success messages
@@ -212,6 +214,7 @@ function wc_cart_totals_shipping_html() {
             'available_methods' => $package['rates'],
             'show_package_details' => sizeof($packages) > 1,
             'package_details' => implode(', ', $product_names),
+            /* translators: %d: shipping package name */
             'package_name' => apply_filters('woocommerce_shipping_package_name', sprintf(_n('Shipping', 'Shipping %d', ( $i + 1), 'woo-conditional-discount-rules-for-checkout'), ( $i + 1)), $i, $package),
             'index' => $i,
             'chosen_method' => $chosen_method
@@ -302,7 +305,9 @@ function wc_cart_totals_order_total_html() {
 
         if (!empty($tax_string_array)) {
             $taxable_address = WC()->customer->get_taxable_address();
+            /* translators: %s: country name */
             $estimated_text = WC()->customer->is_customer_outside_base() && !WC()->customer->has_calculated_shipping() ? sprintf(' ' . __('estimated for %s', 'woo-conditional-discount-rules-for-checkout'), WC()->countries->estimated_for_prefix($taxable_address[0]) . WC()->countries->countries[$taxable_address[0]]) : '';
+            /* translators: %s: tax information */
             $value .= '<small class="includes_tax">' . sprintf(__('(includes %s)', 'woo-conditional-discount-rules-for-checkout'), implode(', ', $tax_string_array) . $estimated_text) . '</small>';
         }
     }

@@ -191,7 +191,7 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
             $cart_based_qty += $woo_cart_item_for_qty['quantity'];
         }
         $dpad_title = get_the_title( $dpad_id );
-        $title = ( !empty( $dpad_title ) ? __( $dpad_title, 'woo-conditional-discount-rules-for-checkout' ) : __( 'Fee', 'woo-conditional-discount-rules-for-checkout' ) );
+        $title = ( !empty( $dpad_title ) ? $dpad_title : __( 'Fee', 'woo-conditional-discount-rules-for-checkout' ) );
         $getFeesCostOriginal = get_post_meta( $dpad_id, 'dpad_settings_product_cost', true );
         $getFeeType = get_post_meta( $dpad_id, 'dpad_settings_select_dpad_type', true );
         if ( isset( $woocommerce_wpml ) && !empty( $woocommerce_wpml->multi_currency ) ) {
@@ -270,6 +270,7 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
             $variableproduct_array = array();
             $category_array = array();
             $tag_array = array();
+            $brand_array = array();
             $product_qty_array = array();
             $product_count_array = array();
             $user_array = array();
@@ -315,6 +316,9 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
                 }
                 if ( array_search( 'tag', $value, true ) ) {
                     $tag_array[$key] = $value;
+                }
+                if ( array_search( 'brand', $value, true ) ) {
+                    $brand_array[$key] = $value;
                 }
                 if ( array_search( 'product_qty', $value, true ) ) {
                     $product_qty_array[$key] = $value;
@@ -402,6 +406,21 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
                     $is_passed['has_dpad_based_on_product'] = 'yes';
                 } else {
                     $is_passed['has_dpad_based_on_product'] = 'no';
+                }
+            }
+            //Check if is variable product exist
+            if ( is_array( $variableproduct_array ) && isset( $variableproduct_array ) && !empty( $variableproduct_array ) && !empty( $cart_array ) ) {
+                $variable_prd_passed = $this->wdpad_match_variable_products_rule(
+                    $cart_array,
+                    $variableproduct_array,
+                    $sale_product_check,
+                    $general_rule_match,
+                    $default_lang
+                );
+                if ( 'yes' === $variable_prd_passed ) {
+                    $is_passed['has_dpad_based_on_variable_product'] = 'yes';
+                } else {
+                    $is_passed['has_dpad_based_on_variable_product'] = 'no';
                 }
             }
             //Check if is Category exist
@@ -759,6 +778,78 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
             }
         }
         $main_is_passed = $this->dpad_check_all_passed_general_rule( $is_passed, 'has_dpad_based_on_product', $general_rule_match );
+        return $main_is_passed;
+    }
+
+    /**
+     * Match variable products rules
+     *
+     * @param array $cart_product_ids_array
+     * @param array $variableproduct_array
+     * * @param string $general_rule_match
+     *
+     * @return string $main_is_passed
+     *
+     * @since    1.3.3
+     *
+     */
+    public function wdpad_match_variable_products_rule(
+        $cart_array,
+        $variableproduct_array,
+        $sale_product_check,
+        $general_rule_match,
+        $default_lang
+    ) {
+        global $sitepress;
+        $is_passed = array();
+        $cart_products_array = array();
+        $cart_product = $this->dpad_array_column( $cart_array, 'variation_id' );
+        $product_ids_on_sale = wc_get_product_ids_on_sale();
+        if ( "exclude" === $sale_product_check ) {
+            $cart_product = array_diff( $cart_product, $product_ids_on_sale );
+        }
+        if ( isset( $cart_product ) && !empty( $cart_product ) ) {
+            foreach ( $cart_product as $key => $cart_product_id ) {
+                if ( !empty( $sitepress ) ) {
+                    $cart_products_array[] = apply_filters(
+                        'wpml_object_id',
+                        $cart_product_id,
+                        'product',
+                        true,
+                        $default_lang
+                    );
+                } else {
+                    $cart_products_array[] = $cart_product_id;
+                }
+            }
+        }
+        foreach ( $variableproduct_array as $key => $product ) {
+            if ( !empty( $product['product_dpad_conditions_values'] ) ) {
+                if ( $product['product_dpad_conditions_is'] === 'is_equal_to' ) {
+                    foreach ( $product['product_dpad_conditions_values'] as $product_id ) {
+                        settype( $product_id, 'integer' );
+                        if ( in_array( $product_id, dpad_convert_array_to_int( $cart_products_array ), true ) ) {
+                            $is_passed[$key]['has_dpad_based_on_variable_product'] = 'yes';
+                            break;
+                        } else {
+                            $is_passed[$key]['has_dpad_based_on_variable_product'] = 'no';
+                        }
+                    }
+                }
+                if ( $product['product_dpad_conditions_is'] === 'not_in' ) {
+                    foreach ( $product['product_dpad_conditions_values'] as $product_id ) {
+                        settype( $product_id, 'integer' );
+                        if ( in_array( $product_id, dpad_convert_array_to_int( $cart_products_array ), true ) ) {
+                            $is_passed[$key]['has_dpad_based_on_variable_product'] = 'no';
+                            break;
+                        } else {
+                            $is_passed[$key]['has_dpad_based_on_variable_product'] = 'yes';
+                        }
+                    }
+                }
+            }
+        }
+        $main_is_passed = $this->dpad_check_all_passed_general_rule( $is_passed, 'has_dpad_based_on_variable_product', $general_rule_match );
         return $main_is_passed;
     }
 
@@ -1161,7 +1252,7 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
                     if ( !empty( $getMsgChecked ) && "on" === $getMsgChecked ) {
                         $discount_msg_bg_color = ( get_post_meta( $discount_id, 'dpad_discount_msg_bg_color', true ) ? get_post_meta( $discount_id, 'dpad_discount_msg_bg_color', true ) : '#ffcaca' );
                         $discount_msg_text_color = ( get_post_meta( $discount_id, 'dpad_discount_msg_text_color', true ) ? get_post_meta( $discount_id, 'dpad_discount_msg_text_color', true ) : '#000000' );
-                        $getDiscountMsg = esc_html__( get_post_meta( $discount_id, 'dpad_discount_msg_text', true ), 'woo-conditional-discount-rules-for-checkout' );
+                        $getDiscountMsg = ( get_post_meta( $discount_id, 'dpad_discount_msg_text', true ) ? get_post_meta( $discount_id, 'dpad_discount_msg_text', true ) : '' );
                         $discount_msg_show = false;
                         if ( !empty( $forSpecificProduct ) && 'on' === $forSpecificProduct ) {
                             $selectedProductList = (array) get_post_meta( $discount_id, 'dpad_selected_product_list', true );
@@ -1717,6 +1808,79 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
                         }
                     }
                 }
+                if ( array_search( 'brand', $condition, true ) ) {
+                    // Brand Condition Start
+                    $final_cart_products_brand_ids = array();
+                    $cart_final_brand_products_array = array();
+                    $product_dpad_conditions_values = ( isset( $condition['product_dpad_conditions_values'] ) && !empty( $condition['product_dpad_conditions_values'] ) ? array_map( 'intval', $condition['product_dpad_conditions_values'] ) : array() );
+                    $all_brands = get_terms( array(
+                        'taxonomy' => 'product_brand',
+                        'fields'   => 'ids',
+                    ) );
+                    if ( 'is_equal_to' === $condition['product_dpad_conditions_is'] ) {
+                        if ( !empty( $product_dpad_conditions_values ) ) {
+                            foreach ( $product_dpad_conditions_values as $brand_id ) {
+                                $final_cart_products_brand_ids[] = $brand_id;
+                            }
+                        }
+                    } elseif ( 'not_in' === $condition['product_dpad_conditions_is'] ) {
+                        if ( !empty( $product_dpad_conditions_values ) ) {
+                            $final_cart_products_brand_ids = array_diff( $all_brands, $product_dpad_conditions_values );
+                        }
+                    }
+                    $final_cart_products_brand_ids = array_map( 'intval', $final_cart_products_brand_ids );
+                    $brands = array();
+                    $cart_value_array = array();
+                    foreach ( $cart_array as $value ) {
+                        if ( !empty( $value['variation_id'] ) && 0 !== $value['variation_id'] ) {
+                            $product_id = $value['variation_id'];
+                        } else {
+                            $product_id = $value['product_id'];
+                        }
+                        $_product = wc_get_product( $product_id );
+                        $line_item_subtotal = (float) $this->dpad_remove_currency( WC()->cart->get_product_subtotal( $_product, $value['quantity'] ) );
+                        $cart_value_array[] = $value;
+                        $brand_ids = wp_get_post_terms( $value['product_id'], 'product_brand', array(
+                            'fields' => 'ids',
+                        ) );
+                        foreach ( $brand_ids as $brand_id ) {
+                            $prod_qty = ( $value['quantity'] ? $value['quantity'] : 0 );
+                            if ( false !== strpos( $_product->get_type(), 'bundle' ) ) {
+                                $prod_qty = 0;
+                            }
+                            $product_id = ( $value['variation_id'] ? $value['variation_id'] : $product_id );
+                            if ( in_array( $brand_id, $final_cart_products_brand_ids, true ) ) {
+                                if ( array_key_exists( $product_id, $brands ) && array_key_exists( $brand_id, $brands[$product_id] ) ) {
+                                    $term_data_explode = explode( "||", $brands[$product_id][$brand_id] );
+                                    $cart_term_qty = json_decode( $term_data_explode[0] );
+                                    $prod_qty += $cart_term_qty;
+                                }
+                                $brands[$product_id][$brand_id] = $prod_qty . "||" . $line_item_subtotal;
+                            }
+                        }
+                    }
+                    foreach ( $brands as $cart_product_key => $main_brand_data ) {
+                        foreach ( $main_brand_data as $cart_brand_id => $brand_data ) {
+                            $brand_data_explode = explode( "||", $brand_data );
+                            $cart_brand_qty = json_decode( $brand_data_explode[0] );
+                            $cart_brand_subtotal = json_decode( $brand_data_explode[1] );
+                            if ( !empty( $final_cart_products_brand_ids ) ) {
+                                if ( in_array( $cart_brand_id, $final_cart_products_brand_ids, true ) ) {
+                                    $cart_final_brand_products_array[$cart_product_key][$cart_brand_id] = $cart_brand_qty . "||" . $cart_brand_subtotal;
+                                }
+                            }
+                        }
+                    }
+                    if ( !empty( $cart_final_brand_products_array ) ) {
+                        foreach ( $cart_final_brand_products_array as $prd_id => $main_cart_item ) {
+                            foreach ( $main_cart_item as $term_id => $cart_item ) {
+                                $cart_item_explode = explode( "||", $cart_item );
+                                $all_rule_check[$prd_id]['qty'] = $cart_item_explode[0];
+                                $all_rule_check[$prd_id]['subtotal'] = $cart_item_explode[1];
+                            }
+                        }
+                    }
+                }
             }
         }
         if ( !empty( $all_rule_check ) ) {
@@ -1982,6 +2146,51 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
                         foreach ( $tag_ids as $tag_id ) {
                             $product_id = ( $value['variation_id'] ? $value['variation_id'] : $product_id );
                             if ( in_array( $tag_id, $final_cart_products_tag_ids, true ) ) {
+                                if ( !array_key_exists( $product_id, $cart_final_products_array ) ) {
+                                    $final_count++;
+                                    $cart_final_products_array[$product_id] = $final_count;
+                                }
+                            }
+                        }
+                    }
+                }
+                if ( array_search( 'brand', $condition, true ) ) {
+                    // brand Condition Start
+                    $final_cart_products_brand_ids = array();
+                    $product_dpad_conditions_values = ( isset( $condition['product_dpad_conditions_values'] ) && !empty( $condition['product_dpad_conditions_values'] ) ? array_map( 'intval', $condition['product_dpad_conditions_values'] ) : array() );
+                    $all_brands = get_terms( array(
+                        'taxonomy' => 'product_brand',
+                        'fields'   => 'ids',
+                    ) );
+                    if ( 'is_equal_to' === $condition['product_dpad_conditions_is'] ) {
+                        if ( !empty( $product_dpad_conditions_values ) ) {
+                            foreach ( $product_dpad_conditions_values as $brand_id ) {
+                                $final_cart_products_brand_ids[] = $brand_id;
+                            }
+                        }
+                    } elseif ( 'not_in' === $condition['product_dpad_conditions_is'] ) {
+                        if ( !empty( $product_dpad_conditions_values ) ) {
+                            $final_cart_products_brand_ids = array_diff( $all_brands, $product_dpad_conditions_values );
+                        }
+                    }
+                    $final_cart_products_brand_ids = array_map( 'intval', $final_cart_products_brand_ids );
+                    $cart_value_array = array();
+                    $cart_final_products_array = array();
+                    foreach ( $cart_array as $value ) {
+                        if ( !empty( $value['variation_id'] ) && 0 !== $value['variation_id'] ) {
+                            $product_id = $value['variation_id'];
+                        } else {
+                            $product_id = $value['product_id'];
+                        }
+                        $_product = wc_get_product( $product_id );
+                        $line_item_subtotal = (float) $value['line_subtotal'] + (float) $value['line_subtotal_tax'];
+                        $cart_value_array[] = $value;
+                        $brand_ids = wp_get_post_terms( $value['product_id'], 'product_brand', array(
+                            'fields' => 'ids',
+                        ) );
+                        foreach ( $brand_ids as $brand_id ) {
+                            $product_id = ( $value['variation_id'] ? $value['variation_id'] : $product_id );
+                            if ( in_array( $brand_id, $final_cart_products_brand_ids, true ) ) {
                                 if ( !array_key_exists( $product_id, $cart_final_products_array ) ) {
                                     $final_count++;
                                     $cart_final_products_array[$product_id] = $final_count;

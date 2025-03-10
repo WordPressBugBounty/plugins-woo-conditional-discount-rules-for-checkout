@@ -1,20 +1,20 @@
 <?php
 
 /**
- * Plugin Name: Dynamic Pricing and Discount Rules for WooCommerce
- * Plugin URI:        https://www.thedotstore.com/woocommerce-conditional-discount-rules-for-checkout/
- * Description:       With this plugin, you can create and manage complex discount rules in WooCommerce store without the help of a developer.
- * Version:           2.5.0
- * Author:            theDotstore
- * Author URI:        https://www.thedotstore.com/
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       woo-conditional-discount-rules-for-checkout
- * Domain Path:       /languages
- * Requires Plugins:  woocommerce
+ * Plugin Name:         Dynamic Pricing and Discount Rules for WooCommerce
+ * Plugin URI:          https://www.thedotstore.com/woocommerce-conditional-discount-rules-for-checkout/
+ * Description:         With this plugin, you can create and manage complex discount rules in WooCommerce store without the help of a developer.
+ * Version:             2.5.1
+ * Author:              theDotstore
+ * Author URI:          https://www.thedotstore.com/
+ * License:             GPL-2.0+
+ * License URI:         http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:         woo-conditional-discount-rules-for-checkout
+ * Domain Path:         /languages
+ * Requires Plugins:    woocommerce
  * 
- * WP tested up to:     6.6.1
- * WC tested up to:     9.1.4
+ * Tested up to:        6.7.2
+ * WC tested up to:     9.6.2
  * Requires PHP:        7.2
  * Requires at least:   5.0
  * 
@@ -34,6 +34,7 @@ if ( function_exists( 'wcdrfc_fs' ) ) {
             if ( !isset( $wcdrfc_fs ) ) {
                 // Include Freemius SDK.
                 require_once dirname( __FILE__ ) . '/freemius/start.php';
+                // @phpstan-ignore-next-line
                 $wcdrfc_fs = fs_dynamic_init( array(
                     'id'               => '3790',
                     'slug'             => 'woocommerce-conditional-discount-rules-for-checkout',
@@ -243,7 +244,7 @@ if ( !defined( 'WDPAD_PLUGIN_NAME' ) ) {
     define( 'WDPAD_PLUGIN_NAME', 'Dynamic Pricing and Discount Rules' );
 }
 if ( !defined( 'WDPAD_PLUGIN_VERSION' ) ) {
-    define( 'WDPAD_PLUGIN_VERSION', 'v2.5.0' );
+    define( 'WDPAD_PLUGIN_VERSION', 'v2.5.1' );
 }
 if ( !defined( 'WDPAD_PLUGIN_URL' ) ) {
     define( 'WDPAD_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -364,6 +365,7 @@ if ( !function_exists( 'wcdrcp_plugin_admin_notice' ) ) {
         <div class="error">
             <p>
                 <?php 
+        /* translators: %1$s: our plugin name, %2$s: WooCommerce plugin name */
         echo sprintf( esc_html__( '%1$s requires %2$s to be installed & activated!', 'woo-conditional-discount-rules-for-checkout' ), '<strong>' . esc_html( $vpe_plugin ) . '</strong>', '<a href="' . esc_url( 'https://wordpress.org/plugins/woocommerce/' ) . '" target="_blank"><strong>' . esc_html( $wc_plugin ) . '</strong></a>' );
         ?>
             </p>

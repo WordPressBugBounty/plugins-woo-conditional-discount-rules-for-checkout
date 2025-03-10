@@ -1,7 +1,9 @@
 (function( $ ) {
     $( window ).load( function() {
         // Integrate select2
-        jQuery( '.multiselect2' ).select2();
+        jQuery( '.multiselect2' ).select2({
+            closeOnSelect: false,
+        });
 
         // Add placeholder for conditional fields
         jQuery('#tbl-product-fee tr').each(function() {
@@ -14,7 +16,8 @@
             } else if( jQuery(this).find('.condition-value select').length ){
                 //Select 2 fields
                 jQuery(this).find('.condition-value select').select2({
-                    placeholder: get_placehoder
+                    placeholder: get_placehoder,
+                    closeOnSelect: false,
                 });
             } else {
                 //Input fields
@@ -29,6 +32,7 @@
 
         // Integrate select for products condition
         jQuery('.product_filter_select2').select2(select2object('wdpad_product_dpad_conditions_values_product'));
+        jQuery('.product_var_filter_select2').select2(select2object('wdpad_product_dpad_conditions_varible_values_product'));
 
         $( '#dpad_settings_start_date' ).datepicker( {
             dateFormat: 'dd-mm-yy',
@@ -223,9 +227,10 @@
                     'attributes' : {'label' :'Product Specific'},
                     'options' :[
                         {'name': 'Product','attributes' : {'value':'product'} },
-                        {'name': 'Variable Product 🔒','attributes' : {'value':'variableproduct_in_pro'} },
+                        {'name': 'Variable Product','attributes' : {'value':'variableproduct'} },
                         {'name': 'Category','attributes' : {'value':'category'} },
                         {'name': 'Tag 🔒','attributes' : {'value':'tag_in_pro'} },
+                        {'name': 'Brand 🔒','attributes' : {'value':'brand_in_pro'} },
                         {'name': 'Product\'s quantity 🔒', 'attributes': {'value' : 'product_qty_in_pro'} },
                         {'name': 'Product\'s count', 'attributes': {'value' : 'product_count'} },
                     ]
@@ -335,10 +340,15 @@
                 if(condition === 'product'){
                     condition_values_id = 'product-filter';
                 }
+                if(condition === 'variableproduct'){
+                    condition_values_id='var-product-filter';
+                }
 
                 var product_condition_class;
                 if ( condition === 'product' ) {
                     product_condition_class = 'product_filter_select2';
+                } else if ( condition === 'variableproduct' ) {
+                    product_condition_class = 'product_var_filter_select2';
                 } else {
                     product_condition_class = '';
                 }
@@ -411,9 +421,12 @@
                 var selectCoundition = coditional_vars['select_' + condition];
                 if ( condition === 'product' ) {
                     $( '.multiselect2_' + count + '_' + condition ).select2(select2object('wdpad_product_dpad_conditions_values_product'));
+                } else if( condition === 'variableproduct' ) {
+                    $( '.multiselect2_' + count + '_' + condition ).select2(select2object('wdpad_product_dpad_conditions_varible_values_product'));
                 } else {
                     $( '.multiselect2_' + count + '_' + condition ).select2({
-                        placeholder: selectCoundition
+                        placeholder: selectCoundition,
+                        closeOnSelect: false,
                     });
                 }
 
@@ -492,6 +505,7 @@
         function select2object(ajaxtype){
             return {
                 minimumInputLength: 3,
+                closeOnSelect: false,
                 placeholder: coditional_vars.select_product,
                 ajax: {
                     url: ajaxurl,
@@ -592,7 +606,8 @@
         } );
 
         $( '.product_dpad_conditions_values_country' ).select2({
-			placeholder: coditional_vars.select_country
+			placeholder: coditional_vars.select_country,
+            closeOnSelect: false,
 		});
 
         function get_all_products_and_variations_select_init(){
@@ -632,6 +647,7 @@
                 },
                 minimumInputLength: 3,
                 allowClear: true,
+                closeOnSelect: false,
                 placeholder: coditional_vars.select2_product_placeholder
             });
         }

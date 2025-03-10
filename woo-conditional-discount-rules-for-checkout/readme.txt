@@ -3,9 +3,9 @@ Contributors: dots, niravcse006, jariwalasagar
 Donate link: https://www.thedotstore.com/
 Tags: category discount, dynamic pricing, woocommerce discount, dynamic discounts, bulk discount
 Requires at least: 5.0
-Tested up to: 6.6.1
-WC tested up to: 9.1.4
-Stable tag: 2.5.0
+Tested up to: 6.7.2
+WC tested up to: 9.6.2
+Stable tag: 2.5.1
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -223,6 +223,13 @@ Automatic updates should work great for you.  As always, though, we recommend ba
 7. 
 
 == Changelog ==
+= 2.5.1 - 10-03-2025 =
+* [Fixed] - Resolved minor bugs to enhance stability  
+* [New] - Introduced variable product support in conditional rules  
+* [Enhancement] - Updated Freemius SDK to v2.11.0  
+* [Enhancement] - Ensured compatibility with WooCommerce 9.6.x  
+* [Enhancement] - Verified compatibility with WordPress 6.7.x  
+
 = 2.5.0 =
 * [Enhancement] Plugin UI Enhancement
 * [Enhancement] Compatible with WooCommerce 9.1.x

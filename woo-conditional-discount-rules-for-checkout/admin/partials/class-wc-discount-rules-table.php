@@ -160,6 +160,7 @@ if ( !class_exists( 'WC_Discount_Rules_Table' ) ) {
          * @param object $item
          *
          * @return string
+         * 
          * @since 1.0.0
          *
          */
@@ -173,7 +174,7 @@ if ( !class_exists( 'WC_Discount_Rules_Table' ) ) {
             $method_name = '<strong>
                             <a href="' . wp_nonce_url( $editurl, 'edit_' . $item->ID, 'cust_nonce' ) . '" class="row-title">' . esc_html( $item->post_title ) . '</a>
                         </strong>';
-            echo wp_kses( $method_name, allowed_html_tags() );
+            return wp_kses( $method_name, allowed_html_tags() );
         }
 
         /**
@@ -242,25 +243,22 @@ if ( !class_exists( 'WC_Discount_Rules_Table' ) ) {
          *
          * @param object $item
          *
-         * @return int|float
+         * @return int|float|string
          * @since 1.0.0
-         *
          */
         public function column_amount( $item ) {
             if ( 0 === $item->ID ) {
                 return esc_html__( 'null', 'woo-conditional-discount-rules-for-checkout' );
             }
             $amount = get_post_meta( $item->ID, 'dpad_settings_product_cost', true );
-            if ( !is_null( $amount ) && $amount >= 0 ) {
-                $amount_type = get_post_meta( $item->ID, 'dpad_settings_select_dpad_type', true );
-                if ( 'fixed' === $amount_type ) {
-                    return wc_price( $amount );
-                } else {
-                    return $amount . '%';
-                }
-            } else {
+            if ( is_null( $amount ) ) {
                 return esc_html__( 'N/As', 'woo-conditional-discount-rules-for-checkout' );
             }
+            $amount_type = get_post_meta( $item->ID, 'dpad_settings_select_dpad_type', true );
+            if ( 'fixed' !== $amount_type ) {
+                return $amount . '%';
+            }
+            return wc_price( $amount );
         }
 
         /**
@@ -349,7 +347,8 @@ if ( !class_exists( 'WC_Discount_Rules_Table' ) ) {
                 return esc_html__( 'Everywhere', 'woo-conditional-discount-rules-for-checkout' );
             }
             $date_obj = date_create( $item->post_date );
-            $new_format = sprintf( esc_html__( '%s at %s', 'woo-conditional-discount-rules-for-checkout' ), date_format( $date_obj, get_option( 'date_format' ) ), date_format( $date_obj, get_option( 'time_format' ) ) );
+            /* translators: %1$s: date format, %2$s: time format */
+            $new_format = sprintf( esc_html__( '%1$s at %2$s', 'woo-conditional-discount-rules-for-checkout' ), date_format( $date_obj, get_option( 'date_format' ) ), date_format( $date_obj, get_option( 'time_format' ) ) );
             return $new_format;
         }
 
@@ -376,7 +375,7 @@ if ( !class_exists( 'WC_Discount_Rules_Table' ) ) {
          */
         public function process_bulk_action() {
             global $plugin_public;
-            $delete_nonce = filter_input( INPUT_POST, '_wpnonce', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+            $delete_nonce = filter_input( INPUT_POST, 'sorting_conditional_fee', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
             $get_method_id_cb = filter_input(
                 INPUT_POST,
                 'method_id_cb',
@@ -388,8 +387,8 @@ if ( !class_exists( 'WC_Discount_Rules_Table' ) ) {
             if ( !isset( $method_id_cb ) ) {
                 return;
             }
-            $deletenonce = wp_verify_nonce( $delete_nonce, 'bulk-shippingmethods' );
-            if ( !isset( $deletenonce ) && 1 !== $deletenonce ) {
+            $deletenonce = wp_verify_nonce( $delete_nonce, 'sorting_conditional_fee_action' );
+            if ( 1 !== $deletenonce ) {
                 return;
             }
             $items = array_filter( array_map( 'absint', $method_id_cb ) );
