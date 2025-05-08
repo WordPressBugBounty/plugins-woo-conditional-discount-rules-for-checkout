@@ -83,6 +83,7 @@ esc_html_e( 'Upgrade Now', 'woo-conditional-discount-rules-for-checkout' );
 $menu_page = filter_input( INPUT_GET, 'page', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
 $dpad_free_dashboard = ( isset( $menu_page ) && $menu_page === 'wcdrfc-upgrade-dashboard' ? 'active' : '' );
 $dpad_list = ( isset( $menu_page ) && $menu_page === 'wcdrfc-rules-list' ? 'active' : '' );
+$collection_list = ( isset( $menu_page ) && $menu_page === 'wcdrfc-collection-list' ? 'active' : '' );
 $dpad_getting_started = ( isset( $menu_page ) && $menu_page === 'wcdrfc-page-get-started' ? 'active' : '' );
 $dpad_licenses = ( isset( $menu_page ) && $menu_page === 'wcdrfc-page-get-started-account' ? 'active' : '' );
 $dpad_import_export = ( isset( $menu_page ) && $menu_page === 'wcdrfc-page-import-export' ? 'active' : '' );
@@ -114,6 +115,8 @@ echo esc_url( add_query_arg( array(
 esc_html_e( 'Manage Rules', 'woo-conditional-discount-rules-for-checkout' );
 ?></a>
                                 </li>
+                                <?php 
+?>
                                 <li>
                                     <a class="dotstore_plugin <?php 
 echo esc_attr( $dpad_settings_menu );

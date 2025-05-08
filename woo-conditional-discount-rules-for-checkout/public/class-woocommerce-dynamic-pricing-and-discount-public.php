@@ -128,6 +128,9 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
         global $woocommerce;
         //Get all discount IDs with WPML compatibile
         $get_all_dpad = $this->wdpad_action_on_discount_list();
+        if ( function_exists( 'get_woocommerce_currency' ) ) {
+            $current_currency = get_woocommerce_currency();
+        }
         $combine_cost = 0;
         if ( !empty( $get_all_dpad ) ) {
             foreach ( $get_all_dpad as $dpad_id ) {
@@ -203,10 +206,56 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
         } else {
             $getFeesCost = $getFeesCostOriginal;
         }
+        /**
+         * Compatible Multi Currency plugin (CURCY)
+         * Since 2.6.0
+         * @author Rishi Shah
+         */
+        if ( class_exists( 'WOOMULTI_CURRENCY_Data' ) || class_exists( 'WOOMULTI_CURRENCY_F_Data' ) ) {
+            if ( isset( $getFeeType ) && !empty( $getFeeType ) && $getFeeType === 'fixed' ) {
+                $currency_data = null;
+                if ( class_exists( 'WOOMULTI_CURRENCY_Data' ) ) {
+                    $currency_data = new WOOMULTI_CURRENCY_Data();
+                } elseif ( class_exists( 'WOOMULTI_CURRENCY_F_Data' ) ) {
+                    $currency_data = new WOOMULTI_CURRENCY_F_Data();
+                }
+                if ( !$currency_data ) {
+                    return false;
+                }
+                $added_currency = $currency_data->get_list_currencies();
+                // Call the method on the instance
+                $current_currency = $currency_data->get_current_currency();
+                $rate = ( $added_currency[$current_currency]['rate'] ? $added_currency[$current_currency]['rate'] : 1 );
+                $converted_fee = $getFeesCost * $rate;
+                $getFeesCost = $converted_fee;
+            }
+        }
         $getFeesPerQtyFlag = '';
         $getFeesPerQty = '';
         $extraProductCost = 0;
         $get_condition_array = get_post_meta( $dpad_id, 'dynamic_pricing_metabox', true );
+        /**
+         * Add collection settings
+         * Since 2.6.0
+         * @author Rishi Shah
+         */
+        if ( isset( $get_condition_array ) && !empty( $get_condition_array ) ) {
+            foreach ( $get_condition_array as $key => $value ) {
+                if ( 'collection_name' === $value['product_dpad_conditions_condition'] ) {
+                    $collection_ids = $value['product_dpad_conditions_values'];
+                    if ( isset( $collection_ids ) && !empty( $collection_ids ) ) {
+                        foreach ( $collection_ids as $key => $id ) {
+                            $collection_meta_data = get_post_meta( $id, 'dynamic_pricing_metabox', true );
+                            if ( isset( $collection_meta_data ) && !empty( $collection_meta_data ) ) {
+                                foreach ( $collection_meta_data as $key => $value ) {
+                                    $get_condition_array[] = $value;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         $general_rule_match = 'all';
         /* Percentage Logic Start */
         if ( isset( $getFeesCost ) && !empty( $getFeesCost ) ) {
@@ -957,7 +1006,7 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
         $is_passed = array();
         $quantity_total = ( $quantity_total > 0 ? $quantity_total : 0 );
         foreach ( $product_count_array as $key => $quantity ) {
-            settype( $quantity['product_dpad_conditions_values'], 'float' );
+            settype( $quantity['product_dpad_conditions_values'], 'integer' );
             if ( !empty( $quantity['product_dpad_conditions_values'] ) ) {
                 if ( $quantity['product_dpad_conditions_is'] === 'is_equal_to' ) {
                     if ( $quantity_total === $quantity['product_dpad_conditions_values'] ) {
@@ -1068,6 +1117,8 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
     public function wdpad_match_cart_subtotal_before_discount_rule( $new_total, $cart_total_array, $general_rule_match ) {
         $is_passed = array();
         foreach ( $cart_total_array as $key => $cart_total ) {
+            $cart_total['product_dpad_conditions_values'] = $this->wdpad_pro_convert_currency( $cart_total['product_dpad_conditions_values'] );
+            // Convert to current currency
             settype( $cart_total['product_dpad_conditions_values'], 'float' );
             if ( !empty( $cart_total['product_dpad_conditions_values'] ) ) {
                 if ( $cart_total['product_dpad_conditions_is'] === 'is_equal_to' ) {
@@ -1483,6 +1534,28 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
         $default_lang
     ) {
         $get_condition_array = get_post_meta( $fees_id, 'dynamic_pricing_metabox', true );
+        /**
+         * Add collection settings
+         * Since 2.6.0
+         * @author Rishi Shah
+         */
+        if ( isset( $get_condition_array ) && !empty( $get_condition_array ) ) {
+            foreach ( $get_condition_array as $key => $value ) {
+                if ( 'collection_name' === $value['product_dpad_conditions_condition'] ) {
+                    $collection_ids = $value['product_dpad_conditions_values'];
+                    if ( isset( $collection_ids ) && !empty( $collection_ids ) ) {
+                        foreach ( $collection_ids as $key => $id ) {
+                            $collection_meta_data = get_post_meta( $id, 'dynamic_pricing_metabox', true );
+                            if ( isset( $collection_meta_data ) && !empty( $collection_meta_data ) ) {
+                                foreach ( $collection_meta_data as $key => $value ) {
+                                    $get_condition_array[] = $value;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         $all_rule_check = array();
         if ( !empty( $get_condition_array ) ) {
             foreach ( $get_condition_array as $condition ) {
@@ -2378,6 +2451,39 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Public {
             add_option( 'wpdad_discount_id_list', $discount_ids );
         }
         return $discount_ids;
+    }
+
+    /**
+     * Convert currency based on multi currency - CURCY Plugin
+     * 
+     * @param float $amount
+     * 
+     * @return float $amount
+     * 
+     * @since 4.2.0
+     */
+    public function wdpad_pro_convert_currency( $amount ) {
+        // Support both free and premium class names
+        if ( class_exists( 'WOOMULTI_CURRENCY_Data' ) ) {
+            $multiCurrencySettings = WOOMULTI_CURRENCY_Data::get_ins();
+            // Premium
+        } elseif ( class_exists( 'WOOMULTI_CURRENCY_F_Data' ) ) {
+            $multiCurrencySettings = WOOMULTI_CURRENCY_F_Data::get_ins();
+            // Free
+        } else {
+            $multiCurrencySettings = null;
+        }
+        if ( $multiCurrencySettings ) {
+            $currentCurrency = ( $multiCurrencySettings->get_current_currency() ?: $multiCurrencySettings->get_default_currency() );
+            if ( $currentCurrency ) {
+                $all_currencies = $multiCurrencySettings->get_list_currencies();
+                $currentCurrencyRate = ( !empty( $all_currencies ) && is_array( $all_currencies ) && isset( $all_currencies[$currentCurrency]['rate'] ) ? floatval( $all_currencies[$currentCurrency]['rate'] ) : 1 );
+                $amount *= $currentCurrencyRate;
+            }
+        }
+        // Convert and round
+        $amount = round( floatval( $amount ), 3 );
+        return $amount;
     }
 
 }

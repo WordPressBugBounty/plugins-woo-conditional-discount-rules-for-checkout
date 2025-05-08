@@ -4,7 +4,7 @@
  * Plugin Name:         Dynamic Pricing and Discount Rules for WooCommerce
  * Plugin URI:          https://www.thedotstore.com/woocommerce-conditional-discount-rules-for-checkout/
  * Description:         With this plugin, you can create and manage complex discount rules in WooCommerce store without the help of a developer.
- * Version:             2.5.1
+ * Version:             2.5.2
  * Author:              theDotstore
  * Author URI:          https://www.thedotstore.com/
  * License:             GPL-2.0+
@@ -13,8 +13,8 @@
  * Domain Path:         /languages
  * Requires Plugins:    woocommerce
  * 
- * Tested up to:        6.7.2
- * WC tested up to:     9.6.2
+ * Tested up to:        6.8.1
+ * WC tested up to:     9.8.4
  * Requires PHP:        7.2
  * Requires at least:   5.0
  * 
@@ -244,7 +244,7 @@ if ( !defined( 'WDPAD_PLUGIN_NAME' ) ) {
     define( 'WDPAD_PLUGIN_NAME', 'Dynamic Pricing and Discount Rules' );
 }
 if ( !defined( 'WDPAD_PLUGIN_VERSION' ) ) {
-    define( 'WDPAD_PLUGIN_VERSION', 'v2.5.1' );
+    define( 'WDPAD_PLUGIN_VERSION', 'v2.5.2' );
 }
 if ( !defined( 'WDPAD_PLUGIN_URL' ) ) {
     define( 'WDPAD_PLUGIN_URL', plugin_dir_url( __FILE__ ) );

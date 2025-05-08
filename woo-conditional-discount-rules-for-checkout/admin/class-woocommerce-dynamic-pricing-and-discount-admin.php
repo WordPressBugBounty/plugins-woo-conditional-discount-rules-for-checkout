@@ -19,6 +19,8 @@ if ( !defined( 'ABSPATH' ) ) {
 class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
     const wdpad_post_type = 'wc_dynamic_pricing';
 
+    const wdpad_collection_post_type = 'wdpad_collection';
+
     /**
      * The ID of this plugin.
      *
@@ -206,6 +208,7 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
                 'discount_cost_msg'              => esc_html__( 'Please add discount value which will apply on cart/checkout.', 'woo-conditional-discount-rules-for-checkout' ),
                 'select_country'                 => esc_html__( 'Select a Country', 'woo-conditional-discount-rules-for-checkout' ),
                 'select_product'                 => esc_html__( 'Select a Product', 'woo-conditional-discount-rules-for-checkout' ),
+                'select_collection'              => esc_html__( 'Select a Collection', 'woo-conditional-discount-rules-for-checkout' ),
                 'select_category'                => esc_html__( 'Select a Category', 'woo-conditional-discount-rules-for-checkout' ),
                 'select_user'                    => esc_html__( 'Select a User', 'woo-conditional-discount-rules-for-checkout' ),
                 'select_float_number'            => esc_html__( '0.00', 'woo-conditional-discount-rules-for-checkout' ),
@@ -306,6 +309,17 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
         require_once plugin_dir_path( __FILE__ ) . 'partials/wcdrfc-pro-list-page.php';
         $dpad_rule_lising_obj = new DPAD_Rule_Listing_Page();
         $dpad_rule_lising_obj->dpad_sj_output();
+    }
+
+    /**
+     * Add collection settings
+     * Since 2.6.0
+     * @author Rishi Shah
+     */
+    public function wdpad_collection_page() {
+        require_once plugin_dir_path( __FILE__ ) . 'partials/wcdrfc-pro-collection-page.php';
+        $dpad_collection_obj = new DPAD_Collection_Page();
+        $dpad_collection_obj->dpad_sj_output();
     }
 
     public function wdpad_get_started_page() {
@@ -678,6 +692,68 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
     }
 
     /**
+     * Add collection settings
+     * Since 2.6.0
+     * @author Rishi Shah
+     */
+    public function wdpad_get_collection_list(
+        $count = '',
+        $selected = array(),
+        $action = '',
+        $json = false
+    ) {
+        $selected = ( !empty( $selected ) ? $selected : array() );
+        //this need to extra check as some time we got blank STRING.
+        global $sitepress;
+        if ( !empty( $sitepress ) ) {
+            $default_lang = $sitepress->get_default_language();
+        }
+        $post_in = '';
+        if ( 'edit' === $action ) {
+            $post_in = $selected;
+            $posts_per_page = -1;
+        } else {
+            $post_in = '';
+            $posts_per_page = 10;
+        }
+        $product_args = array(
+            'post_type'      => 'wdpad_collection',
+            'post_status'    => 'publish',
+            'orderby'        => 'ID',
+            'order'          => 'ASC',
+            'post__in'       => $post_in,
+            'posts_per_page' => $posts_per_page,
+        );
+        $get_all_products = new WP_Query($product_args);
+        $html = '<select id="collection-filter-' . $count . '" rel-id="' . $count . '" name="dpad[product_dpad_conditions_values][value_' . $count . '][]" class="collection_filter_select2 multiselect2_' . $count . '_collection_name product_dpad_conditions_values" multiple="multiple">';
+        if ( isset( $get_all_products->posts ) && !empty( $get_all_products->posts ) ) {
+            foreach ( $get_all_products->posts as $get_all_product ) {
+                if ( !empty( $sitepress ) ) {
+                    $new_product_id = apply_filters(
+                        'wpml_object_id',
+                        $get_all_product->ID,
+                        'product',
+                        true,
+                        $default_lang
+                    );
+                } else {
+                    $new_product_id = $get_all_product->ID;
+                }
+                $selected = array_map( 'intval', $selected );
+                $selectedVal = ( is_array( $selected ) && !empty( $selected ) && in_array( $new_product_id, $selected, true ) ? 'selected=selected' : '' );
+                if ( $selectedVal !== '' ) {
+                    $html .= '<option value="' . $new_product_id . '" ' . $selectedVal . '>' . '#' . $new_product_id . ' - ' . get_the_title( $new_product_id ) . '</option>';
+                }
+            }
+        }
+        $html .= '</select>';
+        if ( $json ) {
+            return [];
+        }
+        return $html;
+    }
+
+    /**
      * Function for select product list
      *
      */
@@ -858,6 +934,16 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
             'public'          => false,
             'capability_type' => 'page',
         ) );
+        register_post_type( self::wdpad_collection_post_type, array(
+            'labels'          => array(
+                'name'          => __( 'Conditional Discount Rule Collection', 'woo-conditional-discount-rules-for-checkout' ),
+                'singular_name' => __( 'Conditional Discount Rule Collection', 'woo-conditional-discount-rules-for-checkout' ),
+            ),
+            'rewrite'         => false,
+            'query_var'       => false,
+            'public'          => false,
+            'capability_type' => 'page',
+        ) );
     }
 
     public function wdpad_remove_admin_submenus() {
@@ -868,6 +954,7 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
         remove_submenu_page( 'dots_store', 'wcdrfc-page-general-settings' );
         remove_submenu_page( 'dots_store', 'wcdrfc-page-licenses' );
         remove_submenu_page( 'dots_store', 'wcdrfc-upgrade-dashboard' );
+        remove_submenu_page( 'dots_store', 'wcdrfc-collection-list' );
         // Dotstore menu icon css
         echo '<style>
             .toplevel_page_dots_store .dashicons-marker::after{content:"";border:3px solid;position:absolute;top:14px;left:15px;border-radius:50%;opacity: 0.6;}
@@ -980,6 +1067,25 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
         wp_die();
     }
 
+    public function wdpad_product_category_list_ajax() {
+        // Security check
+        check_ajax_referer( 'wcdrfc_ajax_verification', 'security' );
+        $request_value = filter_input( INPUT_GET, 'value', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+        $product_cat = get_terms( array(
+            'taxonomy'   => 'product_cat',
+            'hide_empty' => true,
+            'search'     => $request_value,
+        ) );
+        $filter_category_list = [];
+        if ( isset( $product_cat ) && !empty( $product_cat ) ) {
+            foreach ( $product_cat as $product_cat_value ) {
+                $filter_category_list[] = array($product_cat_value->term_id, $product_cat_value->name);
+            }
+        }
+        echo wp_json_encode( $filter_category_list );
+        wp_die();
+    }
+
     /**
      * Get products on Ajax 
      *
@@ -1063,6 +1169,58 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
         }
         if ( $json ) {
             echo wp_json_encode( $filter_product_list );
+            wp_die();
+        }
+        echo wp_kses( $html, allowed_html_tags() );
+        wp_die();
+    }
+
+    /**
+     * Add collection settings
+     * Since 2.6.0
+     * @author Rishi Shah
+     */
+    public function wdpad_product_dpad_conditions_values_collection_ajax() {
+        // Security check
+        check_ajax_referer( 'wcdrfc_ajax_verification', 'security' );
+        // Get products
+        global $sitepress;
+        if ( !empty( $sitepress ) ) {
+            $default_lang = $sitepress->get_default_language();
+        }
+        $json = true;
+        $filter_collection_list = [];
+        $request_value = filter_input( INPUT_GET, 'search', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+        $posts_per_page = filter_input( INPUT_GET, 'posts_per_page', FILTER_VALIDATE_INT );
+        $offset = filter_input( INPUT_GET, 'offset', FILTER_VALIDATE_INT );
+        $post_value = ( isset( $request_value ) ? sanitize_text_field( $request_value ) : '' );
+        $posts_per_page = ( isset( $posts_per_page ) ? intval( $posts_per_page ) : 10 );
+        $offset = ( isset( $offset ) ? intval( $offset ) : 0 );
+        $baselang_product_ids = array();
+        $product_args = array(
+            'post_type'      => 'wdpad_collection',
+            'posts_per_page' => $posts_per_page,
+            'offset'         => $posts_per_page * ($offset - 1),
+            's'              => $post_value,
+            'post_status'    => 'publish',
+            'orderby'        => 'title',
+            'order'          => 'ASC',
+            'show_posts'     => -1,
+        );
+        $wp_query = new WP_Query($product_args);
+        $get_all_collections = $wp_query->posts;
+        $html = '';
+        if ( isset( $get_all_collections ) && !empty( $get_all_collections ) ) {
+            foreach ( $get_all_collections as $get_all_collection ) {
+                $html .= '<option value="' . $get_all_collection->ID . '">' . $get_all_collection->post_title . '</option>';
+                $filter_product = array();
+                $filter_product['id'] = $get_all_collection->ID;
+                $filter_product['text'] = $get_all_collection->post_title;
+                $filter_collection_list[] = $filter_product;
+            }
+        }
+        if ( $json ) {
+            echo wp_json_encode( $filter_collection_list );
             wp_die();
         }
         echo wp_kses( $html, allowed_html_tags() );
@@ -1275,17 +1433,27 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro_Admin {
         // Change rule status
         $get_current_dpad_id = filter_input( INPUT_POST, 'current_dpad_id', FILTER_SANITIZE_NUMBER_INT );
         $get_current_value = filter_input( INPUT_POST, 'current_value', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+        $page = filter_input( INPUT_POST, 'page', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
         if ( !isset( $get_current_dpad_id ) ) {
             wp_send_json_error( esc_html__( 'Something went wrong', 'woo-conditional-discount-rules-for-checkout' ) );
         }
         $post_id = ( isset( $get_current_dpad_id ) ? absint( $get_current_dpad_id ) : '' );
         $current_value = ( isset( $get_current_value ) ? sanitize_text_field( $get_current_value ) : '' );
+        $page_name = 'Discount';
+        if ( 'wcdrfc-collection-list' === $page ) {
+            $page_name = 'Collection';
+        }
+        /**
+         * Add collection settings
+         * Since 2.6.0
+         * @author Rishi Shah
+         */
         if ( 'true' === $current_value ) {
             update_post_meta( $post_id, 'dpad_settings_status', 'on' );
-            wp_send_json_success( esc_html__( 'Discount status has been enabled successfully.', 'woo-conditional-discount-rules-for-checkout' ) );
+            wp_send_json_success( esc_html__( $page_name . ' status has been enabled successfully.', 'woo-conditional-discount-rules-for-checkout' ) );
         } else {
             update_post_meta( $post_id, 'dpad_settings_status', 'off' );
-            wp_send_json_success( esc_html__( 'Discount status has been disabled successfully.', 'woo-conditional-discount-rules-for-checkout' ) );
+            wp_send_json_success( esc_html__( $page_name . ' status has been disabled successfully.', 'woo-conditional-discount-rules-for-checkout' ) );
         }
     }
 

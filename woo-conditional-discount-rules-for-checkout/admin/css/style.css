@@ -390,6 +390,7 @@ div#tiptip_holder,div#tiptip_content{max-width:350px!important;}
 .bogo-table-wrap table th.column-qty-field:not(:last-child){width:14%;}
 .bogo-table-wrap table th.column-qty-field:last-child{width:8%;text-align:center;}
 .bogo-products + span{width:100%!important;}
+.bogo-category + span{width:100%!important;}
 .wdpad-main-table .error{border:1px solid red;}
 .bogo-table-wrap{width:100%;padding:10px;background:#fff;display:table-cell;}
 .wdpad-main-table .bogo-table-wrap table.table-outer{table-layout:fixed;border-collapse:collapse;}

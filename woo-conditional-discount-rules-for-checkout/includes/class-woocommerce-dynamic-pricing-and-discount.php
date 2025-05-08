@@ -165,9 +165,17 @@ class Woocommerce_Dynamic_Pricing_And_Discount_Pro {
         $this->loader->add_action( 'wp_ajax_wdpad_plugin_setup_wizard_submit', $plugin_admin, 'wdpad_plugin_setup_wizard_submit' );
         $this->loader->add_action( 'wp_ajax_wdpad_product_dpad_conditions_values_product_ajax', $plugin_admin, 'wdpad_product_dpad_conditions_values_product_ajax' );
         $this->loader->add_action( 'wp_ajax_nopriv_wdpad_product_dpad_conditions_values_product_ajax', $plugin_admin, 'wdpad_product_dpad_conditions_values_product_ajax' );
+        /**
+         * Add collection settings
+         * Since 2.6.0
+         * @author Rishi Shah
+         */
+        $this->loader->add_action( 'wp_ajax_wdpad_product_dpad_conditions_values_collection_ajax', $plugin_admin, 'wdpad_product_dpad_conditions_values_collection_ajax' );
+        $this->loader->add_action( 'wp_ajax_nopriv_wdpad_product_dpad_conditions_values_collection_ajax', $plugin_admin, 'wdpad_product_dpad_conditions_values_collection_ajax' );
         $this->loader->add_action( 'wp_ajax_wdpad_product_dpad_conditions_varible_values_product_ajax', $plugin_admin, 'wdpad_product_dpad_conditions_varible_values_product_ajax' );
         $this->loader->add_action( 'wp_ajax_nopriv_wdpad_product_dpad_conditions_varible_values_product_ajax', $plugin_admin, 'wdpad_product_dpad_conditions_varible_values_product_ajax' );
         $this->loader->add_action( 'wp_ajax_wdpad_simple_and_variation_product_list_ajax', $plugin_admin, 'wdpad_simple_and_variation_product_list_ajax' );
+        $this->loader->add_action( 'wp_ajax_wdpad_product_category_list_ajax', $plugin_admin, 'wdpad_product_category_list_ajax' );
         $this->loader->add_action( 'wp_ajax_wdpad_product_discount_conditions_sorting', $plugin_admin, 'conditional_discount_sorting' );
         $this->loader->add_action( 'wp_ajax_wdpad_change_status_from_list_section', $plugin_admin, 'wdpad_change_status_from_list_section' );
         $this->loader->add_action( 'admin_post_dpad_save_general_settings', $plugin_admin, 'wdpad_save_general_settings' );

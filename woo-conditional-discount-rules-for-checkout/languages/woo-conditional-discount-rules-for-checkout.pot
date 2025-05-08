@@ -3,9 +3,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Dynamic Pricing and Discount Rules for WooCommerce "
-"2.5.1\n"
+"2.5.2\n"
 "Report-Msgid-Bugs-To: https://www.multidots.com/contact/\n"
-"POT-Creation-Date: 2025-03-10 13:32:16+00:00\n"
+"POT-Creation-Date: 2025-05-08 09:05:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,308 +25,337 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:177
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:202
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:227
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:179
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:205
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:232
 msgid "10"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:134
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:135
+#: admin/partials/class-wc-collection-rules-table.php:243
+#: admin/partials/class-wc-collection-rules-table.php:281
 #: admin/partials/class-wc-discount-rules-table.php:229
 #: admin/partials/class-wc-discount-rules-table.php:408
 msgid "Delete"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:135
-#: admin/partials/wcdrfc-pro-add-new-page.php:2820
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:136
+#: admin/partials/wcdrfc-pro-add-new-page.php:2966
 msgid "Cart Qty"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:136
-#: admin/partials/wcdrfc-pro-add-new-page.php:1876
-#: admin/partials/wcdrfc-pro-add-new-page.php:2350
-#: admin/partials/wcdrfc-pro-add-new-page.php:2830
-#: admin/partials/wcdrfc-pro-add-new-page.php:3482
-#: admin/partials/wcdrfc-pro-add-new-page.php:3617
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:137
+#: admin/partials/wcdrfc-pro-add-new-page.php:2022
+#: admin/partials/wcdrfc-pro-add-new-page.php:2496
+#: admin/partials/wcdrfc-pro-add-new-page.php:2976
+#: admin/partials/wcdrfc-pro-add-new-page.php:3628
+#: admin/partials/wcdrfc-pro-add-new-page.php:3763
 msgid "Min Quantity"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:137
-#: admin/partials/wcdrfc-pro-add-new-page.php:1884
-#: admin/partials/wcdrfc-pro-add-new-page.php:2359
-#: admin/partials/wcdrfc-pro-add-new-page.php:2786
-#: admin/partials/wcdrfc-pro-add-new-page.php:2839
-#: admin/partials/wcdrfc-pro-add-new-page.php:3485
-#: admin/partials/wcdrfc-pro-add-new-page.php:3620
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:138
+#: admin/partials/wcdrfc-pro-add-new-page.php:2030
+#: admin/partials/wcdrfc-pro-add-new-page.php:2505
+#: admin/partials/wcdrfc-pro-add-new-page.php:2932
+#: admin/partials/wcdrfc-pro-add-new-page.php:2985
+#: admin/partials/wcdrfc-pro-add-new-page.php:3631
+#: admin/partials/wcdrfc-pro-add-new-page.php:3766
 msgid "Max Quantity"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:138
-#: admin/partials/wcdrfc-pro-add-new-page.php:2975
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:139
+#: admin/partials/wcdrfc-pro-add-new-page.php:3121
 msgid "Cart Weight"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:139
-#: admin/partials/wcdrfc-pro-add-new-page.php:2190
-#: admin/partials/wcdrfc-pro-add-new-page.php:2681
-#: admin/partials/wcdrfc-pro-add-new-page.php:2985
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:140
+#: admin/partials/wcdrfc-pro-add-new-page.php:2336
+#: admin/partials/wcdrfc-pro-add-new-page.php:2827
+#: admin/partials/wcdrfc-pro-add-new-page.php:3131
 msgid "Min Weight"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:140
-#: admin/partials/wcdrfc-pro-add-new-page.php:2198
-#: admin/partials/wcdrfc-pro-add-new-page.php:2689
-#: admin/partials/wcdrfc-pro-add-new-page.php:2940
-#: admin/partials/wcdrfc-pro-add-new-page.php:2993
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:141
+#: admin/partials/wcdrfc-pro-add-new-page.php:2344
+#: admin/partials/wcdrfc-pro-add-new-page.php:2835
+#: admin/partials/wcdrfc-pro-add-new-page.php:3086
+#: admin/partials/wcdrfc-pro-add-new-page.php:3139
 msgid "Max Weight"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:141
-#: admin/partials/wcdrfc-pro-add-new-page.php:1340
-#: admin/partials/wcdrfc-pro-add-new-page.php:1448
-#: admin/partials/wcdrfc-pro-add-new-page.php:3129
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:142
+#: admin/partials/wcdrfc-pro-add-new-collection.php:691
+#: admin/partials/wcdrfc-pro-add-new-collection.php:799
+#: admin/partials/wcdrfc-pro-add-new-page.php:1468
+#: admin/partials/wcdrfc-pro-add-new-page.php:1582
+#: admin/partials/wcdrfc-pro-add-new-page.php:3275
 msgid "Cart Subtotal"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:142
-#: admin/partials/wcdrfc-pro-add-new-page.php:2032
-#: admin/partials/wcdrfc-pro-add-new-page.php:2512
-#: admin/partials/wcdrfc-pro-add-new-page.php:3139
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:143
+#: admin/partials/wcdrfc-pro-add-new-page.php:2178
+#: admin/partials/wcdrfc-pro-add-new-page.php:2658
+#: admin/partials/wcdrfc-pro-add-new-page.php:3285
 msgid "Min Subtotal"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:143
-#: admin/partials/wcdrfc-pro-add-new-page.php:1981
-#: admin/partials/wcdrfc-pro-add-new-page.php:2042
-#: admin/partials/wcdrfc-pro-add-new-page.php:2458
-#: admin/partials/wcdrfc-pro-add-new-page.php:2522
-#: admin/partials/wcdrfc-pro-add-new-page.php:3093
-#: admin/partials/wcdrfc-pro-add-new-page.php:3149
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:144
+#: admin/partials/wcdrfc-pro-add-new-page.php:2127
+#: admin/partials/wcdrfc-pro-add-new-page.php:2188
+#: admin/partials/wcdrfc-pro-add-new-page.php:2604
+#: admin/partials/wcdrfc-pro-add-new-page.php:2668
+#: admin/partials/wcdrfc-pro-add-new-page.php:3239
+#: admin/partials/wcdrfc-pro-add-new-page.php:3295
 msgid "Max Subtotal"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:144
-#: admin/partials/wcdrfc-pro-add-new-page.php:1892
-#: admin/partials/wcdrfc-pro-add-new-page.php:2052
-#: admin/partials/wcdrfc-pro-add-new-page.php:2206
-#: admin/partials/wcdrfc-pro-add-new-page.php:2368
-#: admin/partials/wcdrfc-pro-add-new-page.php:2532
-#: admin/partials/wcdrfc-pro-add-new-page.php:2697
-#: admin/partials/wcdrfc-pro-add-new-page.php:2848
-#: admin/partials/wcdrfc-pro-add-new-page.php:3001
-#: admin/partials/wcdrfc-pro-add-new-page.php:3159
-#: admin/partials/wcdrfc-pro-add-new-page.php:3488
-#: admin/partials/wcdrfc-pro-add-new-page.php:3623
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:145
+#: admin/partials/wcdrfc-pro-add-new-page.php:2038
+#: admin/partials/wcdrfc-pro-add-new-page.php:2198
+#: admin/partials/wcdrfc-pro-add-new-page.php:2352
+#: admin/partials/wcdrfc-pro-add-new-page.php:2514
+#: admin/partials/wcdrfc-pro-add-new-page.php:2678
+#: admin/partials/wcdrfc-pro-add-new-page.php:2843
+#: admin/partials/wcdrfc-pro-add-new-page.php:2994
+#: admin/partials/wcdrfc-pro-add-new-page.php:3147
+#: admin/partials/wcdrfc-pro-add-new-page.php:3305
+#: admin/partials/wcdrfc-pro-add-new-page.php:3634
+#: admin/partials/wcdrfc-pro-add-new-page.php:3769
 msgid "Amount"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:145
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:190
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:215
-#: admin/partials/wcdrfc-pro-add-new-page.php:1217
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:146
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:192
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:219
+#: admin/partials/wcdrfc-pro-add-new-collection.php:568
+#: admin/partials/wcdrfc-pro-add-new-page.php:1345
 msgid ""
 "This rule will only work if you have selected any one Product Specific "
 "option."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:146
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:191
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:216
-#: admin/partials/wcdrfc-pro-add-new-page.php:1223
-#: admin/partials/wcdrfc-pro-add-new-page.php:1395
-#: admin/partials/wcdrfc-pro-add-new-page.php:1503
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:147
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:193
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:220
+#: admin/partials/wcdrfc-pro-add-new-collection.php:574
+#: admin/partials/wcdrfc-pro-add-new-collection.php:746
+#: admin/partials/wcdrfc-pro-add-new-collection.php:854
+#: admin/partials/wcdrfc-pro-add-new-page.php:1351
+#: admin/partials/wcdrfc-pro-add-new-page.php:1529
+#: admin/partials/wcdrfc-pro-add-new-page.php:1640
 msgid ""
 "This rule will work if you have selected any one Product Specific option or "
 "it will apply to all products."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:147
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:192
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:217
-#: admin/partials/wcdrfc-pro-add-new-page.php:613
-#: admin/partials/wcdrfc-pro-add-new-page.php:1216
-#: admin/partials/wcdrfc-pro-add-new-page.php:1222
-#: admin/partials/wcdrfc-pro-add-new-page.php:1394
-#: admin/partials/wcdrfc-pro-add-new-page.php:1502
-#: admin/partials/wcdrfc-pro-add-new-page.php:1899
-#: admin/partials/wcdrfc-pro-add-new-page.php:2060
-#: admin/partials/wcdrfc-pro-add-new-page.php:2214
-#: admin/partials/wcdrfc-pro-add-new-page.php:2376
-#: admin/partials/wcdrfc-pro-add-new-page.php:2540
-#: admin/partials/wcdrfc-pro-add-new-page.php:2705
-#: admin/partials/wcdrfc-pro-add-new-page.php:2856
-#: admin/partials/wcdrfc-pro-add-new-page.php:3008
-#: admin/partials/wcdrfc-pro-add-new-page.php:3166
-#: admin/partials/wcdrfc-pro-add-new-page.php:3335
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:148
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:194
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:221
+#: admin/partials/wcdrfc-pro-add-new-collection.php:567
+#: admin/partials/wcdrfc-pro-add-new-collection.php:573
+#: admin/partials/wcdrfc-pro-add-new-collection.php:745
+#: admin/partials/wcdrfc-pro-add-new-collection.php:853
+#: admin/partials/wcdrfc-pro-add-new-page.php:625
+#: admin/partials/wcdrfc-pro-add-new-page.php:1344
+#: admin/partials/wcdrfc-pro-add-new-page.php:1350
+#: admin/partials/wcdrfc-pro-add-new-page.php:1528
+#: admin/partials/wcdrfc-pro-add-new-page.php:1639
+#: admin/partials/wcdrfc-pro-add-new-page.php:2045
+#: admin/partials/wcdrfc-pro-add-new-page.php:2206
+#: admin/partials/wcdrfc-pro-add-new-page.php:2360
+#: admin/partials/wcdrfc-pro-add-new-page.php:2522
+#: admin/partials/wcdrfc-pro-add-new-page.php:2686
+#: admin/partials/wcdrfc-pro-add-new-page.php:2851
+#: admin/partials/wcdrfc-pro-add-new-page.php:3002
+#: admin/partials/wcdrfc-pro-add-new-page.php:3154
+#: admin/partials/wcdrfc-pro-add-new-page.php:3312
+#: admin/partials/wcdrfc-pro-add-new-page.php:3481
 msgid "Note: "
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:148
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:193
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:218
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:149
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:195
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:222
 msgid ""
 "You need to select product specific option in Discount Rules for product "
 "based option"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:149
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:194
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:219
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:150
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:196
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:223
 msgid "Please add Discount Rules value"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:150
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:151
 msgid ""
 "Please choose atleast one product or product variation or category or tag "
 "or brand condition ds"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:151
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:152
 msgid "Apply on Products"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:154
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:155
 msgid "Select category"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:155
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:204
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:229
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:156
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:207
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:234
 msgid "Select product"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:156
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:157
 msgid "Please select Buy and Get product fields to save the cofiguration."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:157
-#: admin/partials/wcdrfc-pro-add-new-page.php:1036
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:158
+#: admin/partials/wcdrfc-pro-add-new-page.php:1048
+#: admin/partials/wcdrfc-pro-add-new-page.php:1149
 msgid "Copy buy products"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:158
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:196
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:221
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:159
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:198
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:225
 msgid "Please add discount value which will apply on cart/checkout."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:159
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:160
 msgid "Please select get product to save the cofiguration."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:160
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:161
 msgid "Please select get category to save the cofiguration."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:161
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:197
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:222
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:162
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:199
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:226
 msgid "Select a Country"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:162
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:163
 msgid ""
 "City 1\n"
 "City 2"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:163
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:164
 msgid "Select a State"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:164
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:165
 msgid ""
 "Postcode 1\n"
 "Postcode 2"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:165
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:166
 msgid "Select a Zone"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:166
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:198
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:223
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:167
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:200
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:227
 msgid "Select a Product"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:167
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:199
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:224
-msgid "Select a Category"
-msgstr ""
-
 #: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:168
-msgid "Select a Tag"
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:201
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:228
+msgid "Select a Collection"
 msgstr ""
 
 #: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:169
-msgid "Select a Brand"
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:202
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:229
+msgid "Select a Category"
 msgstr ""
 
 #: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:170
-msgid "Select a SKU"
+msgid "Select a Tag"
 msgstr ""
 
 #: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:171
-msgid "Select Product Attribute"
+msgid "Select a Brand"
 msgstr ""
 
 #: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:172
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:200
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:225
-msgid "Select a User"
+msgid "Select a SKU"
 msgstr ""
 
 #: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:173
-msgid "Select a User Role"
+msgid "Select Product Attribute"
 msgstr ""
 
 #: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:174
-msgid "Please enter mail"
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:203
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:230
+msgid "Select a User"
 msgstr ""
 
 #: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:175
-msgid "Select a Coupon"
+msgid "Select a User Role"
 msgstr ""
 
 #: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:176
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:201
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:226
-msgid "0.00"
+msgid "Please enter mail"
+msgstr ""
+
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:177
+msgid "Select a Coupon"
 msgstr ""
 
 #: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:178
-msgid "Select a Shipping Class"
-msgstr ""
-
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:179
-msgid "Select a Shipping Method"
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:204
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:231
+msgid "0.00"
 msgstr ""
 
 #: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:180
+msgid "Select a Shipping Class"
+msgstr ""
+
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:181
+msgid "Select a Shipping Method"
+msgstr ""
+
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:182
 msgid "Select a Payment Gateway"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:195
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:220
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:197
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:224
 msgid "Please choose atleast one product or product variation or category condition"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:258
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:208
+#: admin/partials/wcdrfc-pro-add-new-page.php:2727
+msgid "Select Category"
+msgstr ""
+
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:263
 msgid "Dotstore Plugins"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:309
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:341
 msgid "List Per Page"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1280
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1281
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1373
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1374
 msgid "Conditional Discount Rule"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1565
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1386
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1387
+msgid "Conditional Discount Rule Collection"
+msgstr ""
+
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1759
 #. translators: %1$s: URL
 msgid ""
 "<strong>We need your support</strong> to keep updating and improving the "
@@ -334,83 +363,122 @@ msgid ""
 "review</a> :) Thanks!"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1625
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1635
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1819
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1829
 msgid "Discount rule has been updated."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1633
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1827
 msgid "Discount rule has been created."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1637
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1831
 msgid "Discount rule has been deleted."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1639
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1833
 msgid "Discount rule has been duplicated."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1641
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1835
 msgid "Discount rule has been disabled."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1643
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1837
 msgid "Discount rule has been enabled."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1645
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1839
 msgid "General setting has been saved."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1648
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1842
 msgid "There was an error with saving data."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1650
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1844
 msgid "There was an error with security check."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1687
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1882
 msgid "Something went wrong"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1695
-msgid "Discount status has been enabled successfully."
-msgstr ""
-
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:1698
-msgid "Discount status has been disabled successfully."
-msgstr ""
-
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:2028
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:2233
 msgid "Data has been Exported!"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:2054
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:2259
 msgid "Please upload a file to import"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:2060
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:2265
 msgid "Please upload a valid .json file"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:2229
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:2434
 msgid "Blank .json file uploaded."
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:2232
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:2437
 msgid "Data has been Imported!"
 msgstr ""
 
-#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:2304
-#: public/class-woocommerce-dynamic-pricing-and-discount-public.php:1510
-#: public/class-woocommerce-dynamic-pricing-and-discount-public.php:1560
+#: admin/class-woocommerce-dynamic-pricing-and-discount-admin.php:2509
+#: public/class-woocommerce-dynamic-pricing-and-discount-public.php:1603
+#: public/class-woocommerce-dynamic-pricing-and-discount-public.php:1653
 msgid "Free"
 msgstr ""
 
+#: admin/partials/class-wc-collection-rules-table.php:52
 #: admin/partials/class-wc-discount-rules-table.php:51
 msgid "Title"
+msgstr ""
+
+#: admin/partials/class-wc-collection-rules-table.php:53
+#: admin/partials/class-wc-discount-rules-table.php:57
+msgid "Date"
+msgstr ""
+
+#: admin/partials/class-wc-collection-rules-table.php:159
+#: admin/partials/class-wc-discount-rules-table.php:145
+msgid "No rule found."
+msgstr ""
+
+#: admin/partials/class-wc-collection-rules-table.php:242
+#: admin/partials/class-wc-discount-rules-table.php:228
+msgid "Edit"
+msgstr ""
+
+#: admin/partials/class-wc-collection-rules-table.php:244
+#: admin/partials/class-wc-discount-rules-table.php:230
+msgid "Duplicate"
+msgstr ""
+
+#: admin/partials/class-wc-collection-rules-table.php:260
+#: admin/partials/class-wc-discount-rules-table.php:358
+#: admin/partials/class-wc-discount-rules-table.php:387
+msgid "Everywhere"
+msgstr ""
+
+#: admin/partials/class-wc-collection-rules-table.php:265
+#: admin/partials/class-wc-discount-rules-table.php:392
+#. translators: %1$s: date format, %2$s: time format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: admin/partials/class-wc-collection-rules-table.php:279
+#: admin/partials/class-wc-discount-rules-table.php:406
+msgid "Disable"
+msgstr ""
+
+#: admin/partials/class-wc-collection-rules-table.php:280
+#: admin/partials/class-wc-discount-rules-table.php:407
+msgid "Enable"
+msgstr ""
+
+#: admin/partials/class-wc-collection-rules-table.php:412
+msgid "Collection title"
 msgstr ""
 
 #: admin/partials/class-wc-discount-rules-table.php:52
@@ -430,24 +498,8 @@ msgid "End Date"
 msgstr ""
 
 #: admin/partials/class-wc-discount-rules-table.php:56
-#: admin/partials/wcdrfc-pro-add-new-page.php:376
+#: admin/partials/wcdrfc-pro-add-new-page.php:388
 msgid "Status"
-msgstr ""
-
-#: admin/partials/class-wc-discount-rules-table.php:57
-msgid "Date"
-msgstr ""
-
-#: admin/partials/class-wc-discount-rules-table.php:145
-msgid "No rule found."
-msgstr ""
-
-#: admin/partials/class-wc-discount-rules-table.php:228
-msgid "Edit"
-msgstr ""
-
-#: admin/partials/class-wc-discount-rules-table.php:230
-msgid "Duplicate"
 msgstr ""
 
 #: admin/partials/class-wc-discount-rules-table.php:266
@@ -456,24 +508,6 @@ msgstr ""
 
 #: admin/partials/class-wc-discount-rules-table.php:271
 msgid "N/As"
-msgstr ""
-
-#: admin/partials/class-wc-discount-rules-table.php:358
-#: admin/partials/class-wc-discount-rules-table.php:387
-msgid "Everywhere"
-msgstr ""
-
-#: admin/partials/class-wc-discount-rules-table.php:392
-#. translators: %1$s: date format, %2$s: time format
-msgid "%1$s at %2$s"
-msgstr ""
-
-#: admin/partials/class-wc-discount-rules-table.php:406
-msgid "Disable"
-msgstr ""
-
-#: admin/partials/class-wc-discount-rules-table.php:407
-msgid "Enable"
 msgstr ""
 
 #: admin/partials/class-wc-discount-rules-table.php:539
@@ -522,7 +556,7 @@ msgid "Upgrade Now"
 msgstr ""
 
 #: admin/partials/header/plugin-header.php:28
-#: includes/class-woocommerce-dynamic-pricing-and-discount.php:289
+#: includes/class-woocommerce-dynamic-pricing-and-discount.php:299
 msgid "Support"
 msgstr ""
 
@@ -538,29 +572,33 @@ msgstr ""
 msgid "My Account"
 msgstr ""
 
-#: admin/partials/header/plugin-header.php:93
+#: admin/partials/header/plugin-header.php:94
 msgid "Manage Rules"
 msgstr ""
 
-#: admin/partials/header/plugin-header.php:96
-#: includes/class-woocommerce-dynamic-pricing-and-discount.php:287
+#: admin/partials/header/plugin-header.php:107
+msgid "Manage Collections"
+msgstr ""
+
+#: admin/partials/header/plugin-header.php:114
+#: includes/class-woocommerce-dynamic-pricing-and-discount.php:297
 msgid "Settings"
 msgstr ""
 
-#: admin/partials/header/plugin-header.php:102
+#: admin/partials/header/plugin-header.php:120
 msgid "License"
 msgstr ""
 
-#: admin/partials/header/plugin-header.php:108
+#: admin/partials/header/plugin-header.php:126
 msgid "Get Premium"
 msgstr ""
 
-#: admin/partials/header/plugin-header.php:131
+#: admin/partials/header/plugin-header.php:149
 #: admin/partials/wcdrfc-general-settings.php:28
 msgid "General Settings"
 msgstr ""
 
-#: admin/partials/header/plugin-header.php:132
+#: admin/partials/header/plugin-header.php:150
 msgid "Import / Export"
 msgstr ""
 
@@ -762,205 +800,959 @@ msgstr ""
 msgid "Done"
 msgstr ""
 
+#: admin/partials/wcdrfc-pro-add-new-collection.php:53
 #: admin/partials/wcdrfc-pro-add-new-page.php:53
 msgid "Update"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:274
+#: admin/partials/wcdrfc-pro-add-new-collection.php:286
+#: admin/partials/wcdrfc-pro-add-new-page.php:286
 msgid "Submit"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:350
-#: admin/partials/wcdrfc-pro-add-new-page.php:358
-#: admin/partials/wcdrfc-pro-add-new-page.php:1150
-#: admin/partials/wcdrfc-pro-add-new-page.php:1165
-#: admin/partials/wcdrfc-pro-add-new-page.php:1359
-#: admin/partials/wcdrfc-pro-add-new-page.php:1369
-#: admin/partials/wcdrfc-pro-add-new-page.php:1467
-#: admin/partials/wcdrfc-pro-add-new-page.php:1477
-#: admin/partials/wcdrfc-pro-add-new-page.php:1583
-#: admin/partials/wcdrfc-pro-add-new-page.php:1649
-#: admin/partials/wcdrfc-pro-add-new-page.php:1715
+#: admin/partials/wcdrfc-pro-add-new-collection.php:362
+#: admin/partials/wcdrfc-pro-add-new-collection.php:370
+#: admin/partials/wcdrfc-pro-add-new-collection.php:497
+#: admin/partials/wcdrfc-pro-add-new-collection.php:512
+#: admin/partials/wcdrfc-pro-add-new-collection.php:516
+#: admin/partials/wcdrfc-pro-add-new-collection.php:710
+#: admin/partials/wcdrfc-pro-add-new-collection.php:720
+#: admin/partials/wcdrfc-pro-add-new-collection.php:818
+#: admin/partials/wcdrfc-pro-add-new-collection.php:828
+#: admin/partials/wcdrfc-pro-add-new-collection.php:934
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1000
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1066
+#: admin/partials/wcdrfc-pro-add-new-page.php:362
+#: admin/partials/wcdrfc-pro-add-new-page.php:370
+#: admin/partials/wcdrfc-pro-add-new-page.php:1271
+#: admin/partials/wcdrfc-pro-add-new-page.php:1286
+#: admin/partials/wcdrfc-pro-add-new-page.php:1290
+#: admin/partials/wcdrfc-pro-add-new-page.php:1493
+#: admin/partials/wcdrfc-pro-add-new-page.php:1503
+#: admin/partials/wcdrfc-pro-add-new-page.php:1604
+#: admin/partials/wcdrfc-pro-add-new-page.php:1614
+#: admin/partials/wcdrfc-pro-add-new-page.php:1723
+#: admin/partials/wcdrfc-pro-add-new-page.php:1792
+#: admin/partials/wcdrfc-pro-add-new-page.php:1861
 msgid "Equal to ( = )"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:351
-#: admin/partials/wcdrfc-pro-add-new-page.php:1151
-#: admin/partials/wcdrfc-pro-add-new-page.php:1360
-#: admin/partials/wcdrfc-pro-add-new-page.php:1468
+#: admin/partials/wcdrfc-pro-add-new-collection.php:363
+#: admin/partials/wcdrfc-pro-add-new-collection.php:498
+#: admin/partials/wcdrfc-pro-add-new-collection.php:711
+#: admin/partials/wcdrfc-pro-add-new-collection.php:819
+#: admin/partials/wcdrfc-pro-add-new-page.php:363
+#: admin/partials/wcdrfc-pro-add-new-page.php:1272
+#: admin/partials/wcdrfc-pro-add-new-page.php:1494
+#: admin/partials/wcdrfc-pro-add-new-page.php:1605
 msgid "Less or Equal to ( <= )"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:352
-#: admin/partials/wcdrfc-pro-add-new-page.php:1152
-#: admin/partials/wcdrfc-pro-add-new-page.php:1362
-#: admin/partials/wcdrfc-pro-add-new-page.php:1470
+#: admin/partials/wcdrfc-pro-add-new-collection.php:364
+#: admin/partials/wcdrfc-pro-add-new-collection.php:499
+#: admin/partials/wcdrfc-pro-add-new-collection.php:713
+#: admin/partials/wcdrfc-pro-add-new-collection.php:821
+#: admin/partials/wcdrfc-pro-add-new-page.php:364
+#: admin/partials/wcdrfc-pro-add-new-page.php:1273
+#: admin/partials/wcdrfc-pro-add-new-page.php:1496
+#: admin/partials/wcdrfc-pro-add-new-page.php:1607
 msgid "Less than ( < )"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:353
-#: admin/partials/wcdrfc-pro-add-new-page.php:1153
-#: admin/partials/wcdrfc-pro-add-new-page.php:1363
-#: admin/partials/wcdrfc-pro-add-new-page.php:1471
+#: admin/partials/wcdrfc-pro-add-new-collection.php:365
+#: admin/partials/wcdrfc-pro-add-new-collection.php:500
+#: admin/partials/wcdrfc-pro-add-new-collection.php:714
+#: admin/partials/wcdrfc-pro-add-new-collection.php:822
+#: admin/partials/wcdrfc-pro-add-new-page.php:365
+#: admin/partials/wcdrfc-pro-add-new-page.php:1274
+#: admin/partials/wcdrfc-pro-add-new-page.php:1497
+#: admin/partials/wcdrfc-pro-add-new-page.php:1608
 msgid "Greater or Equal to ( >= )"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:354
-#: admin/partials/wcdrfc-pro-add-new-page.php:1154
-#: admin/partials/wcdrfc-pro-add-new-page.php:1364
-#: admin/partials/wcdrfc-pro-add-new-page.php:1472
+#: admin/partials/wcdrfc-pro-add-new-collection.php:366
+#: admin/partials/wcdrfc-pro-add-new-collection.php:501
+#: admin/partials/wcdrfc-pro-add-new-collection.php:715
+#: admin/partials/wcdrfc-pro-add-new-collection.php:823
+#: admin/partials/wcdrfc-pro-add-new-page.php:366
+#: admin/partials/wcdrfc-pro-add-new-page.php:1275
+#: admin/partials/wcdrfc-pro-add-new-page.php:1498
+#: admin/partials/wcdrfc-pro-add-new-page.php:1609
 msgid "Greater than ( > )"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:355
-#: admin/partials/wcdrfc-pro-add-new-page.php:359
-#: admin/partials/wcdrfc-pro-add-new-page.php:1155
-#: admin/partials/wcdrfc-pro-add-new-page.php:1166
-#: admin/partials/wcdrfc-pro-add-new-page.php:1365
-#: admin/partials/wcdrfc-pro-add-new-page.php:1370
-#: admin/partials/wcdrfc-pro-add-new-page.php:1473
-#: admin/partials/wcdrfc-pro-add-new-page.php:1478
-#: admin/partials/wcdrfc-pro-add-new-page.php:1584
-#: admin/partials/wcdrfc-pro-add-new-page.php:1650
-#: admin/partials/wcdrfc-pro-add-new-page.php:1716
+#: admin/partials/wcdrfc-pro-add-new-collection.php:367
+#: admin/partials/wcdrfc-pro-add-new-collection.php:371
+#: admin/partials/wcdrfc-pro-add-new-collection.php:502
+#: admin/partials/wcdrfc-pro-add-new-collection.php:517
+#: admin/partials/wcdrfc-pro-add-new-collection.php:716
+#: admin/partials/wcdrfc-pro-add-new-collection.php:721
+#: admin/partials/wcdrfc-pro-add-new-collection.php:824
+#: admin/partials/wcdrfc-pro-add-new-collection.php:829
+#: admin/partials/wcdrfc-pro-add-new-collection.php:935
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1001
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1067
+#: admin/partials/wcdrfc-pro-add-new-page.php:367
+#: admin/partials/wcdrfc-pro-add-new-page.php:371
+#: admin/partials/wcdrfc-pro-add-new-page.php:1276
+#: admin/partials/wcdrfc-pro-add-new-page.php:1291
+#: admin/partials/wcdrfc-pro-add-new-page.php:1499
+#: admin/partials/wcdrfc-pro-add-new-page.php:1504
+#: admin/partials/wcdrfc-pro-add-new-page.php:1610
+#: admin/partials/wcdrfc-pro-add-new-page.php:1615
+#: admin/partials/wcdrfc-pro-add-new-page.php:1724
+#: admin/partials/wcdrfc-pro-add-new-page.php:1793
+#: admin/partials/wcdrfc-pro-add-new-page.php:1862
 msgid "Not Equal to ( != )"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:370
+#: admin/partials/wcdrfc-pro-add-new-collection.php:382
+#: admin/partials/wcdrfc-pro-add-new-page.php:382
 msgid "Discount Configuration"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:377
-msgid "This discount will be visible to customers only if it is enabled."
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:390
+#: admin/partials/wcdrfc-pro-add-new-collection.php:388
+#: admin/partials/wcdrfc-pro-add-new-page.php:402
 msgid "Discount rule title"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:392
+#: admin/partials/wcdrfc-pro-add-new-collection.php:390
+#: admin/partials/wcdrfc-pro-add-new-page.php:404
 msgid "This discount rule title is visible to the customer at the time of checkout."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:396
+#: admin/partials/wcdrfc-pro-add-new-collection.php:394
+#: admin/partials/wcdrfc-pro-add-new-page.php:408
 msgid "Enter product discount title"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:402
+#: admin/partials/wcdrfc-pro-add-new-collection.php:404
+#: admin/partials/wcdrfc-pro-add-new-page.php:1173
+msgid "Discount Rules for checkout"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:406
+#: admin/partials/wcdrfc-pro-add-new-page.php:980
+#: admin/partials/wcdrfc-pro-add-new-page.php:1079
+#: admin/partials/wcdrfc-pro-add-new-page.php:1175
+#: admin/partials/wcdrfc-pro-add-new-page.php:1936
+#: admin/partials/wcdrfc-pro-add-new-page.php:2090
+#: admin/partials/wcdrfc-pro-add-new-page.php:2248
+#: admin/partials/wcdrfc-pro-add-new-page.php:2406
+#: admin/partials/wcdrfc-pro-add-new-page.php:2567
+#: admin/partials/wcdrfc-pro-add-new-page.php:2736
+#: admin/partials/wcdrfc-pro-add-new-page.php:2896
+#: admin/partials/wcdrfc-pro-add-new-page.php:3049
+#: admin/partials/wcdrfc-pro-add-new-page.php:3200
+#: admin/partials/wcdrfc-pro-add-new-page.php:3360
+#: admin/partials/wcdrfc-pro-add-new-page.php:3576
+#: admin/partials/wcdrfc-pro-add-new-page.php:3711
+msgid "+ Add Rule"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:414
+#: admin/partials/wcdrfc-pro-add-new-page.php:1183
+#: admin/partials/wcdrfc-pro-add-new-page.php:1947
+#: admin/partials/wcdrfc-pro-add-new-page.php:2101
+#: admin/partials/wcdrfc-pro-add-new-page.php:2259
+#: admin/partials/wcdrfc-pro-add-new-page.php:2417
+#: admin/partials/wcdrfc-pro-add-new-page.php:2578
+#: admin/partials/wcdrfc-pro-add-new-page.php:2747
+#: admin/partials/wcdrfc-pro-add-new-page.php:2907
+#: admin/partials/wcdrfc-pro-add-new-page.php:3060
+#: admin/partials/wcdrfc-pro-add-new-page.php:3213
+#: admin/partials/wcdrfc-pro-add-new-page.php:3373
+#: admin/partials/wcdrfc-pro-add-new-page.php:3587
+#: admin/partials/wcdrfc-pro-add-new-page.php:3722
+msgid "below"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:416
+#: admin/partials/wcdrfc-pro-add-new-page.php:1185
+#: admin/partials/wcdrfc-pro-add-new-page.php:1952
+#: admin/partials/wcdrfc-pro-add-new-page.php:2107
+#: admin/partials/wcdrfc-pro-add-new-page.php:2264
+#: admin/partials/wcdrfc-pro-add-new-page.php:2422
+#: admin/partials/wcdrfc-pro-add-new-page.php:2584
+#: admin/partials/wcdrfc-pro-add-new-page.php:2753
+#: admin/partials/wcdrfc-pro-add-new-page.php:2912
+#: admin/partials/wcdrfc-pro-add-new-page.php:3066
+#: admin/partials/wcdrfc-pro-add-new-page.php:3219
+#: admin/partials/wcdrfc-pro-add-new-page.php:3380
+#: admin/partials/wcdrfc-pro-add-new-page.php:3590
+#: admin/partials/wcdrfc-pro-add-new-page.php:3725
+msgid "Any One"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:417
+#: admin/partials/wcdrfc-pro-add-new-page.php:1186
+#: admin/partials/wcdrfc-pro-add-new-page.php:1954
+#: admin/partials/wcdrfc-pro-add-new-page.php:2109
+#: admin/partials/wcdrfc-pro-add-new-page.php:2266
+#: admin/partials/wcdrfc-pro-add-new-page.php:2424
+#: admin/partials/wcdrfc-pro-add-new-page.php:2586
+#: admin/partials/wcdrfc-pro-add-new-page.php:2755
+#: admin/partials/wcdrfc-pro-add-new-page.php:2914
+#: admin/partials/wcdrfc-pro-add-new-page.php:3068
+#: admin/partials/wcdrfc-pro-add-new-page.php:3221
+#: admin/partials/wcdrfc-pro-add-new-page.php:3382
+#: admin/partials/wcdrfc-pro-add-new-page.php:3591
+#: admin/partials/wcdrfc-pro-add-new-page.php:3726
+msgid "All"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:419
+#: admin/partials/wcdrfc-pro-add-new-page.php:1188
+#: admin/partials/wcdrfc-pro-add-new-page.php:1957
+#: admin/partials/wcdrfc-pro-add-new-page.php:2112
+#: admin/partials/wcdrfc-pro-add-new-page.php:2269
+#: admin/partials/wcdrfc-pro-add-new-page.php:2427
+#: admin/partials/wcdrfc-pro-add-new-page.php:2589
+#: admin/partials/wcdrfc-pro-add-new-page.php:2758
+#: admin/partials/wcdrfc-pro-add-new-page.php:2917
+#: admin/partials/wcdrfc-pro-add-new-page.php:3071
+#: admin/partials/wcdrfc-pro-add-new-page.php:3224
+#: admin/partials/wcdrfc-pro-add-new-page.php:3385
+#: admin/partials/wcdrfc-pro-add-new-page.php:3594
+#: admin/partials/wcdrfc-pro-add-new-page.php:3729
+msgid "rule match"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:446
+#: admin/partials/wcdrfc-pro-add-new-collection.php:659
+#: admin/partials/wcdrfc-pro-add-new-collection.php:767
+#: admin/partials/wcdrfc-pro-add-new-collection.php:884
+#: admin/partials/wcdrfc-pro-add-new-collection.php:950
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1016
+#: admin/partials/wcdrfc-pro-add-new-page.php:1215
+#: admin/partials/wcdrfc-pro-add-new-page.php:1436
+#: admin/partials/wcdrfc-pro-add-new-page.php:1550
+#: admin/partials/wcdrfc-pro-add-new-page.php:1670
+#: admin/partials/wcdrfc-pro-add-new-page.php:1739
+#: admin/partials/wcdrfc-pro-add-new-page.php:1808
+msgid "Location Specific"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:447
+#: admin/partials/wcdrfc-pro-add-new-collection.php:660
+#: admin/partials/wcdrfc-pro-add-new-collection.php:768
+#: admin/partials/wcdrfc-pro-add-new-collection.php:885
+#: admin/partials/wcdrfc-pro-add-new-collection.php:951
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1017
+#: admin/partials/wcdrfc-pro-add-new-page.php:1216
+#: admin/partials/wcdrfc-pro-add-new-page.php:1437
+#: admin/partials/wcdrfc-pro-add-new-page.php:1551
+#: admin/partials/wcdrfc-pro-add-new-page.php:1671
+#: admin/partials/wcdrfc-pro-add-new-page.php:1740
+#: admin/partials/wcdrfc-pro-add-new-page.php:1809
+msgid "Country"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:448
+#: admin/partials/wcdrfc-pro-add-new-collection.php:886
+#: admin/partials/wcdrfc-pro-add-new-page.php:1217
+#: admin/partials/wcdrfc-pro-add-new-page.php:1672
+msgid "City"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:449
+#: admin/partials/wcdrfc-pro-add-new-collection.php:887
+#: admin/partials/wcdrfc-pro-add-new-page.php:1218
+#: admin/partials/wcdrfc-pro-add-new-page.php:1673
+msgid "State"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:450
+#: admin/partials/wcdrfc-pro-add-new-collection.php:888
+#: admin/partials/wcdrfc-pro-add-new-page.php:1219
+#: admin/partials/wcdrfc-pro-add-new-page.php:1674
+msgid "Postcode"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:451
+#: admin/partials/wcdrfc-pro-add-new-collection.php:889
+#: admin/partials/wcdrfc-pro-add-new-page.php:1220
+#: admin/partials/wcdrfc-pro-add-new-page.php:1675
+msgid "Zone"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:453
+#: admin/partials/wcdrfc-pro-add-new-collection.php:666
+#: admin/partials/wcdrfc-pro-add-new-collection.php:774
+#: admin/partials/wcdrfc-pro-add-new-collection.php:891
+#: admin/partials/wcdrfc-pro-add-new-collection.php:957
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1023
+#: admin/partials/wcdrfc-pro-add-new-page.php:1222
+#: admin/partials/wcdrfc-pro-add-new-page.php:1443
+#: admin/partials/wcdrfc-pro-add-new-page.php:1557
+#: admin/partials/wcdrfc-pro-add-new-page.php:1677
+#: admin/partials/wcdrfc-pro-add-new-page.php:1746
+#: admin/partials/wcdrfc-pro-add-new-page.php:1815
+msgid "Product Specific"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:454
+#: admin/partials/wcdrfc-pro-add-new-collection.php:667
+#: admin/partials/wcdrfc-pro-add-new-collection.php:775
+#: admin/partials/wcdrfc-pro-add-new-collection.php:892
+#: admin/partials/wcdrfc-pro-add-new-collection.php:958
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1024
+#: admin/partials/wcdrfc-pro-add-new-page.php:641
+#: admin/partials/wcdrfc-pro-add-new-page.php:1223
+#: admin/partials/wcdrfc-pro-add-new-page.php:1444
+#: admin/partials/wcdrfc-pro-add-new-page.php:1558
+#: admin/partials/wcdrfc-pro-add-new-page.php:1678
+#: admin/partials/wcdrfc-pro-add-new-page.php:1747
+#: admin/partials/wcdrfc-pro-add-new-page.php:1816
+#: admin/partials/wcdrfc-pro-add-new-page.php:1965
+#: admin/partials/wcdrfc-pro-add-new-page.php:2277
+#: admin/partials/wcdrfc-pro-add-new-page.php:3602
+#: admin/partials/wcdrfc-pro-add-new-page.php:3737
+#: woocommerce/checkout/review-order.php:23
+msgid "Product"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:455
+#: admin/partials/wcdrfc-pro-add-new-collection.php:668
+#: admin/partials/wcdrfc-pro-add-new-collection.php:776
+#: admin/partials/wcdrfc-pro-add-new-collection.php:893
+#: admin/partials/wcdrfc-pro-add-new-collection.php:959
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1025
+#: admin/partials/wcdrfc-pro-add-new-page.php:1224
+#: admin/partials/wcdrfc-pro-add-new-page.php:1445
+#: admin/partials/wcdrfc-pro-add-new-page.php:1559
+#: admin/partials/wcdrfc-pro-add-new-page.php:1679
+#: admin/partials/wcdrfc-pro-add-new-page.php:1748
+#: admin/partials/wcdrfc-pro-add-new-page.php:1817
+msgid "Variable Product"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:456
+#: admin/partials/wcdrfc-pro-add-new-collection.php:669
+#: admin/partials/wcdrfc-pro-add-new-collection.php:777
+#: admin/partials/wcdrfc-pro-add-new-collection.php:894
+#: admin/partials/wcdrfc-pro-add-new-collection.php:960
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1026
+#: admin/partials/wcdrfc-pro-add-new-page.php:642
+#: admin/partials/wcdrfc-pro-add-new-page.php:1096
+#: admin/partials/wcdrfc-pro-add-new-page.php:1225
+#: admin/partials/wcdrfc-pro-add-new-page.php:1446
+#: admin/partials/wcdrfc-pro-add-new-page.php:1560
+#: admin/partials/wcdrfc-pro-add-new-page.php:1680
+#: admin/partials/wcdrfc-pro-add-new-page.php:1749
+#: admin/partials/wcdrfc-pro-add-new-page.php:1818
+#: admin/partials/wcdrfc-pro-add-new-page.php:2435
+#: admin/partials/wcdrfc-pro-add-new-page.php:2766
+msgid "Category"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:457
+#: admin/partials/wcdrfc-pro-add-new-collection.php:895
+#: admin/partials/wcdrfc-pro-add-new-page.php:1226
+#: admin/partials/wcdrfc-pro-add-new-page.php:1681
+msgid "Tag"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:458
+#: admin/partials/wcdrfc-pro-add-new-collection.php:896
+#: admin/partials/wcdrfc-pro-add-new-page.php:1227
+#: admin/partials/wcdrfc-pro-add-new-page.php:1682
+msgid "Brand"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:459
+#: admin/partials/wcdrfc-pro-add-new-collection.php:897
+#: admin/partials/wcdrfc-pro-add-new-page.php:1228
+#: admin/partials/wcdrfc-pro-add-new-page.php:1683
+msgid "Product's quantity"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:460
+#: admin/partials/wcdrfc-pro-add-new-collection.php:673
+#: admin/partials/wcdrfc-pro-add-new-collection.php:781
+#: admin/partials/wcdrfc-pro-add-new-collection.php:898
+#: admin/partials/wcdrfc-pro-add-new-collection.php:964
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1030
+#: admin/partials/wcdrfc-pro-add-new-page.php:1229
+#: admin/partials/wcdrfc-pro-add-new-page.php:1450
+#: admin/partials/wcdrfc-pro-add-new-page.php:1564
+#: admin/partials/wcdrfc-pro-add-new-page.php:1684
+#: admin/partials/wcdrfc-pro-add-new-page.php:1753
+#: admin/partials/wcdrfc-pro-add-new-page.php:1822
+msgid "Product's count"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:462
+#: admin/partials/wcdrfc-pro-add-new-collection.php:675
+#: admin/partials/wcdrfc-pro-add-new-collection.php:783
+#: admin/partials/wcdrfc-pro-add-new-collection.php:900
+#: admin/partials/wcdrfc-pro-add-new-collection.php:966
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1032
+#: admin/partials/wcdrfc-pro-add-new-page.php:1231
+#: admin/partials/wcdrfc-pro-add-new-page.php:1452
+#: admin/partials/wcdrfc-pro-add-new-page.php:1566
+#: admin/partials/wcdrfc-pro-add-new-page.php:1686
+#: admin/partials/wcdrfc-pro-add-new-page.php:1755
+#: admin/partials/wcdrfc-pro-add-new-page.php:1824
+msgid "User Specific"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:463
+#: admin/partials/wcdrfc-pro-add-new-collection.php:676
+#: admin/partials/wcdrfc-pro-add-new-collection.php:784
+#: admin/partials/wcdrfc-pro-add-new-collection.php:901
+#: admin/partials/wcdrfc-pro-add-new-collection.php:967
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1033
+#: admin/partials/wcdrfc-pro-add-new-page.php:1232
+#: admin/partials/wcdrfc-pro-add-new-page.php:1453
+#: admin/partials/wcdrfc-pro-add-new-page.php:1567
+#: admin/partials/wcdrfc-pro-add-new-page.php:1687
+#: admin/partials/wcdrfc-pro-add-new-page.php:1756
+#: admin/partials/wcdrfc-pro-add-new-page.php:1825
+msgid "User"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:464
+#: admin/partials/wcdrfc-pro-add-new-collection.php:902
+#: admin/partials/wcdrfc-pro-add-new-page.php:1233
+#: admin/partials/wcdrfc-pro-add-new-page.php:1688
+msgid "User Role"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:465
+#: admin/partials/wcdrfc-pro-add-new-collection.php:903
+#: admin/partials/wcdrfc-pro-add-new-page.php:1234
+#: admin/partials/wcdrfc-pro-add-new-page.php:1689
+msgid "User Email"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:467
+#: admin/partials/wcdrfc-pro-add-new-collection.php:680
+#: admin/partials/wcdrfc-pro-add-new-collection.php:788
+#: admin/partials/wcdrfc-pro-add-new-collection.php:905
+#: admin/partials/wcdrfc-pro-add-new-collection.php:971
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1037
+#: admin/partials/wcdrfc-pro-add-new-page.php:1236
+#: admin/partials/wcdrfc-pro-add-new-page.php:1457
+#: admin/partials/wcdrfc-pro-add-new-page.php:1571
+#: admin/partials/wcdrfc-pro-add-new-page.php:1691
+#: admin/partials/wcdrfc-pro-add-new-page.php:1760
+#: admin/partials/wcdrfc-pro-add-new-page.php:1829
+msgid "Purchase History"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:468
+#: admin/partials/wcdrfc-pro-add-new-collection.php:907
+#: admin/partials/wcdrfc-pro-add-new-page.php:1237
+#: admin/partials/wcdrfc-pro-add-new-page.php:1693
+msgid "Total order spent (all time)"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:469
+#: admin/partials/wcdrfc-pro-add-new-collection.php:908
+#: admin/partials/wcdrfc-pro-add-new-page.php:1238
+#: admin/partials/wcdrfc-pro-add-new-page.php:1694
+msgid "Number of orders (all time)"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:470
+#: admin/partials/wcdrfc-pro-add-new-collection.php:906
+#: admin/partials/wcdrfc-pro-add-new-page.php:1239
+#: admin/partials/wcdrfc-pro-add-new-page.php:1692
+msgid "Last order spent"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:471
+#: admin/partials/wcdrfc-pro-add-new-collection.php:909
+#: admin/partials/wcdrfc-pro-add-new-page.php:1240
+#: admin/partials/wcdrfc-pro-add-new-page.php:1695
+msgid "User repeat product"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:473
+#: admin/partials/wcdrfc-pro-add-new-collection.php:686
+#: admin/partials/wcdrfc-pro-add-new-collection.php:911
+#: admin/partials/wcdrfc-pro-add-new-collection.php:977
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1043
+#: admin/partials/wcdrfc-pro-add-new-page.php:1242
+#: admin/partials/wcdrfc-pro-add-new-page.php:1463
+#: admin/partials/wcdrfc-pro-add-new-page.php:1697
+#: admin/partials/wcdrfc-pro-add-new-page.php:1766
+#: admin/partials/wcdrfc-pro-add-new-page.php:1835
+msgid "Cart Specific"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:478
+#: admin/partials/wcdrfc-pro-add-new-collection.php:916
+#: admin/partials/wcdrfc-pro-add-new-page.php:1247
+#: admin/partials/wcdrfc-pro-add-new-page.php:1702
+msgid "Cart Subtotal (Before Discount) "
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:479
+#: admin/partials/wcdrfc-pro-add-new-collection.php:917
+#: admin/partials/wcdrfc-pro-add-new-page.php:1248
+#: admin/partials/wcdrfc-pro-add-new-page.php:1703
+msgid "Cart Subtotal (After Discount) "
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:480
+#: admin/partials/wcdrfc-pro-add-new-collection.php:693
+#: admin/partials/wcdrfc-pro-add-new-collection.php:801
+#: admin/partials/wcdrfc-pro-add-new-collection.php:918
+#: admin/partials/wcdrfc-pro-add-new-collection.php:984
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1050
+#: admin/partials/wcdrfc-pro-add-new-page.php:1249
+#: admin/partials/wcdrfc-pro-add-new-page.php:1470
+#: admin/partials/wcdrfc-pro-add-new-page.php:1584
+#: admin/partials/wcdrfc-pro-add-new-page.php:1704
+#: admin/partials/wcdrfc-pro-add-new-page.php:1773
+#: admin/partials/wcdrfc-pro-add-new-page.php:1842
+msgid "Quantity"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:481
+#: admin/partials/wcdrfc-pro-add-new-page.php:1250
+msgid "Weight "
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:482
+#: admin/partials/wcdrfc-pro-add-new-collection.php:920
+#: admin/partials/wcdrfc-pro-add-new-page.php:1251
+#: admin/partials/wcdrfc-pro-add-new-page.php:1706
+msgid "Coupon"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:483
+#: admin/partials/wcdrfc-pro-add-new-collection.php:921
+#: admin/partials/wcdrfc-pro-add-new-page.php:1252
+#: admin/partials/wcdrfc-pro-add-new-page.php:1707
+#: admin/partials/wcdrfc-pro-add-new-page.php:3393
+msgid "Shipping Class"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:485
+#: admin/partials/wcdrfc-pro-add-new-collection.php:698
+#: admin/partials/wcdrfc-pro-add-new-collection.php:806
+#: admin/partials/wcdrfc-pro-add-new-collection.php:923
+#: admin/partials/wcdrfc-pro-add-new-collection.php:989
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1055
+#: admin/partials/wcdrfc-pro-add-new-page.php:1254
+#: admin/partials/wcdrfc-pro-add-new-page.php:1475
+#: admin/partials/wcdrfc-pro-add-new-page.php:1589
+#: admin/partials/wcdrfc-pro-add-new-page.php:1709
+#: admin/partials/wcdrfc-pro-add-new-page.php:1778
+#: admin/partials/wcdrfc-pro-add-new-page.php:1847
+msgid "Payment Specific"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:486
+#: admin/partials/wcdrfc-pro-add-new-collection.php:924
+#: admin/partials/wcdrfc-pro-add-new-page.php:1255
+#: admin/partials/wcdrfc-pro-add-new-page.php:1710
+msgid "Payment Gateway"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:488
+#: admin/partials/wcdrfc-pro-add-new-collection.php:701
+#: admin/partials/wcdrfc-pro-add-new-collection.php:809
+#: admin/partials/wcdrfc-pro-add-new-collection.php:926
+#: admin/partials/wcdrfc-pro-add-new-collection.php:992
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1058
+#: admin/partials/wcdrfc-pro-add-new-page.php:1257
+#: admin/partials/wcdrfc-pro-add-new-page.php:1478
+#: admin/partials/wcdrfc-pro-add-new-page.php:1592
+#: admin/partials/wcdrfc-pro-add-new-page.php:1712
+#: admin/partials/wcdrfc-pro-add-new-page.php:1781
+#: admin/partials/wcdrfc-pro-add-new-page.php:1850
+msgid "Shipping Specific"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:489
+#: admin/partials/wcdrfc-pro-add-new-collection.php:927
+#: admin/partials/wcdrfc-pro-add-new-page.php:1258
+#: admin/partials/wcdrfc-pro-add-new-page.php:1713
+msgid "Shipping Method"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:490
+#: admin/partials/wcdrfc-pro-add-new-collection.php:928
+#: admin/partials/wcdrfc-pro-add-new-page.php:1259
+#: admin/partials/wcdrfc-pro-add-new-page.php:1714
+msgid "Shipping Total"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:506
+#: admin/partials/wcdrfc-pro-add-new-page.php:1280
+msgid "User Name ( john.doe )"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:507
+#: admin/partials/wcdrfc-pro-add-new-page.php:1281
+msgid "Domain ( @gmail.com )"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:508
+#: admin/partials/wcdrfc-pro-add-new-page.php:1282
+msgid "Email Address"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:661
+#: admin/partials/wcdrfc-pro-add-new-collection.php:769
+#: admin/partials/wcdrfc-pro-add-new-collection.php:952
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1018
+#: admin/partials/wcdrfc-pro-add-new-page.php:1438
+#: admin/partials/wcdrfc-pro-add-new-page.php:1552
+#: admin/partials/wcdrfc-pro-add-new-page.php:1741
+#: admin/partials/wcdrfc-pro-add-new-page.php:1810
+msgid "City 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:662
+#: admin/partials/wcdrfc-pro-add-new-collection.php:770
+#: admin/partials/wcdrfc-pro-add-new-collection.php:953
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1019
+#: admin/partials/wcdrfc-pro-add-new-page.php:1439
+#: admin/partials/wcdrfc-pro-add-new-page.php:1553
+#: admin/partials/wcdrfc-pro-add-new-page.php:1742
+#: admin/partials/wcdrfc-pro-add-new-page.php:1811
+msgid "State 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:663
+#: admin/partials/wcdrfc-pro-add-new-collection.php:771
+#: admin/partials/wcdrfc-pro-add-new-collection.php:954
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1020
+#: admin/partials/wcdrfc-pro-add-new-page.php:1440
+#: admin/partials/wcdrfc-pro-add-new-page.php:1554
+#: admin/partials/wcdrfc-pro-add-new-page.php:1743
+#: admin/partials/wcdrfc-pro-add-new-page.php:1812
+msgid "Postcode 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:664
+#: admin/partials/wcdrfc-pro-add-new-collection.php:772
+#: admin/partials/wcdrfc-pro-add-new-collection.php:955
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1021
+#: admin/partials/wcdrfc-pro-add-new-page.php:1441
+#: admin/partials/wcdrfc-pro-add-new-page.php:1555
+#: admin/partials/wcdrfc-pro-add-new-page.php:1744
+#: admin/partials/wcdrfc-pro-add-new-page.php:1813
+msgid "Zone 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:670
+#: admin/partials/wcdrfc-pro-add-new-collection.php:778
+#: admin/partials/wcdrfc-pro-add-new-collection.php:961
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1027
+#: admin/partials/wcdrfc-pro-add-new-page.php:1447
+#: admin/partials/wcdrfc-pro-add-new-page.php:1561
+#: admin/partials/wcdrfc-pro-add-new-page.php:1750
+#: admin/partials/wcdrfc-pro-add-new-page.php:1819
+msgid "Tag 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:671
+#: admin/partials/wcdrfc-pro-add-new-collection.php:779
+#: admin/partials/wcdrfc-pro-add-new-collection.php:962
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1028
+#: admin/partials/wcdrfc-pro-add-new-page.php:1448
+#: admin/partials/wcdrfc-pro-add-new-page.php:1562
+#: admin/partials/wcdrfc-pro-add-new-page.php:1751
+#: admin/partials/wcdrfc-pro-add-new-page.php:1820
+msgid "Brand 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:672
+#: admin/partials/wcdrfc-pro-add-new-collection.php:780
+#: admin/partials/wcdrfc-pro-add-new-collection.php:963
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1029
+#: admin/partials/wcdrfc-pro-add-new-page.php:1449
+#: admin/partials/wcdrfc-pro-add-new-page.php:1563
+#: admin/partials/wcdrfc-pro-add-new-page.php:1752
+#: admin/partials/wcdrfc-pro-add-new-page.php:1821
+msgid "Product's quantity 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:677
+#: admin/partials/wcdrfc-pro-add-new-collection.php:785
+#: admin/partials/wcdrfc-pro-add-new-collection.php:968
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1034
+#: admin/partials/wcdrfc-pro-add-new-page.php:1454
+#: admin/partials/wcdrfc-pro-add-new-page.php:1568
+#: admin/partials/wcdrfc-pro-add-new-page.php:1757
+#: admin/partials/wcdrfc-pro-add-new-page.php:1826
+msgid "User Role 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:678
+#: admin/partials/wcdrfc-pro-add-new-collection.php:786
+#: admin/partials/wcdrfc-pro-add-new-collection.php:969
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1035
+#: admin/partials/wcdrfc-pro-add-new-page.php:1455
+#: admin/partials/wcdrfc-pro-add-new-page.php:1569
+#: admin/partials/wcdrfc-pro-add-new-page.php:1758
+#: admin/partials/wcdrfc-pro-add-new-page.php:1827
+msgid "User Email 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:681
+#: admin/partials/wcdrfc-pro-add-new-collection.php:789
+#: admin/partials/wcdrfc-pro-add-new-collection.php:972
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1038
+#: admin/partials/wcdrfc-pro-add-new-page.php:1458
+#: admin/partials/wcdrfc-pro-add-new-page.php:1572
+#: admin/partials/wcdrfc-pro-add-new-page.php:1761
+#: admin/partials/wcdrfc-pro-add-new-page.php:1830
+msgid "Last order spent 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:682
+#: admin/partials/wcdrfc-pro-add-new-collection.php:790
+#: admin/partials/wcdrfc-pro-add-new-collection.php:973
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1039
+#: admin/partials/wcdrfc-pro-add-new-page.php:1459
+#: admin/partials/wcdrfc-pro-add-new-page.php:1573
+#: admin/partials/wcdrfc-pro-add-new-page.php:1762
+#: admin/partials/wcdrfc-pro-add-new-page.php:1831
+msgid "Total order spent (all time) 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:683
+#: admin/partials/wcdrfc-pro-add-new-collection.php:791
+#: admin/partials/wcdrfc-pro-add-new-collection.php:974
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1040
+#: admin/partials/wcdrfc-pro-add-new-page.php:1460
+#: admin/partials/wcdrfc-pro-add-new-page.php:1574
+#: admin/partials/wcdrfc-pro-add-new-page.php:1763
+#: admin/partials/wcdrfc-pro-add-new-page.php:1832
+msgid "Number of orders (all time) 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:684
+#: admin/partials/wcdrfc-pro-add-new-collection.php:792
+#: admin/partials/wcdrfc-pro-add-new-collection.php:975
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1041
+#: admin/partials/wcdrfc-pro-add-new-page.php:1461
+#: admin/partials/wcdrfc-pro-add-new-page.php:1575
+#: admin/partials/wcdrfc-pro-add-new-page.php:1764
+#: admin/partials/wcdrfc-pro-add-new-page.php:1833
+msgid "User repeat product 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:692
+#: admin/partials/wcdrfc-pro-add-new-collection.php:800
+#: admin/partials/wcdrfc-pro-add-new-collection.php:983
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1049
+#: admin/partials/wcdrfc-pro-add-new-page.php:1469
+#: admin/partials/wcdrfc-pro-add-new-page.php:1583
+#: admin/partials/wcdrfc-pro-add-new-page.php:1772
+#: admin/partials/wcdrfc-pro-add-new-page.php:1841
+msgid "Cart Subtotal (After Discount) 🔒 "
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:694
+#: admin/partials/wcdrfc-pro-add-new-collection.php:802
+#: admin/partials/wcdrfc-pro-add-new-collection.php:985
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1051
+#: admin/partials/wcdrfc-pro-add-new-page.php:1471
+#: admin/partials/wcdrfc-pro-add-new-page.php:1585
+#: admin/partials/wcdrfc-pro-add-new-page.php:1774
+#: admin/partials/wcdrfc-pro-add-new-page.php:1843
+msgid "Weight 🔒 "
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:695
+#: admin/partials/wcdrfc-pro-add-new-collection.php:803
+#: admin/partials/wcdrfc-pro-add-new-collection.php:986
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1052
+#: admin/partials/wcdrfc-pro-add-new-page.php:1472
+#: admin/partials/wcdrfc-pro-add-new-page.php:1586
+#: admin/partials/wcdrfc-pro-add-new-page.php:1775
+#: admin/partials/wcdrfc-pro-add-new-page.php:1844
+msgid "Coupon 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:696
+#: admin/partials/wcdrfc-pro-add-new-collection.php:804
+#: admin/partials/wcdrfc-pro-add-new-collection.php:987
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1053
+#: admin/partials/wcdrfc-pro-add-new-page.php:1473
+#: admin/partials/wcdrfc-pro-add-new-page.php:1587
+#: admin/partials/wcdrfc-pro-add-new-page.php:1776
+#: admin/partials/wcdrfc-pro-add-new-page.php:1845
+msgid "Shipping Class 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:699
+#: admin/partials/wcdrfc-pro-add-new-collection.php:807
+#: admin/partials/wcdrfc-pro-add-new-collection.php:990
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1056
+#: admin/partials/wcdrfc-pro-add-new-page.php:1476
+#: admin/partials/wcdrfc-pro-add-new-page.php:1590
+#: admin/partials/wcdrfc-pro-add-new-page.php:1779
+#: admin/partials/wcdrfc-pro-add-new-page.php:1848
+msgid "Payment Gateway 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:702
+#: admin/partials/wcdrfc-pro-add-new-collection.php:810
+#: admin/partials/wcdrfc-pro-add-new-collection.php:993
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1059
+#: admin/partials/wcdrfc-pro-add-new-page.php:1479
+#: admin/partials/wcdrfc-pro-add-new-page.php:1593
+#: admin/partials/wcdrfc-pro-add-new-page.php:1782
+#: admin/partials/wcdrfc-pro-add-new-page.php:1851
+msgid "Shipping Method 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:703
+#: admin/partials/wcdrfc-pro-add-new-collection.php:811
+#: admin/partials/wcdrfc-pro-add-new-collection.php:994
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1060
+#: admin/partials/wcdrfc-pro-add-new-page.php:1480
+#: admin/partials/wcdrfc-pro-add-new-page.php:1594
+#: admin/partials/wcdrfc-pro-add-new-page.php:1783
+#: admin/partials/wcdrfc-pro-add-new-page.php:1852
+msgid "Shipping Total 🔒"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:794
+#: admin/partials/wcdrfc-pro-add-new-page.php:1577
+msgid "Cart Specific "
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:919
+#: admin/partials/wcdrfc-pro-add-new-page.php:1705
+msgid "Weight"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-collection.php:982
+#: admin/partials/wcdrfc-pro-add-new-collection.php:1048
+#: admin/partials/wcdrfc-pro-add-new-page.php:1771
+#: admin/partials/wcdrfc-pro-add-new-page.php:1840
+msgid "Cart Subtotal "
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-page.php:389
+msgid "This discount will be visible to customers only if it is enabled."
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-add-new-page.php:414
 msgid "Select discount type"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:403
+#: admin/partials/wcdrfc-pro-add-new-page.php:415
 msgid ""
 "You can give discount on fixed price, percentage, BOGO(Buy One Get One) and "
 "Adjustment type."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:409
+#: admin/partials/wcdrfc-pro-add-new-page.php:421
 msgid "Fixed"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:410
+#: admin/partials/wcdrfc-pro-add-new-page.php:422
 msgid "Percentage"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:415
+#: admin/partials/wcdrfc-pro-add-new-page.php:427
 msgid "BOGO (Buy 1 Get 1 Free)"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:416
+#: admin/partials/wcdrfc-pro-add-new-page.php:428
 msgid "Adjustment"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:420
+#: admin/partials/wcdrfc-pro-add-new-page.php:432
 msgid "BOGO (Buy 1 Get 1 Free) 🔒"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:421
+#: admin/partials/wcdrfc-pro-add-new-page.php:433
 msgid "Adjustment 🔒"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:428
+#: admin/partials/wcdrfc-pro-add-new-page.php:440
 msgid "Advance settings"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:434
+#: admin/partials/wcdrfc-pro-add-new-page.php:446
 msgid "Discount value"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:436
+#: admin/partials/wcdrfc-pro-add-new-page.php:448
 msgid ""
 "If you select fixed discount type then : you have add fixed discount value. "
 "(Eg. 10, 20)"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:436
+#: admin/partials/wcdrfc-pro-add-new-page.php:448
 msgid ""
 "If you select percentage based discount type then : you have add percentage "
 "of discount (Eg. 10, 15.20)"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:451
-#: admin/partials/wcdrfc-pro-add-new-page.php:498
-#: admin/partials/wcdrfc-pro-add-new-page.php:549
+#: admin/partials/wcdrfc-pro-add-new-page.php:463
+#: admin/partials/wcdrfc-pro-add-new-page.php:510
+#: admin/partials/wcdrfc-pro-add-new-page.php:561
 msgid "Apply Per Quantity"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:452
-#: admin/partials/wcdrfc-pro-add-new-page.php:500
-#: admin/partials/wcdrfc-pro-add-new-page.php:551
+#: admin/partials/wcdrfc-pro-add-new-page.php:464
+#: admin/partials/wcdrfc-pro-add-new-page.php:512
+#: admin/partials/wcdrfc-pro-add-new-page.php:563
 msgid "Apply this discount per quantity of products."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:460
-#: admin/partials/wcdrfc-pro-add-new-page.php:508
-#: admin/partials/wcdrfc-pro-add-new-page.php:559
+#: admin/partials/wcdrfc-pro-add-new-page.php:472
+#: admin/partials/wcdrfc-pro-add-new-page.php:520
+#: admin/partials/wcdrfc-pro-add-new-page.php:571
 msgid "Calculate Quantity Based On"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:461
+#: admin/partials/wcdrfc-pro-add-new-page.php:473
 msgid ""
 "If you want to apply the discount for each quantity - where quantity should "
 "calculated based on product/category/tag/brand conditions, then select the "
 "\"Product Based\" option."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:461
-#: admin/partials/wcdrfc-pro-add-new-page.php:510
-#: admin/partials/wcdrfc-pro-add-new-page.php:561
+#: admin/partials/wcdrfc-pro-add-new-page.php:473
+#: admin/partials/wcdrfc-pro-add-new-page.php:522
+#: admin/partials/wcdrfc-pro-add-new-page.php:573
 msgid ""
 "If you want to apply the discount for each quantity in the customer's cart, "
 "then select the \"Cart Based\" option."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:464
-#: admin/partials/wcdrfc-pro-add-new-page.php:513
-#: admin/partials/wcdrfc-pro-add-new-page.php:564
+#: admin/partials/wcdrfc-pro-add-new-page.php:476
+#: admin/partials/wcdrfc-pro-add-new-page.php:525
+#: admin/partials/wcdrfc-pro-add-new-page.php:576
 msgid "Cart Based"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:465
-#: admin/partials/wcdrfc-pro-add-new-page.php:514
-#: admin/partials/wcdrfc-pro-add-new-page.php:565
+#: admin/partials/wcdrfc-pro-add-new-page.php:477
+#: admin/partials/wcdrfc-pro-add-new-page.php:526
+#: admin/partials/wcdrfc-pro-add-new-page.php:577
 msgid "Product Based"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:474
-#: admin/partials/wcdrfc-pro-add-new-page.php:523
-#: admin/partials/wcdrfc-pro-add-new-page.php:574
+#: admin/partials/wcdrfc-pro-add-new-page.php:486
+#: admin/partials/wcdrfc-pro-add-new-page.php:535
+#: admin/partials/wcdrfc-pro-add-new-page.php:586
 #. translators: %s: currency symbol
 msgid "Discount per Additional Quantity (%s) "
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:481
-#: admin/partials/wcdrfc-pro-add-new-page.php:531
-#: admin/partials/wcdrfc-pro-add-new-page.php:582
+#: admin/partials/wcdrfc-pro-add-new-page.php:493
+#: admin/partials/wcdrfc-pro-add-new-page.php:543
+#: admin/partials/wcdrfc-pro-add-new-page.php:594
 msgid "You can add a discount here to be charged for each additional quantity."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:484
-#: admin/partials/wcdrfc-pro-add-new-page.php:534
-#: admin/partials/wcdrfc-pro-add-new-page.php:585
+#: admin/partials/wcdrfc-pro-add-new-page.php:496
+#: admin/partials/wcdrfc-pro-add-new-page.php:546
+#: admin/partials/wcdrfc-pro-add-new-page.php:597
 msgid ""
 "For example, if a user adds 3 items and you've set a $10 discount with a $5 "
 "discount for each additional item, the total extra discount would be = "
@@ -973,1183 +1765,769 @@ msgid ""
 "of $5 applies to 2 items, not all 5."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:510
-#: admin/partials/wcdrfc-pro-add-new-page.php:561
+#: admin/partials/wcdrfc-pro-add-new-page.php:522
+#: admin/partials/wcdrfc-pro-add-new-page.php:573
 msgid ""
 "If you want to apply the discount for each quantity - where quantity should "
 "calculated based on product/category conditions, then select the \"Product "
 "Based\" option."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:603
+#: admin/partials/wcdrfc-pro-add-new-page.php:615
 msgid "Adjustment value"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:605
+#: admin/partials/wcdrfc-pro-add-new-page.php:617
 msgid "You must add percentage of discount for product price adjustment."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:614
+#: admin/partials/wcdrfc-pro-add-new-page.php:626
 msgid "We can provide percentage of discount adjustment of product price."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:623
+#: admin/partials/wcdrfc-pro-add-new-page.php:635
 msgid "Type of apply"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:624
+#: admin/partials/wcdrfc-pro-add-new-page.php:636
 msgid "Select type of price adjustment on product/category."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:629
-#: admin/partials/wcdrfc-pro-add-new-page.php:1107
-#: admin/partials/wcdrfc-pro-add-new-page.php:1316
-#: admin/partials/wcdrfc-pro-add-new-page.php:1424
-#: admin/partials/wcdrfc-pro-add-new-page.php:1541
-#: admin/partials/wcdrfc-pro-add-new-page.php:1607
-#: admin/partials/wcdrfc-pro-add-new-page.php:1673
-#: admin/partials/wcdrfc-pro-add-new-page.php:1819
-#: admin/partials/wcdrfc-pro-add-new-page.php:2131
-#: admin/partials/wcdrfc-pro-add-new-page.php:3456
-#: admin/partials/wcdrfc-pro-add-new-page.php:3591
-#: woocommerce/checkout/review-order.php:23
-msgid "Product"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:630
-#: admin/partials/wcdrfc-pro-add-new-page.php:1109
-#: admin/partials/wcdrfc-pro-add-new-page.php:1318
-#: admin/partials/wcdrfc-pro-add-new-page.php:1426
-#: admin/partials/wcdrfc-pro-add-new-page.php:1543
-#: admin/partials/wcdrfc-pro-add-new-page.php:1609
-#: admin/partials/wcdrfc-pro-add-new-page.php:1675
-#: admin/partials/wcdrfc-pro-add-new-page.php:2289
-#: admin/partials/wcdrfc-pro-add-new-page.php:2620
-msgid "Category"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:637
+#: admin/partials/wcdrfc-pro-add-new-page.php:649
 msgid "Get Category"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:638
+#: admin/partials/wcdrfc-pro-add-new-page.php:650
 msgid ""
 "Select category on which, We will apply price adjustment on all products of "
 "this category"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:669
+#: admin/partials/wcdrfc-pro-add-new-page.php:681
 msgid "Get Product"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:670
+#: admin/partials/wcdrfc-pro-add-new-page.php:682
 msgid "Select a product on which, We will apply price adjustment."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:697
+#: admin/partials/wcdrfc-pro-add-new-page.php:709
 msgid "Start date"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:698
+#: admin/partials/wcdrfc-pro-add-new-page.php:710
 msgid "Select start date which date product discount rules will enable on website."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:702
+#: admin/partials/wcdrfc-pro-add-new-page.php:714
 msgid "Select start date"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:707
+#: admin/partials/wcdrfc-pro-add-new-page.php:719
 msgid "End date"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:708
+#: admin/partials/wcdrfc-pro-add-new-page.php:720
 msgid "Select ending date which date product discount rules will disable on website"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:712
+#: admin/partials/wcdrfc-pro-add-new-page.php:724
 msgid "Select end date"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:718
+#: admin/partials/wcdrfc-pro-add-new-page.php:730
 msgid "Time"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:721
+#: admin/partials/wcdrfc-pro-add-new-page.php:733
 msgid ""
 "Select time on which time product discount rules will enable on the "
 "website. This rule match with current time which is set by wordpress "
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:723
-#: admin/partials/wcdrfc-pro-add-new-page.php:748
-#: admin/partials/wcdrfc-pro-add-new-page.php:808
-#: admin/partials/wcdrfc-pro-add-new-page.php:857
+#: admin/partials/wcdrfc-pro-add-new-page.php:735
+#: admin/partials/wcdrfc-pro-add-new-page.php:760
+#: admin/partials/wcdrfc-pro-add-new-page.php:820
+#: admin/partials/wcdrfc-pro-add-new-page.php:869
 msgid "Timezone"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:730
+#: admin/partials/wcdrfc-pro-add-new-page.php:742
 msgid "Select start time"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:731
+#: admin/partials/wcdrfc-pro-add-new-page.php:743
 msgid "-"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:732
+#: admin/partials/wcdrfc-pro-add-new-page.php:744
 msgid "Select end time"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:743
-#: admin/partials/wcdrfc-pro-add-new-page.php:802
-#: admin/partials/wcdrfc-pro-add-new-page.php:851
+#: admin/partials/wcdrfc-pro-add-new-page.php:755
+#: admin/partials/wcdrfc-pro-add-new-page.php:814
+#: admin/partials/wcdrfc-pro-add-new-page.php:863
 msgid "Days of the Week"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:746
-#: admin/partials/wcdrfc-pro-add-new-page.php:806
-#: admin/partials/wcdrfc-pro-add-new-page.php:855
+#: admin/partials/wcdrfc-pro-add-new-page.php:758
+#: admin/partials/wcdrfc-pro-add-new-page.php:818
+#: admin/partials/wcdrfc-pro-add-new-page.php:867
 msgid ""
 "Select days on which day discount will enable on the website. This rule "
 "match with current day which is set by wordpress "
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:757
-#: admin/partials/wcdrfc-pro-add-new-page.php:816
-#: admin/partials/wcdrfc-pro-add-new-page.php:865
+#: admin/partials/wcdrfc-pro-add-new-page.php:769
+#: admin/partials/wcdrfc-pro-add-new-page.php:828
+#: admin/partials/wcdrfc-pro-add-new-page.php:877
 msgid "Sunday"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:758
+#: admin/partials/wcdrfc-pro-add-new-page.php:770
 msgid "Monday"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:759
+#: admin/partials/wcdrfc-pro-add-new-page.php:771
 msgid "Tuesday"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:760
+#: admin/partials/wcdrfc-pro-add-new-page.php:772
 msgid "Wednesday"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:761
+#: admin/partials/wcdrfc-pro-add-new-page.php:773
 msgid "Thursday"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:762
+#: admin/partials/wcdrfc-pro-add-new-page.php:774
 msgid "Friday"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:763
+#: admin/partials/wcdrfc-pro-add-new-page.php:775
 msgid "Saturday"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:777
-#: admin/partials/wcdrfc-pro-add-new-page.php:823
-#: admin/partials/wcdrfc-pro-add-new-page.php:872
+#: admin/partials/wcdrfc-pro-add-new-page.php:789
+#: admin/partials/wcdrfc-pro-add-new-page.php:835
+#: admin/partials/wcdrfc-pro-add-new-page.php:884
 msgid "Enable for first order"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:778
-#: admin/partials/wcdrfc-pro-add-new-page.php:825
-#: admin/partials/wcdrfc-pro-add-new-page.php:874
+#: admin/partials/wcdrfc-pro-add-new-page.php:790
+#: admin/partials/wcdrfc-pro-add-new-page.php:837
+#: admin/partials/wcdrfc-pro-add-new-page.php:886
 msgid "Only apply when user will place first order."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:788
-#: admin/partials/wcdrfc-pro-add-new-page.php:835
-#: admin/partials/wcdrfc-pro-add-new-page.php:884
+#: admin/partials/wcdrfc-pro-add-new-page.php:800
+#: admin/partials/wcdrfc-pro-add-new-page.php:847
+#: admin/partials/wcdrfc-pro-add-new-page.php:896
 msgid "Enable for logged in user"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:789
-#: admin/partials/wcdrfc-pro-add-new-page.php:837
-#: admin/partials/wcdrfc-pro-add-new-page.php:886
+#: admin/partials/wcdrfc-pro-add-new-page.php:801
+#: admin/partials/wcdrfc-pro-add-new-page.php:849
+#: admin/partials/wcdrfc-pro-add-new-page.php:898
 msgid "Only apply when user is login into their account."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:899
+#: admin/partials/wcdrfc-pro-add-new-page.php:911
 msgid "Sale products"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:900
+#: admin/partials/wcdrfc-pro-add-new-page.php:912
 msgid "You can include/exclude sale product from discount rules"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:905
+#: admin/partials/wcdrfc-pro-add-new-page.php:917
 msgid "Include"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:906
+#: admin/partials/wcdrfc-pro-add-new-page.php:918
 msgid "Exclude"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:913
+#: admin/partials/wcdrfc-pro-add-new-page.php:925
 msgid "Enable discount message"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:914
+#: admin/partials/wcdrfc-pro-add-new-page.php:926
 msgid "Display discount message on product details page above add to cart button"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:924
+#: admin/partials/wcdrfc-pro-add-new-page.php:936
 msgid "Discount message"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:925
+#: admin/partials/wcdrfc-pro-add-new-page.php:937
 msgid ""
 "This discount message will visible to the customer at the product details "
 "page below addd to cart button."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:940
+#: admin/partials/wcdrfc-pro-add-new-page.php:952
 msgid "Background Color"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:944
+#: admin/partials/wcdrfc-pro-add-new-page.php:956
 msgid "Text Color"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:950
+#: admin/partials/wcdrfc-pro-add-new-page.php:962
 msgid "Only for specific products"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:966
-msgid "BOGO Discount"
+#: admin/partials/wcdrfc-pro-add-new-page.php:978
+msgid "BOGO Discount by product"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:968
-#: admin/partials/wcdrfc-pro-add-new-page.php:1059
-#: admin/partials/wcdrfc-pro-add-new-page.php:1790
-#: admin/partials/wcdrfc-pro-add-new-page.php:1944
-#: admin/partials/wcdrfc-pro-add-new-page.php:2102
-#: admin/partials/wcdrfc-pro-add-new-page.php:2260
-#: admin/partials/wcdrfc-pro-add-new-page.php:2421
-#: admin/partials/wcdrfc-pro-add-new-page.php:2590
-#: admin/partials/wcdrfc-pro-add-new-page.php:2750
-#: admin/partials/wcdrfc-pro-add-new-page.php:2903
-#: admin/partials/wcdrfc-pro-add-new-page.php:3054
-#: admin/partials/wcdrfc-pro-add-new-page.php:3214
-#: admin/partials/wcdrfc-pro-add-new-page.php:3430
-#: admin/partials/wcdrfc-pro-add-new-page.php:3565
-msgid "+ Add Rule"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:974
+#: admin/partials/wcdrfc-pro-add-new-page.php:986
 msgid ""
 "You can choose products on whcih BOGO discount will apply where you need to "
 "enter the min/max ranges and choose free item with quantity."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:975
+#: admin/partials/wcdrfc-pro-add-new-page.php:987
+#: admin/partials/wcdrfc-pro-add-new-page.php:1086
 msgid "Example:"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:976
+#: admin/partials/wcdrfc-pro-add-new-page.php:988
+#: admin/partials/wcdrfc-pro-add-new-page.php:1087
 msgid "Buy X Get X:"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:977
+#: admin/partials/wcdrfc-pro-add-new-page.php:989
+#: admin/partials/wcdrfc-pro-add-new-page.php:1088
 msgid "Buy 1 get 1, Buy 2 get 2, Buy 3 get 3 and so on..."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:978
+#: admin/partials/wcdrfc-pro-add-new-page.php:990
+#: admin/partials/wcdrfc-pro-add-new-page.php:1089
 msgid "Buy X Get Y:"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:979
+#: admin/partials/wcdrfc-pro-add-new-page.php:991
+#: admin/partials/wcdrfc-pro-add-new-page.php:1090
 msgid "Buy 2, get 1 free (a.k.a: Buy 1 get 1 free)"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:980
+#: admin/partials/wcdrfc-pro-add-new-page.php:992
+#: admin/partials/wcdrfc-pro-add-new-page.php:1091
 msgid "Buy qty(2-3) and get qty 1,"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:981
+#: admin/partials/wcdrfc-pro-add-new-page.php:993
+#: admin/partials/wcdrfc-pro-add-new-page.php:1092
 msgid "Buy qty(4-5) and get qty 2, so on..."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:985
+#: admin/partials/wcdrfc-pro-add-new-page.php:997
 msgid "Buy Products"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:985
+#: admin/partials/wcdrfc-pro-add-new-page.php:997
+#: admin/partials/wcdrfc-pro-add-new-page.php:1096
 msgid "Choose on which products the BOGO discount should be applied"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:986
+#: admin/partials/wcdrfc-pro-add-new-page.php:998
+#: admin/partials/wcdrfc-pro-add-new-page.php:1097
 msgid "Buy Min. Qty."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:987
+#: admin/partials/wcdrfc-pro-add-new-page.php:999
+#: admin/partials/wcdrfc-pro-add-new-page.php:1098
 msgid "Buy Max. Qty."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:988
+#: admin/partials/wcdrfc-pro-add-new-page.php:1000
+#: admin/partials/wcdrfc-pro-add-new-page.php:1099
 msgid "Get Free Products"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:988
+#: admin/partials/wcdrfc-pro-add-new-page.php:1000
+#: admin/partials/wcdrfc-pro-add-new-page.php:1099
 msgid "Choose products which will added to cart as free"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:989
+#: admin/partials/wcdrfc-pro-add-new-page.php:1001
+#: admin/partials/wcdrfc-pro-add-new-page.php:1100
 msgid "Get Free Qty."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:989
+#: admin/partials/wcdrfc-pro-add-new-page.php:1001
+#: admin/partials/wcdrfc-pro-add-new-page.php:1100
 msgid "Choose free item quantity"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:990
+#: admin/partials/wcdrfc-pro-add-new-page.php:1002
+#: admin/partials/wcdrfc-pro-add-new-page.php:1101
 msgid "Action"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1018
-#: admin/partials/wcdrfc-pro-add-new-page.php:1019
-#: admin/partials/wcdrfc-pro-add-new-page.php:1038
+#: admin/partials/wcdrfc-pro-add-new-page.php:1030
+#: admin/partials/wcdrfc-pro-add-new-page.php:1031
+#: admin/partials/wcdrfc-pro-add-new-page.php:1050
+#: admin/partials/wcdrfc-pro-add-new-page.php:1131
+#: admin/partials/wcdrfc-pro-add-new-page.php:1132
+#: admin/partials/wcdrfc-pro-add-new-page.php:1151
 msgid "Add Qty."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1057
-msgid "Discount Rules for checkout"
+#: admin/partials/wcdrfc-pro-add-new-page.php:1077
+msgid "BOGO Discount by category"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1067
-#: admin/partials/wcdrfc-pro-add-new-page.php:1801
-#: admin/partials/wcdrfc-pro-add-new-page.php:1955
-#: admin/partials/wcdrfc-pro-add-new-page.php:2113
-#: admin/partials/wcdrfc-pro-add-new-page.php:2271
-#: admin/partials/wcdrfc-pro-add-new-page.php:2432
-#: admin/partials/wcdrfc-pro-add-new-page.php:2601
-#: admin/partials/wcdrfc-pro-add-new-page.php:2761
-#: admin/partials/wcdrfc-pro-add-new-page.php:2914
-#: admin/partials/wcdrfc-pro-add-new-page.php:3067
-#: admin/partials/wcdrfc-pro-add-new-page.php:3227
-#: admin/partials/wcdrfc-pro-add-new-page.php:3441
-#: admin/partials/wcdrfc-pro-add-new-page.php:3576
-msgid "below"
+#: admin/partials/wcdrfc-pro-add-new-page.php:1085
+msgid ""
+"You can choose category on whcih BOGO discount will apply where you need to "
+"enter the min/max ranges and choose free item with quantity."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1069
-#: admin/partials/wcdrfc-pro-add-new-page.php:1806
-#: admin/partials/wcdrfc-pro-add-new-page.php:1961
-#: admin/partials/wcdrfc-pro-add-new-page.php:2118
-#: admin/partials/wcdrfc-pro-add-new-page.php:2276
-#: admin/partials/wcdrfc-pro-add-new-page.php:2438
-#: admin/partials/wcdrfc-pro-add-new-page.php:2607
-#: admin/partials/wcdrfc-pro-add-new-page.php:2766
-#: admin/partials/wcdrfc-pro-add-new-page.php:2920
-#: admin/partials/wcdrfc-pro-add-new-page.php:3073
-#: admin/partials/wcdrfc-pro-add-new-page.php:3234
-#: admin/partials/wcdrfc-pro-add-new-page.php:3444
-#: admin/partials/wcdrfc-pro-add-new-page.php:3579
-msgid "Any One"
+#: admin/partials/wcdrfc-pro-add-new-page.php:1262
+#: admin/partials/wcdrfc-pro-add-new-page.php:1483
+#: admin/partials/wcdrfc-pro-add-new-page.php:1596
+#: admin/partials/wcdrfc-pro-add-new-page.php:1716
+#: admin/partials/wcdrfc-pro-add-new-page.php:1785
+#: admin/partials/wcdrfc-pro-add-new-page.php:1854
+msgid "Collection Specific"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1070
-#: admin/partials/wcdrfc-pro-add-new-page.php:1808
-#: admin/partials/wcdrfc-pro-add-new-page.php:1963
-#: admin/partials/wcdrfc-pro-add-new-page.php:2120
-#: admin/partials/wcdrfc-pro-add-new-page.php:2278
-#: admin/partials/wcdrfc-pro-add-new-page.php:2440
-#: admin/partials/wcdrfc-pro-add-new-page.php:2609
-#: admin/partials/wcdrfc-pro-add-new-page.php:2768
-#: admin/partials/wcdrfc-pro-add-new-page.php:2922
-#: admin/partials/wcdrfc-pro-add-new-page.php:3075
-#: admin/partials/wcdrfc-pro-add-new-page.php:3236
-#: admin/partials/wcdrfc-pro-add-new-page.php:3445
-#: admin/partials/wcdrfc-pro-add-new-page.php:3580
-msgid "All"
+#: admin/partials/wcdrfc-pro-add-new-page.php:1263
+#: admin/partials/wcdrfc-pro-add-new-page.php:1717
+msgid "Collection Name"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1072
-#: admin/partials/wcdrfc-pro-add-new-page.php:1811
-#: admin/partials/wcdrfc-pro-add-new-page.php:1966
-#: admin/partials/wcdrfc-pro-add-new-page.php:2123
-#: admin/partials/wcdrfc-pro-add-new-page.php:2281
-#: admin/partials/wcdrfc-pro-add-new-page.php:2443
-#: admin/partials/wcdrfc-pro-add-new-page.php:2612
-#: admin/partials/wcdrfc-pro-add-new-page.php:2771
-#: admin/partials/wcdrfc-pro-add-new-page.php:2925
-#: admin/partials/wcdrfc-pro-add-new-page.php:3078
-#: admin/partials/wcdrfc-pro-add-new-page.php:3239
-#: admin/partials/wcdrfc-pro-add-new-page.php:3448
-#: admin/partials/wcdrfc-pro-add-new-page.php:3583
-msgid "rule match"
+#: admin/partials/wcdrfc-pro-add-new-page.php:1484
+#: admin/partials/wcdrfc-pro-add-new-page.php:1597
+#: admin/partials/wcdrfc-pro-add-new-page.php:1786
+#: admin/partials/wcdrfc-pro-add-new-page.php:1855
+msgid "Collection Name 🔒"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1099
-#: admin/partials/wcdrfc-pro-add-new-page.php:1308
-#: admin/partials/wcdrfc-pro-add-new-page.php:1416
-#: admin/partials/wcdrfc-pro-add-new-page.php:1533
-#: admin/partials/wcdrfc-pro-add-new-page.php:1599
-#: admin/partials/wcdrfc-pro-add-new-page.php:1665
-msgid "Location Specific"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1100
-#: admin/partials/wcdrfc-pro-add-new-page.php:1309
-#: admin/partials/wcdrfc-pro-add-new-page.php:1417
-#: admin/partials/wcdrfc-pro-add-new-page.php:1534
-#: admin/partials/wcdrfc-pro-add-new-page.php:1600
-#: admin/partials/wcdrfc-pro-add-new-page.php:1666
-msgid "Country"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1101
-#: admin/partials/wcdrfc-pro-add-new-page.php:1535
-msgid "City"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1102
-#: admin/partials/wcdrfc-pro-add-new-page.php:1536
-msgid "State"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1103
-#: admin/partials/wcdrfc-pro-add-new-page.php:1537
-msgid "Postcode"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1104
-#: admin/partials/wcdrfc-pro-add-new-page.php:1538
-msgid "Zone"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1106
-#: admin/partials/wcdrfc-pro-add-new-page.php:1315
-#: admin/partials/wcdrfc-pro-add-new-page.php:1423
-#: admin/partials/wcdrfc-pro-add-new-page.php:1540
-#: admin/partials/wcdrfc-pro-add-new-page.php:1606
-#: admin/partials/wcdrfc-pro-add-new-page.php:1672
-msgid "Product Specific"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1108
-#: admin/partials/wcdrfc-pro-add-new-page.php:1317
-#: admin/partials/wcdrfc-pro-add-new-page.php:1425
-#: admin/partials/wcdrfc-pro-add-new-page.php:1542
-#: admin/partials/wcdrfc-pro-add-new-page.php:1608
-#: admin/partials/wcdrfc-pro-add-new-page.php:1674
-msgid "Variable Product"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1110
-#: admin/partials/wcdrfc-pro-add-new-page.php:1544
-msgid "Tag"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1111
-#: admin/partials/wcdrfc-pro-add-new-page.php:1545
-msgid "Brand"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1112
-#: admin/partials/wcdrfc-pro-add-new-page.php:1546
-msgid "Product's quantity"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1113
-#: admin/partials/wcdrfc-pro-add-new-page.php:1322
-#: admin/partials/wcdrfc-pro-add-new-page.php:1430
-#: admin/partials/wcdrfc-pro-add-new-page.php:1547
-#: admin/partials/wcdrfc-pro-add-new-page.php:1613
-#: admin/partials/wcdrfc-pro-add-new-page.php:1679
-msgid "Product's count"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1115
-#: admin/partials/wcdrfc-pro-add-new-page.php:1324
-#: admin/partials/wcdrfc-pro-add-new-page.php:1432
-#: admin/partials/wcdrfc-pro-add-new-page.php:1549
-#: admin/partials/wcdrfc-pro-add-new-page.php:1615
-#: admin/partials/wcdrfc-pro-add-new-page.php:1681
-msgid "User Specific"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1116
-#: admin/partials/wcdrfc-pro-add-new-page.php:1325
-#: admin/partials/wcdrfc-pro-add-new-page.php:1433
-#: admin/partials/wcdrfc-pro-add-new-page.php:1550
-#: admin/partials/wcdrfc-pro-add-new-page.php:1616
-#: admin/partials/wcdrfc-pro-add-new-page.php:1682
-msgid "User"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1117
-#: admin/partials/wcdrfc-pro-add-new-page.php:1551
-msgid "User Role"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1118
-#: admin/partials/wcdrfc-pro-add-new-page.php:1552
-msgid "User Email"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1120
-#: admin/partials/wcdrfc-pro-add-new-page.php:1329
-#: admin/partials/wcdrfc-pro-add-new-page.php:1437
-#: admin/partials/wcdrfc-pro-add-new-page.php:1554
-#: admin/partials/wcdrfc-pro-add-new-page.php:1620
-#: admin/partials/wcdrfc-pro-add-new-page.php:1686
-msgid "Purchase History"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1121
-#: admin/partials/wcdrfc-pro-add-new-page.php:1556
-msgid "Total order spent (all time)"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1122
-#: admin/partials/wcdrfc-pro-add-new-page.php:1557
-msgid "Number of orders (all time)"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1123
-#: admin/partials/wcdrfc-pro-add-new-page.php:1555
-msgid "Last order spent"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1124
-#: admin/partials/wcdrfc-pro-add-new-page.php:1558
-msgid "User repeat product"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1126
-#: admin/partials/wcdrfc-pro-add-new-page.php:1335
-#: admin/partials/wcdrfc-pro-add-new-page.php:1560
-#: admin/partials/wcdrfc-pro-add-new-page.php:1626
-#: admin/partials/wcdrfc-pro-add-new-page.php:1692
-msgid "Cart Specific"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1131
-#: admin/partials/wcdrfc-pro-add-new-page.php:1565
-msgid "Cart Subtotal (Before Discount) "
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1132
-#: admin/partials/wcdrfc-pro-add-new-page.php:1566
-msgid "Cart Subtotal (After Discount) "
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1133
-#: admin/partials/wcdrfc-pro-add-new-page.php:1342
-#: admin/partials/wcdrfc-pro-add-new-page.php:1450
-#: admin/partials/wcdrfc-pro-add-new-page.php:1567
-#: admin/partials/wcdrfc-pro-add-new-page.php:1633
-#: admin/partials/wcdrfc-pro-add-new-page.php:1699
-msgid "Quantity"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1134
-msgid "Weight "
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1135
-#: admin/partials/wcdrfc-pro-add-new-page.php:1569
-msgid "Coupon"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1136
-#: admin/partials/wcdrfc-pro-add-new-page.php:1570
-#: admin/partials/wcdrfc-pro-add-new-page.php:3247
-msgid "Shipping Class"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1138
-#: admin/partials/wcdrfc-pro-add-new-page.php:1347
-#: admin/partials/wcdrfc-pro-add-new-page.php:1455
-#: admin/partials/wcdrfc-pro-add-new-page.php:1572
-#: admin/partials/wcdrfc-pro-add-new-page.php:1638
-#: admin/partials/wcdrfc-pro-add-new-page.php:1704
-msgid "Payment Specific"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1139
-#: admin/partials/wcdrfc-pro-add-new-page.php:1573
-msgid "Payment Gateway"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1141
-#: admin/partials/wcdrfc-pro-add-new-page.php:1350
-#: admin/partials/wcdrfc-pro-add-new-page.php:1458
-#: admin/partials/wcdrfc-pro-add-new-page.php:1575
-#: admin/partials/wcdrfc-pro-add-new-page.php:1641
-#: admin/partials/wcdrfc-pro-add-new-page.php:1707
-msgid "Shipping Specific"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1142
-#: admin/partials/wcdrfc-pro-add-new-page.php:1576
-msgid "Shipping Method"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1143
-#: admin/partials/wcdrfc-pro-add-new-page.php:1577
-msgid "Shipping Total"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1159
-msgid "User Name ( john.doe )"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1160
-msgid "Domain ( @gmail.com )"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1161
-msgid "Email Address"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1310
-#: admin/partials/wcdrfc-pro-add-new-page.php:1418
-#: admin/partials/wcdrfc-pro-add-new-page.php:1601
-#: admin/partials/wcdrfc-pro-add-new-page.php:1667
-msgid "City 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1311
-#: admin/partials/wcdrfc-pro-add-new-page.php:1419
-#: admin/partials/wcdrfc-pro-add-new-page.php:1602
-#: admin/partials/wcdrfc-pro-add-new-page.php:1668
-msgid "State 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1312
-#: admin/partials/wcdrfc-pro-add-new-page.php:1420
-#: admin/partials/wcdrfc-pro-add-new-page.php:1603
-#: admin/partials/wcdrfc-pro-add-new-page.php:1669
-msgid "Postcode 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1313
-#: admin/partials/wcdrfc-pro-add-new-page.php:1421
-#: admin/partials/wcdrfc-pro-add-new-page.php:1604
-#: admin/partials/wcdrfc-pro-add-new-page.php:1670
-msgid "Zone 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1319
-#: admin/partials/wcdrfc-pro-add-new-page.php:1427
-#: admin/partials/wcdrfc-pro-add-new-page.php:1610
-#: admin/partials/wcdrfc-pro-add-new-page.php:1676
-msgid "Tag 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1320
-#: admin/partials/wcdrfc-pro-add-new-page.php:1428
-#: admin/partials/wcdrfc-pro-add-new-page.php:1611
-#: admin/partials/wcdrfc-pro-add-new-page.php:1677
-msgid "Brand 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1321
-#: admin/partials/wcdrfc-pro-add-new-page.php:1429
-#: admin/partials/wcdrfc-pro-add-new-page.php:1612
-#: admin/partials/wcdrfc-pro-add-new-page.php:1678
-msgid "Product's quantity 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1326
-#: admin/partials/wcdrfc-pro-add-new-page.php:1434
-#: admin/partials/wcdrfc-pro-add-new-page.php:1617
-#: admin/partials/wcdrfc-pro-add-new-page.php:1683
-msgid "User Role 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1327
-#: admin/partials/wcdrfc-pro-add-new-page.php:1435
-#: admin/partials/wcdrfc-pro-add-new-page.php:1618
-#: admin/partials/wcdrfc-pro-add-new-page.php:1684
-msgid "User Email 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1330
-#: admin/partials/wcdrfc-pro-add-new-page.php:1438
-#: admin/partials/wcdrfc-pro-add-new-page.php:1621
-#: admin/partials/wcdrfc-pro-add-new-page.php:1687
-msgid "Last order spent 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1331
-#: admin/partials/wcdrfc-pro-add-new-page.php:1439
-#: admin/partials/wcdrfc-pro-add-new-page.php:1622
-#: admin/partials/wcdrfc-pro-add-new-page.php:1688
-msgid "Total order spent (all time) 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1332
-#: admin/partials/wcdrfc-pro-add-new-page.php:1440
-#: admin/partials/wcdrfc-pro-add-new-page.php:1623
-#: admin/partials/wcdrfc-pro-add-new-page.php:1689
-msgid "Number of orders (all time) 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1333
-#: admin/partials/wcdrfc-pro-add-new-page.php:1441
-#: admin/partials/wcdrfc-pro-add-new-page.php:1624
-#: admin/partials/wcdrfc-pro-add-new-page.php:1690
-msgid "User repeat product 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1341
-#: admin/partials/wcdrfc-pro-add-new-page.php:1449
-#: admin/partials/wcdrfc-pro-add-new-page.php:1632
-#: admin/partials/wcdrfc-pro-add-new-page.php:1698
-msgid "Cart Subtotal (After Discount) 🔒 "
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1343
-#: admin/partials/wcdrfc-pro-add-new-page.php:1451
-#: admin/partials/wcdrfc-pro-add-new-page.php:1634
-#: admin/partials/wcdrfc-pro-add-new-page.php:1700
-msgid "Weight 🔒 "
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1344
-#: admin/partials/wcdrfc-pro-add-new-page.php:1452
-#: admin/partials/wcdrfc-pro-add-new-page.php:1635
-#: admin/partials/wcdrfc-pro-add-new-page.php:1701
-msgid "Coupon 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1345
-#: admin/partials/wcdrfc-pro-add-new-page.php:1453
-#: admin/partials/wcdrfc-pro-add-new-page.php:1636
-#: admin/partials/wcdrfc-pro-add-new-page.php:1702
-msgid "Shipping Class 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1348
-#: admin/partials/wcdrfc-pro-add-new-page.php:1456
-#: admin/partials/wcdrfc-pro-add-new-page.php:1639
-#: admin/partials/wcdrfc-pro-add-new-page.php:1705
-msgid "Payment Gateway 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1351
-#: admin/partials/wcdrfc-pro-add-new-page.php:1459
-#: admin/partials/wcdrfc-pro-add-new-page.php:1642
-#: admin/partials/wcdrfc-pro-add-new-page.php:1708
-msgid "Shipping Method 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1352
-#: admin/partials/wcdrfc-pro-add-new-page.php:1460
-#: admin/partials/wcdrfc-pro-add-new-page.php:1643
-#: admin/partials/wcdrfc-pro-add-new-page.php:1709
-msgid "Shipping Total 🔒"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1443
-msgid "Cart Specific "
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1568
-msgid "Weight"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1631
-#: admin/partials/wcdrfc-pro-add-new-page.php:1697
-msgid "Cart Subtotal "
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:1738
-#: admin/partials/wcdrfc-pro-add-new-page.php:3379
-#: admin/partials/wcdrfc-pro-add-new-page.php:3514
+#: admin/partials/wcdrfc-pro-add-new-page.php:1884
+#: admin/partials/wcdrfc-pro-add-new-page.php:3525
+#: admin/partials/wcdrfc-pro-add-new-page.php:3660
 msgid "Advanced Discount Price Rules"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1743
-#: admin/partials/wcdrfc-pro-add-new-page.php:3384
-#: admin/partials/wcdrfc-pro-add-new-page.php:3519
+#: admin/partials/wcdrfc-pro-add-new-page.php:1889
+#: admin/partials/wcdrfc-pro-add-new-page.php:3530
+#: admin/partials/wcdrfc-pro-add-new-page.php:3665
 msgid ""
 "If enabled this Advanced Pricing button only than below all rule's will go "
 "for apply to discount rule"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1751
-#: admin/partials/wcdrfc-pro-add-new-page.php:1782
-#: admin/partials/wcdrfc-pro-add-new-page.php:1788
-#: admin/partials/wcdrfc-pro-add-new-page.php:3391
-#: admin/partials/wcdrfc-pro-add-new-page.php:3422
-#: admin/partials/wcdrfc-pro-add-new-page.php:3428
-#: admin/partials/wcdrfc-pro-add-new-page.php:3526
-#: admin/partials/wcdrfc-pro-add-new-page.php:3557
-#: admin/partials/wcdrfc-pro-add-new-page.php:3563
+#: admin/partials/wcdrfc-pro-add-new-page.php:1897
+#: admin/partials/wcdrfc-pro-add-new-page.php:1928
+#: admin/partials/wcdrfc-pro-add-new-page.php:1934
+#: admin/partials/wcdrfc-pro-add-new-page.php:3537
+#: admin/partials/wcdrfc-pro-add-new-page.php:3568
+#: admin/partials/wcdrfc-pro-add-new-page.php:3574
+#: admin/partials/wcdrfc-pro-add-new-page.php:3672
+#: admin/partials/wcdrfc-pro-add-new-page.php:3703
+#: admin/partials/wcdrfc-pro-add-new-page.php:3709
 msgid "Cost on Product"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1752
-#: admin/partials/wcdrfc-pro-add-new-page.php:1933
-#: admin/partials/wcdrfc-pro-add-new-page.php:1942
-#: admin/partials/wcdrfc-pro-add-new-page.php:3392
-#: admin/partials/wcdrfc-pro-add-new-page.php:3527
+#: admin/partials/wcdrfc-pro-add-new-page.php:1898
+#: admin/partials/wcdrfc-pro-add-new-page.php:2079
+#: admin/partials/wcdrfc-pro-add-new-page.php:2088
+#: admin/partials/wcdrfc-pro-add-new-page.php:3538
+#: admin/partials/wcdrfc-pro-add-new-page.php:3673
 msgid "Cost on Product Subtotal"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1753
-#: admin/partials/wcdrfc-pro-add-new-page.php:2094
-#: admin/partials/wcdrfc-pro-add-new-page.php:2100
-#: admin/partials/wcdrfc-pro-add-new-page.php:3393
-#: admin/partials/wcdrfc-pro-add-new-page.php:3528
+#: admin/partials/wcdrfc-pro-add-new-page.php:1899
+#: admin/partials/wcdrfc-pro-add-new-page.php:2240
+#: admin/partials/wcdrfc-pro-add-new-page.php:2246
+#: admin/partials/wcdrfc-pro-add-new-page.php:3539
+#: admin/partials/wcdrfc-pro-add-new-page.php:3674
 msgid "Cost on Product Weight"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1754
-#: admin/partials/wcdrfc-pro-add-new-page.php:2248
-#: admin/partials/wcdrfc-pro-add-new-page.php:2258
-#: admin/partials/wcdrfc-pro-add-new-page.php:3394
-#: admin/partials/wcdrfc-pro-add-new-page.php:3529
+#: admin/partials/wcdrfc-pro-add-new-page.php:1900
+#: admin/partials/wcdrfc-pro-add-new-page.php:2394
+#: admin/partials/wcdrfc-pro-add-new-page.php:2404
+#: admin/partials/wcdrfc-pro-add-new-page.php:3540
+#: admin/partials/wcdrfc-pro-add-new-page.php:3675
 msgid "Cost on Category"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1755
-#: admin/partials/wcdrfc-pro-add-new-page.php:2410
-#: admin/partials/wcdrfc-pro-add-new-page.php:2419
-#: admin/partials/wcdrfc-pro-add-new-page.php:3395
-#: admin/partials/wcdrfc-pro-add-new-page.php:3530
+#: admin/partials/wcdrfc-pro-add-new-page.php:1901
+#: admin/partials/wcdrfc-pro-add-new-page.php:2556
+#: admin/partials/wcdrfc-pro-add-new-page.php:2565
+#: admin/partials/wcdrfc-pro-add-new-page.php:3541
+#: admin/partials/wcdrfc-pro-add-new-page.php:3676
 msgid "Cost on Category Subtotal"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1756
-#: admin/partials/wcdrfc-pro-add-new-page.php:2576
-#: admin/partials/wcdrfc-pro-add-new-page.php:2588
-#: admin/partials/wcdrfc-pro-add-new-page.php:3396
-#: admin/partials/wcdrfc-pro-add-new-page.php:3531
+#: admin/partials/wcdrfc-pro-add-new-page.php:1902
+#: admin/partials/wcdrfc-pro-add-new-page.php:2722
+#: admin/partials/wcdrfc-pro-add-new-page.php:2734
+#: admin/partials/wcdrfc-pro-add-new-page.php:3542
+#: admin/partials/wcdrfc-pro-add-new-page.php:3677
 msgid "Cost on Category Weight"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1757
-#: admin/partials/wcdrfc-pro-add-new-page.php:2740
-#: admin/partials/wcdrfc-pro-add-new-page.php:2748
-#: admin/partials/wcdrfc-pro-add-new-page.php:3397
-#: admin/partials/wcdrfc-pro-add-new-page.php:3532
+#: admin/partials/wcdrfc-pro-add-new-page.php:1903
+#: admin/partials/wcdrfc-pro-add-new-page.php:2886
+#: admin/partials/wcdrfc-pro-add-new-page.php:2894
+#: admin/partials/wcdrfc-pro-add-new-page.php:3543
+#: admin/partials/wcdrfc-pro-add-new-page.php:3678
 msgid "Cost on Total Cart Qty"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1758
-#: admin/partials/wcdrfc-pro-add-new-page.php:2892
-#: admin/partials/wcdrfc-pro-add-new-page.php:2901
-#: admin/partials/wcdrfc-pro-add-new-page.php:3398
-#: admin/partials/wcdrfc-pro-add-new-page.php:3533
+#: admin/partials/wcdrfc-pro-add-new-page.php:1904
+#: admin/partials/wcdrfc-pro-add-new-page.php:3038
+#: admin/partials/wcdrfc-pro-add-new-page.php:3047
+#: admin/partials/wcdrfc-pro-add-new-page.php:3544
+#: admin/partials/wcdrfc-pro-add-new-page.php:3679
 msgid "Cost on Total Cart Weight"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1759
-#: admin/partials/wcdrfc-pro-add-new-page.php:3043
-#: admin/partials/wcdrfc-pro-add-new-page.php:3052
-#: admin/partials/wcdrfc-pro-add-new-page.php:3399
-#: admin/partials/wcdrfc-pro-add-new-page.php:3534
+#: admin/partials/wcdrfc-pro-add-new-page.php:1905
+#: admin/partials/wcdrfc-pro-add-new-page.php:3189
+#: admin/partials/wcdrfc-pro-add-new-page.php:3198
+#: admin/partials/wcdrfc-pro-add-new-page.php:3545
+#: admin/partials/wcdrfc-pro-add-new-page.php:3680
 msgid "Cost on Total Cart Subtotal"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1760
-#: admin/partials/wcdrfc-pro-add-new-page.php:3202
-#: admin/partials/wcdrfc-pro-add-new-page.php:3212
-#: admin/partials/wcdrfc-pro-add-new-page.php:3400
-#: admin/partials/wcdrfc-pro-add-new-page.php:3535
+#: admin/partials/wcdrfc-pro-add-new-page.php:1906
+#: admin/partials/wcdrfc-pro-add-new-page.php:3348
+#: admin/partials/wcdrfc-pro-add-new-page.php:3358
+#: admin/partials/wcdrfc-pro-add-new-page.php:3546
+#: admin/partials/wcdrfc-pro-add-new-page.php:3681
 msgid "Cost on Shipping Class Subtotal"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1796
-#: admin/partials/wcdrfc-pro-add-new-page.php:1950
-#: admin/partials/wcdrfc-pro-add-new-page.php:2108
-#: admin/partials/wcdrfc-pro-add-new-page.php:2266
-#: admin/partials/wcdrfc-pro-add-new-page.php:2427
-#: admin/partials/wcdrfc-pro-add-new-page.php:2596
-#: admin/partials/wcdrfc-pro-add-new-page.php:2756
-#: admin/partials/wcdrfc-pro-add-new-page.php:2909
-#: admin/partials/wcdrfc-pro-add-new-page.php:3062
-#: admin/partials/wcdrfc-pro-add-new-page.php:3222
-#: admin/partials/wcdrfc-pro-add-new-page.php:3436
-#: admin/partials/wcdrfc-pro-add-new-page.php:3571
+#: admin/partials/wcdrfc-pro-add-new-page.php:1942
+#: admin/partials/wcdrfc-pro-add-new-page.php:2096
+#: admin/partials/wcdrfc-pro-add-new-page.php:2254
+#: admin/partials/wcdrfc-pro-add-new-page.php:2412
+#: admin/partials/wcdrfc-pro-add-new-page.php:2573
+#: admin/partials/wcdrfc-pro-add-new-page.php:2742
+#: admin/partials/wcdrfc-pro-add-new-page.php:2902
+#: admin/partials/wcdrfc-pro-add-new-page.php:3055
+#: admin/partials/wcdrfc-pro-add-new-page.php:3208
+#: admin/partials/wcdrfc-pro-add-new-page.php:3368
+#: admin/partials/wcdrfc-pro-add-new-page.php:3582
+#: admin/partials/wcdrfc-pro-add-new-page.php:3717
 msgid ""
 "You can turn off this button, if you do not need to apply this discount "
 "amount."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1820
-#: admin/partials/wcdrfc-pro-add-new-page.php:3457
-#: admin/partials/wcdrfc-pro-add-new-page.php:3592
+#: admin/partials/wcdrfc-pro-add-new-page.php:1966
+#: admin/partials/wcdrfc-pro-add-new-page.php:3603
+#: admin/partials/wcdrfc-pro-add-new-page.php:3738
 msgid ""
 "Select a product to apply the discount amount to when the min/max quantity "
 "match."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1823
-#: admin/partials/wcdrfc-pro-add-new-page.php:2293
-#: admin/partials/wcdrfc-pro-add-new-page.php:2782
-#: admin/partials/wcdrfc-pro-add-new-page.php:3460
-#: admin/partials/wcdrfc-pro-add-new-page.php:3595
+#: admin/partials/wcdrfc-pro-add-new-page.php:1969
+#: admin/partials/wcdrfc-pro-add-new-page.php:2439
+#: admin/partials/wcdrfc-pro-add-new-page.php:2928
+#: admin/partials/wcdrfc-pro-add-new-page.php:3606
+#: admin/partials/wcdrfc-pro-add-new-page.php:3741
 msgid "Min Quantity "
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1824
-#: admin/partials/wcdrfc-pro-add-new-page.php:3461
-#: admin/partials/wcdrfc-pro-add-new-page.php:3596
+#: admin/partials/wcdrfc-pro-add-new-page.php:1970
+#: admin/partials/wcdrfc-pro-add-new-page.php:3607
+#: admin/partials/wcdrfc-pro-add-new-page.php:3742
 msgid ""
 "You can set a minimum product quantity per row before the discount amount "
 "is applied.<br/>Leave empty to not set a minimum."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1827
-#: admin/partials/wcdrfc-pro-add-new-page.php:2297
-#: admin/partials/wcdrfc-pro-add-new-page.php:3464
-#: admin/partials/wcdrfc-pro-add-new-page.php:3599
+#: admin/partials/wcdrfc-pro-add-new-page.php:1973
+#: admin/partials/wcdrfc-pro-add-new-page.php:2443
+#: admin/partials/wcdrfc-pro-add-new-page.php:3610
+#: admin/partials/wcdrfc-pro-add-new-page.php:3745
 msgid "Max Quantity "
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1828
-#: admin/partials/wcdrfc-pro-add-new-page.php:3465
-#: admin/partials/wcdrfc-pro-add-new-page.php:3600
+#: admin/partials/wcdrfc-pro-add-new-page.php:1974
+#: admin/partials/wcdrfc-pro-add-new-page.php:3611
+#: admin/partials/wcdrfc-pro-add-new-page.php:3746
 msgid ""
 "You can set a maximum product quantity per row before the discount amount "
 "is applied.<br/>Leave empty to not set a maximum."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1831
-#: admin/partials/wcdrfc-pro-add-new-page.php:1985
-#: admin/partials/wcdrfc-pro-add-new-page.php:2143
-#: admin/partials/wcdrfc-pro-add-new-page.php:2301
-#: admin/partials/wcdrfc-pro-add-new-page.php:2462
-#: admin/partials/wcdrfc-pro-add-new-page.php:2632
-#: admin/partials/wcdrfc-pro-add-new-page.php:2790
-#: admin/partials/wcdrfc-pro-add-new-page.php:2944
-#: admin/partials/wcdrfc-pro-add-new-page.php:3097
-#: admin/partials/wcdrfc-pro-add-new-page.php:3259
-#: admin/partials/wcdrfc-pro-add-new-page.php:3468
-#: admin/partials/wcdrfc-pro-add-new-page.php:3603
+#: admin/partials/wcdrfc-pro-add-new-page.php:1977
+#: admin/partials/wcdrfc-pro-add-new-page.php:2131
+#: admin/partials/wcdrfc-pro-add-new-page.php:2289
+#: admin/partials/wcdrfc-pro-add-new-page.php:2447
+#: admin/partials/wcdrfc-pro-add-new-page.php:2608
+#: admin/partials/wcdrfc-pro-add-new-page.php:2778
+#: admin/partials/wcdrfc-pro-add-new-page.php:2936
+#: admin/partials/wcdrfc-pro-add-new-page.php:3090
+#: admin/partials/wcdrfc-pro-add-new-page.php:3243
+#: admin/partials/wcdrfc-pro-add-new-page.php:3405
+#: admin/partials/wcdrfc-pro-add-new-page.php:3614
+#: admin/partials/wcdrfc-pro-add-new-page.php:3749
 msgid "Discount Amount"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1832
-#: admin/partials/wcdrfc-pro-add-new-page.php:3469
-#: admin/partials/wcdrfc-pro-add-new-page.php:3604
+#: admin/partials/wcdrfc-pro-add-new-page.php:1978
+#: admin/partials/wcdrfc-pro-add-new-page.php:3615
+#: admin/partials/wcdrfc-pro-add-new-page.php:3750
 msgid ""
 "A fixed amount (e.g. 5 / -5), percentage (e.g. 5% / -5%) to add as a "
 "discount. Percentage and minus amount will apply based on cart subtotal."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1900
-#: admin/partials/wcdrfc-pro-add-new-page.php:2061
-#: admin/partials/wcdrfc-pro-add-new-page.php:2215
-#: admin/partials/wcdrfc-pro-add-new-page.php:2377
-#: admin/partials/wcdrfc-pro-add-new-page.php:2541
-#: admin/partials/wcdrfc-pro-add-new-page.php:2706
-#: admin/partials/wcdrfc-pro-add-new-page.php:2857
-#: admin/partials/wcdrfc-pro-add-new-page.php:3009
-#: admin/partials/wcdrfc-pro-add-new-page.php:3167
-#: admin/partials/wcdrfc-pro-add-new-page.php:3336
+#: admin/partials/wcdrfc-pro-add-new-page.php:2046
+#: admin/partials/wcdrfc-pro-add-new-page.php:2207
+#: admin/partials/wcdrfc-pro-add-new-page.php:2361
+#: admin/partials/wcdrfc-pro-add-new-page.php:2523
+#: admin/partials/wcdrfc-pro-add-new-page.php:2687
+#: admin/partials/wcdrfc-pro-add-new-page.php:2852
+#: admin/partials/wcdrfc-pro-add-new-page.php:3003
+#: admin/partials/wcdrfc-pro-add-new-page.php:3155
+#: admin/partials/wcdrfc-pro-add-new-page.php:3313
+#: admin/partials/wcdrfc-pro-add-new-page.php:3482
 msgid ""
 "If entered discount amount is less than cart subtotal it will reflect with "
 "minus sign (EX: $ -10.00) OR If entered discount amount is more than cart "
 "subtotal then the total amount shown as zero (EX: Total: 0): "
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1938
-#: admin/partials/wcdrfc-pro-add-new-page.php:1974
+#: admin/partials/wcdrfc-pro-add-new-page.php:2084
+#: admin/partials/wcdrfc-pro-add-new-page.php:2120
 msgid "Product Subtotal"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1977
-#: admin/partials/wcdrfc-pro-add-new-page.php:2454
-#: admin/partials/wcdrfc-pro-add-new-page.php:3089
-#: admin/partials/wcdrfc-pro-add-new-page.php:3251
+#: admin/partials/wcdrfc-pro-add-new-page.php:2123
+#: admin/partials/wcdrfc-pro-add-new-page.php:2600
+#: admin/partials/wcdrfc-pro-add-new-page.php:3235
+#: admin/partials/wcdrfc-pro-add-new-page.php:3397
 msgid "Min Subtotal "
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1978
+#: admin/partials/wcdrfc-pro-add-new-page.php:2124
 msgid ""
 "You can set a minimum product subtotal per row before the discount amount "
 "is applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1982
+#: admin/partials/wcdrfc-pro-add-new-page.php:2128
 msgid ""
 "You can set a maximum product subtotal per row before the discount amount "
 "is applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:1986
-#: admin/partials/wcdrfc-pro-add-new-page.php:2144
-#: admin/partials/wcdrfc-pro-add-new-page.php:2302
-#: admin/partials/wcdrfc-pro-add-new-page.php:2463
-#: admin/partials/wcdrfc-pro-add-new-page.php:2633
-#: admin/partials/wcdrfc-pro-add-new-page.php:2791
-#: admin/partials/wcdrfc-pro-add-new-page.php:2945
-#: admin/partials/wcdrfc-pro-add-new-page.php:3098
-#: admin/partials/wcdrfc-pro-add-new-page.php:3260
+#: admin/partials/wcdrfc-pro-add-new-page.php:2132
+#: admin/partials/wcdrfc-pro-add-new-page.php:2290
+#: admin/partials/wcdrfc-pro-add-new-page.php:2448
+#: admin/partials/wcdrfc-pro-add-new-page.php:2609
+#: admin/partials/wcdrfc-pro-add-new-page.php:2779
+#: admin/partials/wcdrfc-pro-add-new-page.php:2937
+#: admin/partials/wcdrfc-pro-add-new-page.php:3091
+#: admin/partials/wcdrfc-pro-add-new-page.php:3244
+#: admin/partials/wcdrfc-pro-add-new-page.php:3406
 msgid ""
 "A fixed amount (e.g. 5 / -5) percentage (e.g. 5% / -5%) to add as a "
 "discount. Percentage and minus amount will apply based on cart subtotal."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2132
+#: admin/partials/wcdrfc-pro-add-new-page.php:2278
 msgid ""
 "Select a product to apply the discount amount to when the min/max weight "
 "match."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2135
-#: admin/partials/wcdrfc-pro-add-new-page.php:2624
-#: admin/partials/wcdrfc-pro-add-new-page.php:2936
+#: admin/partials/wcdrfc-pro-add-new-page.php:2281
+#: admin/partials/wcdrfc-pro-add-new-page.php:2770
+#: admin/partials/wcdrfc-pro-add-new-page.php:3082
 msgid "Min Weight "
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2136
+#: admin/partials/wcdrfc-pro-add-new-page.php:2282
 msgid ""
 "You can set a minimum product weight per row before the discount amount is "
 "applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2139
-#: admin/partials/wcdrfc-pro-add-new-page.php:2628
+#: admin/partials/wcdrfc-pro-add-new-page.php:2285
+#: admin/partials/wcdrfc-pro-add-new-page.php:2774
 msgid "Max Weight "
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2140
+#: admin/partials/wcdrfc-pro-add-new-page.php:2286
 msgid ""
 "You can set a maximum product weight per row before the discount amount is "
 "applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2290
-#: admin/partials/wcdrfc-pro-add-new-page.php:3248
+#: admin/partials/wcdrfc-pro-add-new-page.php:2436
+#: admin/partials/wcdrfc-pro-add-new-page.php:3394
 msgid ""
 "Select a category to apply the discount amount to when the min/max quantity "
 "match."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2294
+#: admin/partials/wcdrfc-pro-add-new-page.php:2440
 msgid ""
 "You can set a minimum category quantity per row before the discount amount "
 "is applied.<br/>Leave empty to not set a minimum."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2298
+#: admin/partials/wcdrfc-pro-add-new-page.php:2444
 msgid ""
 "You can set a maximum category quantity per row before the discount amount "
 "is applied.<br/>Leave empty to not set a maximum."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2415
-#: admin/partials/wcdrfc-pro-add-new-page.php:2451
+#: admin/partials/wcdrfc-pro-add-new-page.php:2561
+#: admin/partials/wcdrfc-pro-add-new-page.php:2597
 msgid "Category Subtotal"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2455
+#: admin/partials/wcdrfc-pro-add-new-page.php:2601
 msgid ""
 "You can set a minimum category subtotal per row before the discount amount "
 "is applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2459
+#: admin/partials/wcdrfc-pro-add-new-page.php:2605
 msgid ""
 "You can set a maximum category subtotal per row before the discount amount "
 "is applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2581
-msgid "Select Category"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-add-new-page.php:2621
+#: admin/partials/wcdrfc-pro-add-new-page.php:2767
 msgid ""
 "Select a category to apply the discount amount to when the min/max weight "
 "match."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2625
+#: admin/partials/wcdrfc-pro-add-new-page.php:2771
 msgid ""
 "You can set a minimum category weight per row before the discount amount is "
 "applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2629
+#: admin/partials/wcdrfc-pro-add-new-page.php:2775
 msgid ""
 "You can set a maximum category weight per row before the discount amount is "
 "applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2744
-#: admin/partials/wcdrfc-pro-add-new-page.php:2779
+#: admin/partials/wcdrfc-pro-add-new-page.php:2890
+#: admin/partials/wcdrfc-pro-add-new-page.php:2925
 msgid "Total Cart Qty"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2783
+#: admin/partials/wcdrfc-pro-add-new-page.php:2929
 msgid ""
 "You can set a minimum total cart quantity per row before the discount "
 "amount is applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2787
+#: admin/partials/wcdrfc-pro-add-new-page.php:2933
 msgid ""
 "You can set a maximum total cart quantity per row before the discount "
 "amount is applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2897
-#: admin/partials/wcdrfc-pro-add-new-page.php:2933
+#: admin/partials/wcdrfc-pro-add-new-page.php:3043
+#: admin/partials/wcdrfc-pro-add-new-page.php:3079
 msgid "Total Cart Weight"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2937
+#: admin/partials/wcdrfc-pro-add-new-page.php:3083
 msgid ""
 "You can set a minimum total cart weight per row before the discount amount "
 "is applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:2941
+#: admin/partials/wcdrfc-pro-add-new-page.php:3087
 msgid ""
 "You can set a maximum total cart weight per row before the discount amount "
 "is applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:3048
-#: admin/partials/wcdrfc-pro-add-new-page.php:3086
+#: admin/partials/wcdrfc-pro-add-new-page.php:3194
+#: admin/partials/wcdrfc-pro-add-new-page.php:3232
 msgid "Total Cart Subtotal"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:3090
+#: admin/partials/wcdrfc-pro-add-new-page.php:3236
 msgid ""
 "You can set a minimum total cart subtotal per row before the discount "
 "amount is applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:3094
+#: admin/partials/wcdrfc-pro-add-new-page.php:3240
 msgid ""
 "You can set a maximum total cart subtotal per row before the discount "
 "amount is applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:3252
+#: admin/partials/wcdrfc-pro-add-new-page.php:3398
 msgid ""
 "You can set a minimum shipping class subtotal per row before the discount "
 "amount is applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:3255
+#: admin/partials/wcdrfc-pro-add-new-page.php:3401
 msgid "Max Subtotal "
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:3256
+#: admin/partials/wcdrfc-pro-add-new-page.php:3402
 msgid ""
 "You can set a maximum shipping class subtotal per row before the discount "
 "amount is applied."
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:3309
+#: admin/partials/wcdrfc-pro-add-new-page.php:3455
 msgid "Min quantity"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:3318
+#: admin/partials/wcdrfc-pro-add-new-page.php:3464
 msgid "Max quantity"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-add-new-page.php:3327
+#: admin/partials/wcdrfc-pro-add-new-page.php:3473
 msgid "amount"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-collection-page.php:111
+#: admin/partials/wcdrfc-pro-list-page.php:108
+msgid "There was an error with deleting data."
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-collection-page.php:803
+#: admin/partials/wcdrfc-pro-list-page.php:805
+msgid "Error saving discount rule."
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-collection-page.php:893
+msgid "Collections Rules"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-collection-page.php:896
+#: admin/partials/wcdrfc-pro-list-page.php:895
+msgid "Add New"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-collection-page.php:903
+#: admin/partials/wcdrfc-pro-list-page.php:902
+#. translators: %s: search keywords
+msgid "Search results for &#8220;%s&#8221;"
+msgstr ""
+
+#: admin/partials/wcdrfc-pro-collection-page.php:912
+#: admin/partials/wcdrfc-pro-list-page.php:911
+msgid "Search"
 msgstr ""
 
 #: admin/partials/wcdrfc-pro-get-started-page.php:12
@@ -2191,29 +2569,8 @@ msgstr ""
 msgid "Plugin Tour"
 msgstr ""
 
-#: admin/partials/wcdrfc-pro-list-page.php:108
-msgid "There was an error with deleting data."
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-list-page.php:786
-msgid "Error saving discount rule."
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-list-page.php:873
-msgid "Discount Rules"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-list-page.php:876
-msgid "Add New"
-msgstr ""
-
-#: admin/partials/wcdrfc-pro-list-page.php:883
-#. translators: %s: search keywords
-msgid "Search results for &#8220;%s&#8221;"
-msgstr ""
-
 #: admin/partials/wcdrfc-pro-list-page.php:892
-msgid "Search"
+msgid "Discount Rules"
 msgstr ""
 
 #: admin/partials/wcdrfc-upgrade-dashboard.php:53
@@ -2571,24 +2928,24 @@ msgstr ""
 msgid "No problem, we’re happy to help! Please reach out at %s."
 msgstr ""
 
-#: includes/class-woocommerce-dynamic-pricing-and-discount.php:288
+#: includes/class-woocommerce-dynamic-pricing-and-discount.php:298
 msgid "Docs"
 msgstr ""
 
-#: public/class-woocommerce-dynamic-pricing-and-discount-public.php:251
+#: public/class-woocommerce-dynamic-pricing-and-discount-public.php:256
 msgid "Fee"
 msgstr ""
 
-#: public/class-woocommerce-dynamic-pricing-and-discount-public.php:5654
+#: public/class-woocommerce-dynamic-pricing-and-discount-public.php:5785
 msgid "Please choose product options&hellip;"
 msgstr ""
 
-#: public/class-woocommerce-dynamic-pricing-and-discount-public.php:5686
+#: public/class-woocommerce-dynamic-pricing-and-discount-public.php:5817
 #. translators: %s: Attribute name.
 msgid "Invalid value posted for %s"
 msgstr ""
 
-#: public/class-woocommerce-dynamic-pricing-and-discount-public.php:5697
+#: public/class-woocommerce-dynamic-pricing-and-discount-public.php:5828
 #. translators: %s: Attribute name.
 msgid "%s is a required field"
 msgid_plural "%s are required fields"
